@@ -12,6 +12,4 @@ This is the project you get when you run `gridsome create new-project`.
 2. `cd my-gridsome-site` to open the folder
 3. `gridsome develop` to start a local dev server at `http://localhost:8080`
 4. Happy coding 🎉🙌
-# ds-cpa_gridsome
-# cpa-gridsome
-# cpa-gridsome
+
