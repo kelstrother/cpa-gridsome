@@ -19,11 +19,12 @@ module.exports = {
     {
       use: 'gridsome-plugin-seo',
     },
-    {
-      use: '@gridsome/plugin-sitemap',
-      options: {
-        exclude: ['/privacy', '/legal']
-      }
-    }
   ],
 }
+
+// {
+//   use: '@gridsome/plugin-sitemap',
+//   options: {
+//     exclude: ['/privacy', '/legal']
+//   }
+// }
