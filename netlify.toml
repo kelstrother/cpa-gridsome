@@ -1,2 +1,4 @@
 [build]
-base = "src/" 
+  base = "src/"
+  publish = 'dist'
+  command = 'gridsome build'
