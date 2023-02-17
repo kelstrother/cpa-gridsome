@@ -1,0 +1,21 @@
+:root {
+  --main-green: #315c2b;
+  --main-gold: #AA8B56;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: hsla(180, 20%, 95%, 1);
+
+background: linear-gradient(90deg, hsla(180, 20%, 95%, 1) 0%, hsla(180, 20%, 83%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(180, 20%, 95%, 1) 0%, hsla(180, 20%, 83%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(180, 20%, 95%, 1) 0%, hsla(180, 20%, 83%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F0F5F5", endColorstr="#CBDCDC", GradientType=1 );
+}

@@ -1,0 +1,19 @@
+{
+  "name": "cpa-gridsome",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "@gridsome/plugin-sitemap": "^0.4.0",
+    "gridsome": "^0.7.0",
+    "gridsome-plugin-seo": "^1.0.2"
+  },
+  "devDependencies": {
+    "gridsome-plugin-svg": "^0.0.14",
+    "vue-svg-inline-loader": "^2.1.5",
+    "vue-svg-loader": "^0.16.0"
+  }
+}
