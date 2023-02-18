@@ -1,6 +1,13 @@
 :root {
-  --main-green: #315c2b;
-  --main-gold: #AA8B56;
+  --mainGreen: #315c2b;
+  --mainGold: #AA8B56;
+  --bgGradient: linear-gradient(155deg, hsla(180, 20%, 95%, 1) 0%, hsla(180, 20%, 85%, 1) 100%);
+  --mozGradient: -moz-linear-gradient(155deg, hsla(180, 20%, 95%, 1) 0%, hsla(180, 20%, 85%, 1) 100%);
+  --webkitGradient: -webkit-linear-gradient(155deg, hsla(180, 20%, 95%, 1) 0%, hsla(180, 20%, 85%, 1) 100%);
+  --boxGradient: linear-gradient(135deg, hsla(198, 33%, 10%, 0.95) 0%, hsla(198, 35%, 31%, 0.95) 100%);
+  --btnGradient: linear-gradient(140deg, rgb(181, 132, 48) 0%, rgb(223, 181, 108) 100%);
+  --ctaPad: .75rem 2rem;
+  --buttonShadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
 }
 
 *{
@@ -8,14 +15,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
+html {
   background: hsla(180, 20%, 95%, 1);
-
-background: linear-gradient(90deg, hsla(180, 20%, 95%, 1) 0%, hsla(180, 20%, 83%, 1) 100%);
-
-background: -moz-linear-gradient(90deg, hsla(180, 20%, 95%, 1) 0%, hsla(180, 20%, 83%, 1) 100%);
-
-background: -webkit-linear-gradient(90deg, hsla(180, 20%, 95%, 1) 0%, hsla(180, 20%, 83%, 1) 100%);
-
-filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F0F5F5", endColorstr="#CBDCDC", GradientType=1 );
+  background: var(--bgGradient);
+  background: var(--mozGradient);
+  background: var(--webkitGradient);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F0F5F5", endColorstr="#CBDCDC", GradientType=1 );
 }
