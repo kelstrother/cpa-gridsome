@@ -100,6 +100,7 @@ import Finance from '../assets/finance.svg'
 import Money from '../assets/money.svg'
 import Briefcase from '../assets/Briefcase.svg'
 export default {
+  name: 'Home',
   components: {
     Arrow,
     Finance,

@@ -1,0 +1,178 @@
+.contact-container {
+  font-family: "Spectral";
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100vw;
+}
+.contact-info {
+    z-index: -2;
+    background: var(--boxGradient);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    box-shadow: 5px 6px 20px 10px rgba(0, 0, 0, 0.2);
+    /* column-gap: 4rem;
+    row-gap: 2rem; */
+  }
+  .green-container {
+    width: 96px;
+    height: 96px;
+    position: relative;
+    border: 2px solid #fff;
+    background: var(--mainGold);
+    border-radius: 50%;
+    top: 0;
+    /* box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.2); */
+    z-index: -1;
+  }
+  .gold-container {
+    width: 96px;
+    height: 96px;
+    position: relative;
+    border: 2px solid var(--mainGold);
+    /* background: var(--gold); */
+    background: #fff;
+    border-radius: 50%;
+    top: 0;
+    /* box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.2); */
+  }
+  .home-svg, .phone-svg, .fax-svg, .email-svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; 
+  }
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* display: grid;
+    place-items: center; */
+    padding: 1rem;
+    width: 15rem;
+    background: var(--green);
+    z-index: -1;
+    position: relative;
+  }
+  .contact p {
+    color: #fff;
+  }
+  p a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .email-container,
+  .address-container {
+    /* background: rgb(136, 129, 54); */
+    background: var(--gold);
+  }
+  .invitation {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .subtext {
+    font-size: 1rem;
+  }
+  .red {
+    color: rgb(172, 1, 1);
+  }
+  .required {
+    margin-top: -10px;
+    font-size: 0.9rem;
+    font-style: italic;
+  }
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px 0;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* width: 100%; */
+  }
+  .form-group {
+    font-family: "abel";
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* width: 100%; */
+  }
+  label {
+    font-weight: 300;
+    margin: 5px 0;
+  }
+  input {
+    font-family: "abel";
+    background: transparent;
+    border: 1px groove rgba(51, 51, 51, 0.2);
+    /* border-bottom: 1px groove rgba(51, 51, 51, 0.254); */
+    /* border-radius: 5px; */
+    height: 25px;
+    width: 500px;
+    margin: 5px 0;
+    /* margin-left: 10px; */
+  }
+  .tel {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: rgb(104, 104, 104);
+  }
+  textarea {
+    font-family: "abel";
+    border: 1px groove rgba(51, 51, 51, 0.2);
+    /* border-bottom: 1px groove rgba(51, 51, 51, 0.254); */
+    background: transparent;
+    margin-top: 5px;
+    height: 100px;
+    width: 500px;
+  }
+  .submit {
+    border: none;
+    box-shadow: 4px 3px 5px rgba(77, 77, 77, 0.3);
+    background: var(--btnGradient);
+    color: #fff;
+    margin-top: 30px;
+    border-radius: 5px;
+    width: 5rem;
+    height: 2.5rem;
+  }
+  .success {
+    font-family: sans-serif;
+    color: rgb(63, 133, 54);
+    font-size: 1.5rem;
+  }
+  .thanks {
+    font-family: sans-serif;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .modal {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 20%;
+    left: 30%;
+    justify-content: center;
+    align-items: center;
+    width: 25vw;
+    height: 15rem;
+    background: rgb(216, 216, 216);
+    border-radius: 5px;
+    box-shadow: 10px 15px 20px 1px rgba(0, 0, 0, 0.1);
+  }
+  .close-modal {
+    margin-top: 1rem;
+    padding: 0.7rem;
+    border-radius: 5px;
+    background: var(--green);
+    color: #fff;
+    border: none;
+  }

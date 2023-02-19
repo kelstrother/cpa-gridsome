@@ -11,7 +11,7 @@ module.exports =
     },
     plugins: [
       {
-        use: "gridsome-plugin-seo",
+        use: "gridsome-plugin-seo"
       }
     ]
   } 

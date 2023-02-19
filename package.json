@@ -7,11 +7,14 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "@gridsome/plugin-sitemap": "^0.4.0",
+    "emailjs-com": "^3.2.0",
     "gridsome": "^0.7.0",
     "gridsome-plugin-seo": "^1.0.2"
   },
   "devDependencies": {
+    "gridsome-plugin-composition-api": "^0.0.3",
     "gridsome-plugin-svg": "^0.0.14",
     "vue-svg-inline-loader": "^2.1.5",
     "vue-svg-loader": "^0.16.0"
