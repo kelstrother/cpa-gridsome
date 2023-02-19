@@ -107,7 +107,7 @@ import HomeIcon from '../assets/home.svg'
 import PhoneIcon from '../assets/call.svg'
 import FaxIcon from '../assets/fax.svg'
 import MailIcon from '../assets/mail.svg'
-
+import router from 'vue-router'
 import '@/pages/Contact.css'
 
 export default {
@@ -125,7 +125,8 @@ export default {
       phone: '',
       email: '',
       message: '',
-      emailSent: false, 
+      emailSent: false,
+      router
     }
   },
 
@@ -144,6 +145,7 @@ export default {
     },
     handleClose() {
       this.emailSent = false
+      this.$router.push({ path: "/" })
     }
   },
 }
