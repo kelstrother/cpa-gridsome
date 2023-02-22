@@ -1,13 +1,20 @@
 <template>
   <div class="layout">
     <header class="header">
-      <Logo />
-      <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/services">Services</g-link>
-        <g-link class="nav__link" to="/about">About</g-link>
-        <g-link class="nav__link" to="/contact">Contact</g-link>
-      </nav>
+      <MobileLogo class="mobile-logo"/>
+      <DesktopLogo class="desktop-logo"/>
+        <div class="burger" @click="toggleNav">
+          <div class="line line-1"></div>
+          <div class="line line-2"></div>
+          <div class="line line-3"></div>
+        </div>
+          <nav :class="['nav', { 'nav-active' : isActive }]">
+            <g-link active-class="nav__active" :class="['nav__link', { 'nav-link-active' : linkActive }]" to="/">Home</g-link>
+            <g-link :class="['nav__link', { 'nav-link-active' : linkActive }]" to="/services">Services</g-link>
+            <g-link :class="['nav__link', { 'nav-link-active' : linkActive }]" to="/about">About</g-link>
+            <g-link :class="['nav__link', { 'nav-link-active' : linkActive }]" to="/resources">Resources</g-link>
+            <g-link :class="['nav__link', { 'nav-link-active' : linkActive }]" to="/contact">Contact</g-link>
+          </nav>
     </header>
     <main>
       <slot/>
@@ -20,52 +27,160 @@
 
 
 <script>
-import Logo from '~/assets/ds-logo-full-curves.svg'
+import MobileLogo from '../components/MobileLogo.vue'
+import DesktopLogo from '../components/DesktopLogo.vue'
 export default {
+  name: 'Layout',
   components: {
-    Logo
+    DesktopLogo,
+    MobileLogo
+  },
+  data() {
+    return {
+      isActive: false,
+      linkActive: false,
+      }
+    },
+    methods: {
+      toggleNav() {
+        this.isActive = !this.isActive
+        this.linkActive = !this.linkActive
+      },
+    }
   }
-}
 </script>
 
 
 
 <style>
-body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  margin:0;
-  padding:0;
-  line-height: 1.5;
-}
-
 .layout {
+  overflow-x: hidden;
   font-family: 'Inter';
-  font-size: 1rem;
-  position: relative;
-  min-height: 100vh;
+  height: 100vh;
 }
 .header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  min-height: 6vh;
+}
+.mobile-logo {
+  margin-inline-start: 1rem;
+}
+.desktop-logo {
+  display: none;
+}
+.burger {
+  display: block;
+  height: 25px;
+  margin-inline-end: 1.5rem;
+}
+.burger div {
+  width: 25px;
+  height: 2px;
+  background-color: var(--mainGrey);
+  margin: 4px;
+}
+.nav {
+  position: absolute;
+  top: 6vh;
+  right: 0;
+  background-color: var(--lightBlue);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 50%;
+  transform: translateX(100%);
+  transition: all .3s ease-in;
+}
+.nav-active {
+  transform: translateX(0);
+}
+.nav__link {
+  text-decoration: none;
+  color: var(--mainGrey);
+  font-size: .8rem;
+  letter-spacing: 1px;
+  opacity: 0;
+  transition: all .15s .4s ease-in-out;
+}
+.nav-link-active {
+  opacity: 1;
+}
+@media screen and (min-width: 780px) {
+  .burger {
+    display: none;
+  }
+  .mobile-logo {
+    display: none;
+  }
+  .desktop-logo {
+    display: block;
+    margin-inline-start: 1rem;
+  }
+  .header {
   background-color: transparent;
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: flex-end;
   padding: 1rem;
-  height: 14vh;
+  min-height: fit-content;
   box-shadow: 0 1px 10px 10px rgba(0,0,0,.2);
+  }
+  .nav {
+    flex-direction: row;
+    position: static;
+    transform: translateX(0);
+    background-color: transparent;
+    width: 60%;
+    height: auto;
+    justify-content: space-around;
+  }
+  .nav__link {
+    opacity: 1;
+    font-size: .9rem;
+    font-weight: 300;
+    cursor: pointer;
+    display: block;
+    position: relative;
+  }
+  .nav__link:hover {
+    color: var(--mainGold);
+  }
+  .nav__link::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: var(--lightGrey);
+    transition: width .25s ease-in;
+  }
+  .nav__link:hover::after {
+    width: 100%;
+  }
+  .nav__active {
+    color: var(--mainGrey);
+    font-weight: 500;
+    position: relative;
+  }
+  .nav__active::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background: var(--mainGrey);
+  }
 }
-.logo-svg {
-  margin-left: 20px;
-}
-.nav__link {
-  margin-left: 20px;
-  margin-right: 20px;
-  text-decoration: none;
-  color: #565656;
-  cursor: pointer;
-}
-main {
-  /* padding-bottom: 250px; */
-}
+
 .footer-container {
   position: relative;
   background: transparent;

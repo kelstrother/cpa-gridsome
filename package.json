@@ -17,6 +17,7 @@
     "gridsome-plugin-composition-api": "^0.0.3",
     "gridsome-plugin-svg": "^0.0.14",
     "vue-svg-inline-loader": "^2.1.5",
-    "vue-svg-loader": "^0.16.0"
+    "vue-svg-loader": "^0.16.0",
+    "vue-template-compiler": "^2.6.14"
   }
 }

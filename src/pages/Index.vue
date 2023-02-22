@@ -1,6 +1,9 @@
 <template>
   <Layout>
     <div class="hero-section">
+      <!-- <g-image class="hero-img" alt="Denver Capitol Building" src="~/assets/capitol-desktop.jpg" fit="cover" /> -->
+      <!-- <g-image class="hero-img" alt="Colorado Flatirons" src="~/assets/flatiron-desktop.jpg" fit="cover" /> -->
+      <g-image class="hero-img-mobile" alt="Colorado Flatirons" src="~/assets/flatirons-mobile.jpg" fit="cover" />
       <g-image class="hero-img" alt="Denver Capitol Building" src="~/assets/capitol-1920.jpg" fit="cover" />
       <div class="hero-text-container">
         <div class="inside-hero-container">
@@ -114,6 +117,11 @@ export default {
 </script>
 
 <style>
+@media  screen and (max-width: 800px) {
+  .hero-img-mobile {
+    display: block;
+  }
+}
 .hero-section {
   position: relative;
   height: 86vh;
@@ -124,6 +132,9 @@ export default {
   height: 86vh;
   z-index: -1;
   position: absolute;
+}
+.hero-img-mobile {
+  display: none;
 }
 .hero-text-container {
   display: grid;
