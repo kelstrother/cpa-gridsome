@@ -3,28 +3,28 @@
     <div class="contact-container">
       <div class="contact-info">
         <div class="contact address-container">
-          <div class="green-container">
+          <div class="gradient-container">
             <HomeIcon class="home-svg" />
           </div>
-          <p class="address">11990 Grant Street Suite 550 <br> Northglenn, CO 80233</p>
+          <p class="contact-text address-info">11990 Grant Street Suite 550 <br> Northglenn, CO 80233</p>
         </div>
-        <div class="contact number-container">
-          <div class="gold-container">
+        <div class="contact number-container">         
+          <div class="gradient-container">
             <PhoneIcon class="phone-svg" />
           </div>
-          <p>303.439.9808</p>
+          <p class="contact-text phone-info">303.439.9808</p>
         </div>
-        <div class="contact fax-container">
-          <div class="gold-container">
+        <div class="contact fax-container">         
+          <div class="gradient-container">
             <FaxIcon class="fax-svg" />
           </div>
-          <p>720.887.7105</p>
+          <p class="contact-text fax-info">720.887.7105</p>
         </div>
         <div class="contact email-container">
-          <div class="green-container">
+          <div class="gradient-container">
             <MailIcon class="email-svg" />
           </div>
-          <p><a href="mailto:">david@strothercpa.com</a></p>
+          <p class="contact-text email-info"><a href="mailto:">david@strothercpa.com</a></p>
         </div>
       </div>
       <div class="form-container">
@@ -103,11 +103,11 @@
 
 <script>
 import emailjs from '@emailjs/browser'
-import HomeIcon from '../assets/home.svg'
-import PhoneIcon from '../assets/call.svg'
-import FaxIcon from '../assets/fax.svg'
-import MailIcon from '../assets/mail.svg'
-import router from 'vue-router'
+import HomeIcon from '../assets/icons/home.svg'
+import PhoneIcon from '../assets/icons/call.svg'
+import FaxIcon from '../assets/icons/fax.svg'
+import MailIcon from '../assets/icons/mail.svg'
+// import router from 'vue-router'
 import '@/pages/Contact.css'
 
 export default {

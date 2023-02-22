@@ -9,11 +9,11 @@
           <div class="line line-3"></div>
         </div>
           <nav :class="['nav', { 'nav-active' : isActive }]">
-            <g-link active-class="nav__active" :class="['nav__link', { 'nav-link-active' : linkActive }]" to="/">Home</g-link>
-            <g-link :class="['nav__link', { 'nav-link-active' : linkActive }]" to="/services">Services</g-link>
-            <g-link :class="['nav__link', { 'nav-link-active' : linkActive }]" to="/about">About</g-link>
-            <g-link :class="['nav__link', { 'nav-link-active' : linkActive }]" to="/resources">Resources</g-link>
-            <g-link :class="['nav__link', { 'nav-link-active' : linkActive }]" to="/contact">Contact</g-link>
+            <g-link exact-active-class="nav__active" class="nav__link" to="/">Home</g-link>
+            <g-link exact-active-class="nav__active" class="nav__link" to="/services">Services</g-link>
+            <g-link exact-active-class="nav__active" class="nav__link" to="/about">About</g-link>
+            <g-link exact-active-class="nav__active" class="nav__link" to="/resources">Resources</g-link>
+            <g-link exact-active-class="nav__active" class="nav__link" to="/contact">Contact</g-link>
           </nav>
     </header>
     <main>
@@ -124,13 +124,13 @@ export default {
     margin-inline-start: 1rem;
   }
   .header {
-  background-color: transparent;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding: 1rem;
-  min-height: fit-content;
-  box-shadow: 0 1px 10px 10px rgba(0,0,0,.2);
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 1rem;
+    min-height: fit-content;
+    box-shadow: 0 1px 10px 10px rgba(0,0,0,.2);
   }
   .nav {
     flex-direction: row;
@@ -149,9 +149,6 @@ export default {
     display: block;
     position: relative;
   }
-  .nav__link:hover {
-    color: var(--mainGold);
-  }
   .nav__link::after {
     content: '';
     display: block;
@@ -169,6 +166,7 @@ export default {
     color: var(--mainGrey);
     font-weight: 500;
     position: relative;
+    /* border-bottom: 2px solid var(--mainGrey); */
   }
   .nav__active::after {
     content: '';

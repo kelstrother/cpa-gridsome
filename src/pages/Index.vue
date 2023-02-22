@@ -1,10 +1,7 @@
 <template>
   <Layout>
     <div class="hero-section">
-      <!-- <g-image class="hero-img" alt="Denver Capitol Building" src="~/assets/capitol-desktop.jpg" fit="cover" /> -->
-      <!-- <g-image class="hero-img" alt="Colorado Flatirons" src="~/assets/flatiron-desktop.jpg" fit="cover" /> -->
-      <g-image class="hero-img-mobile" alt="Colorado Flatirons" src="~/assets/flatirons-mobile.jpg" fit="cover" />
-      <g-image class="hero-img" alt="Denver Capitol Building" src="~/assets/capitol-1920.jpg" fit="cover" />
+      <g-image class="hero-img" alt="Denver Capitol Building" src="~/assets/capitol-1920.jpg" />
       <div class="hero-text-container">
         <div class="inside-hero-container">
           <div class="headline">
@@ -98,10 +95,10 @@
 </template>
 
 <script>
-import Arrow from '../assets/arrow.svg'
-import Finance from '../assets/finance.svg'
-import Money from '../assets/money.svg'
-import Briefcase from '../assets/Briefcase.svg'
+import Arrow from '../assets/icons/arrow.svg'
+import Finance from '../assets/icons/finance.svg'
+import Money from '../assets/icons/money.svg'
+import Briefcase from '../assets/icons/Briefcase.svg'
 export default {
   name: 'Home',
   components: {
@@ -117,28 +114,18 @@ export default {
 </script>
 
 <style>
-@media  screen and (max-width: 800px) {
-  .hero-img-mobile {
-    display: block;
-  }
-}
 .hero-section {
   position: relative;
   height: 86vh;
-  /* border: 2px solid green; */
 }
 .hero-img {
-  max-width: 100%;
   height: 86vh;
   z-index: -1;
   position: absolute;
 }
-.hero-img-mobile {
-  display: none;
-}
 .hero-text-container {
   display: grid;
-  grid-template-columns: 1fr .85fr 3fr 1fr;
+  grid-template-columns: 1fr .45fr 3fr;
   grid-template-rows: 1.5fr 3fr 2fr;
 }
 .inside-hero-container {
