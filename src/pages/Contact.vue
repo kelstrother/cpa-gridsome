@@ -107,7 +107,7 @@ import HomeIcon from '../assets/icons/home.svg'
 import PhoneIcon from '../assets/icons/call.svg'
 import FaxIcon from '../assets/icons/fax.svg'
 import MailIcon from '../assets/icons/mail.svg'
-// import router from 'vue-router'
+import router from 'vue-router'
 import '@/pages/Contact.css'
 
 export default {
