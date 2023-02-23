@@ -2,6 +2,9 @@
   <Layout>
     <div class="hero-section">
       <g-image class="hero-img" alt="Denver Capitol Building" src="~/assets/capitol-1920.jpg" />
+      <!-- <g-image class="cap-hero" src="~/assets/images/tree-cap-lg.jpg"/> -->
+      <!-- <g-image class="cap-hero" src="~/assets/images/sky-irons.jpg"/> -->
+      <g-image class="mobile-hero" src="~/assets/images/shiprock-mobile.jpg"/>
       <div class="hero-text-container">
         <div class="inside-hero-container">
           <div class="headline">
@@ -14,31 +17,34 @@
         </div>
       </div>
     </div>
+    <!-- //!   APPROACH SECTION -->
     <section class="approach-container">
         <g-image class="heading" src="~/assets/Approach.png" />
         <p class="summary">With over 40 years of experience in accounting, we  provide expert financial guidance to businesses and individuals throughout the country. Our experience and knowledge in the industry allows us to provide a wide range of accounting and financial services for both individuals and businesses, tailored to meet their unique needs and goals.</p>
     </section>
     <!-- //!   SERVICES SECTION -->
     <div class="services-container">
-      <div class="service-box-container">
+      <div class="service-box-container snaps-inline">
         <div id="service-1" class="services-box">
-          <p class="service-text">Services</p>
+          <p class="service-title">Services</p>
           <Money />
           <p class="service-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam voluptas quia recusandae ipsa aperiam neque aliquam dicta, nesciunt praesentium repellat?</p>
         </div>
         <div id="service-2" class="services-box">
-          <p class="service-text">Services</p>
+          <p class="service-title">Services</p>
           <Finance />
           <p class="service-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam voluptas quia recusandae ipsa aperiam neque aliquam dicta, nesciunt praesentium repellat?</p>
         </div>
         <div id="service-3" class="services-box">
-          <p class="service-text">Services</p>
+          <p class="service-title">Services</p>
           <Briefcase />
           <p class="service-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam voluptas quia recusandae ipsa aperiam neque aliquam dicta, nesciunt praesentium repellat?</p>
         </div>
       </div>
-      <g-link to="/services">
-        <button class="services-link">All Services</button>
+      <g-link class="service-cta" to="/services">
+        <div class="service-link-container">
+          <button class="services-link">Explore Services</button>
+        </div>
       </g-link>
       <section class="service-backdrop"></section>
     </div>
@@ -95,6 +101,7 @@
 </template>
 
 <script>
+import '@/pages/Index.css'
 import Arrow from '../assets/icons/arrow.svg'
 import Finance from '../assets/icons/finance.svg'
 import Money from '../assets/icons/money.svg'
@@ -114,16 +121,33 @@ export default {
 </script>
 
 <style>
-.hero-section {
+/* .hero-section {
   position: relative;
   height: 86vh;
 }
 .hero-img {
+  display: none;
   height: 86vh;
   z-index: -1;
   position: absolute;
 }
+.mobile-hero {
+  height: 90vh;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
 .hero-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.inside-hero-container {
+  
+  margin-block-start: 10%;
+} */
+/* .hero-text-container {
   display: grid;
   grid-template-columns: 1fr .45fr 3fr;
   grid-template-rows: 1.5fr 3fr 2fr;
@@ -132,9 +156,9 @@ export default {
   grid-column: 3/4;
   grid-row: 2/3;
   margin-left: 1.2rem;
-}
-.beyond {
-  font-size: 4rem;
+} */
+/* .beyond {
+  font-size: 2rem;
   letter-spacing: -2.5px;
   font-weight: 900;
   color: var(--mainGreen);
@@ -142,7 +166,7 @@ export default {
 }
 .the {
   z-index: 2;
-  font-size: 2.25rem;
+  font-size: 1.5rem;
   font-weight: 200;
   color: #fff;
 }
@@ -154,7 +178,7 @@ export default {
 }
 .you, .business {
   color: var(--mainGreen);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 600;
   font-style: italic;
 }
@@ -162,15 +186,15 @@ export default {
   text-shadow: 1px 1px 1px rgba(0,0,0,.15);
   letter-spacing: .01rem;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 .hero-btn {
   color: #fff;
   text-shadow: 1px 1px 2px rgba(0,0,0,.15);
   letter-spacing: .04em;
   margin-top: 2rem;
-  font-size: 1.25rem;
-  padding: var(--ctaPad);
+  font-size: 1rem;
+  padding: var(--ctaMobilePad);
   border-radius: 8px;
   border: none;
   background: rgb(173,130,56);
@@ -179,19 +203,21 @@ export default {
 }
 .approach-container {
   display: flex;
-  height: 50vh;
+  flex-direction: column;
+  height: 70vh;
   width: 100vw;
   justify-content: space-evenly;
   align-items: center;
 }
 .heading {
-  max-width: 25%;
-}
-.summary {
-  display: flex;
+  max-width: 70%;
+} */
+/* .summary {
+  font-size: .9rem;
   align-items: center;
-  width: 30%;
-  line-height: 2;
+  max-width: 80%;
+  line-height: 1.3;
+  text-indent: .7rem;
 }
 .services-container {
   position: relative;
@@ -200,54 +226,45 @@ export default {
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  height: 30rem;
+  height: 10rem;
   width: 100vw;
 }
 .service-box-container {
+  display: flex;
+  width: auto;
+  justify-content: space-evenly;
+  height: 80%;
+} */
+/* .services-container {
+  position: relative;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 30rem;
+  width: 100vw;
+} */
+/* .service-box-container {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
   height: 80%;
-  /* padding: 0 10rem; */
-}
-.services-box {
+} */
+/* .services-box {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-around;
   color: #fff;
-  background: var(--boxGradient);
-  width: 20%;
+  width: 80%;
   height: 90%;
-  line-height: 1.25;
-  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.25);
-
-}
-#service-1 {
-
-}
-#service-2 {
-
-}
-#service-3 {
-
+  background: var(--boxGradient);
 }
 .service-description {
   text-align: center;
-  font-size: 0.8rem;
+  font-size: .7rem;
   font-weight: 200;
-  max-width: 75%;
-}
-.services-link {
-  cursor: pointer;
-  margin-bottom: 1.5rem;
-  width: 10rem;
-  height: 3rem;
-  border-radius: 8px;
-  border: none;
-  background: var(--btnGradient);
-  color: #fff;
-  box-shadow: var(--buttonShadow);
 }
 .service-backdrop {
   width: 100vw;
@@ -260,7 +277,48 @@ export default {
   background: -moz-linear-gradient(135deg, hsla(0, 0%, 25%, 1) 0%, hsla(0, 0%, 15%, 1) 100%);
   background: -webkit-linear-gradient(135deg, hsla(0, 0%, 25%, 1) 0%, hsla(0, 0%, 15%, 1) 100%);
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#404040", endColorstr="#262626", GradientType=1 );
-}
+} */
+/* .services-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+  background: var(--boxGradient);
+  width: 20%;
+  height: 90%;
+  line-height: 1.25;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.25);
+} */
+/* .service-description {
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 200;
+  max-width: 75%;
+} */
+/* .services-link {
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  width: 10rem;
+  height: 3rem;
+  border-radius: 8px;
+  border: none;
+  background: var(--btnGradient);
+  color: #fff;
+  box-shadow: var(--buttonShadow);
+} */
+/* .service-backdrop {
+  width: 100vw;
+  height: 70%;
+  position: absolute;
+  bottom: 10%;
+  z-index: -1;
+  background: hsla(0, 0%, 25%, 1);
+  background: linear-gradient(135deg, hsla(0, 0%, 25%, 1) 0%, hsla(0, 0%, 15%, 1) 100%);
+  background: -moz-linear-gradient(135deg, hsla(0, 0%, 25%, 1) 0%, hsla(0, 0%, 15%, 1) 100%);
+  background: -webkit-linear-gradient(135deg, hsla(0, 0%, 25%, 1) 0%, hsla(0, 0%, 15%, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#404040", endColorstr="#262626", GradientType=1 );
+} */
 /* .service-area {
   position: relative;
   background: transparent;

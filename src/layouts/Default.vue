@@ -20,7 +20,34 @@
       <slot/>
     </main>
     <section class="footer-container">
-      <footer class="footer"></footer>
+      <footer class="footer">
+        <g-image class="footer-logo" src="../assets/images/footer-logo.png" />
+        <div class="footer-about">
+          <p class="f-title f-about-title">About Strother CPA</p>
+          <p class="f-about-content">
+          With over 40 years of experience in accounting, we  provide expert financial guidance to businesses and individuals throughout the country. Our experience and knowledge in the industry allows us to provide a wide range of accounting and financial services for both individuals and businesses, tailored to meet their unique needs and goals.
+          </p>
+          <g-link class="f-about-link" to="/about">Learn More</g-link>
+        </div>
+        <nav class="footer-nav">
+          <g-link class="nav__link footer-link" to="/">Home</g-link>
+          <g-link class="nav__link footer-link" to="/services">Services</g-link>
+          <g-link class="nav__link footer-link" to="/about">About</g-link>
+          <g-link class="nav__link footer-link" to="/resources">Resources</g-link>
+          <g-link class="nav__link footer-link" to="/contact">Contact</g-link>
+        </nav>
+        <div class="footer-contact">
+          <div class="f-contact-top">
+            <p class="f-title f-contact-title">Connect With Us</p>
+            <p class="f-phone">303.439.9808</p>
+            <p class="f-email">david@strothercpa.com</p>
+          </div>
+          <div class="f-contact-bottom">
+            <p class="f-title f-contact-title">Office</p>
+            <p class="f-address">11990 Grant Street<br> Suite 550<br> Northglenn, CO 80233</p>
+          </div>
+        </div>
+      </footer>
     </section>
   </div>
 </template>
@@ -64,7 +91,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   background-color: transparent;
-  min-height: 6vh;
+  min-height: 10vh;
 }
 .mobile-logo {
   margin-inline-start: 1rem;
@@ -181,15 +208,19 @@ export default {
 
 .footer-container {
   position: relative;
-  background: transparent;
   width: 100vw;
-  height: 300px;
-  z-index: -2;
+  height: 15rem;
 }
 .footer {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  grid-template-rows: 1fr 8fr 1fr;
+  /* place-items: top; */
+  padding-inline: 1rem;
   position: absolute;
   bottom: 0;
-  z-index: 5;
+  left: 0;
+  font-size: .7rem;
   width: 100vw;
   height: 100%;
   background: hsla(198, 33%, 10%, 1);
@@ -197,5 +228,64 @@ export default {
   background: -moz-linear-gradient(45deg, hsla(198, 33%, 10%, 1) 0%, hsla(198, 35%, 31%, 1) 100%);
   background: -webkit-linear-gradient(45deg, hsla(198, 33%, 10%, 1) 0%, hsla(198, 35%, 31%, 1) 100%);
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#111D22", endColorstr="#335A6B", GradientType=1 );
+}
+.footer-logo {
+  grid-row: 2/3;
+  place-self: center;
+  width: 75%;
+}
+.footer-about {
+  place-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80%;
+  grid-row: 2/3;
+  font-size: .7rem;
+  color: #fff;
+}
+.f-about-content {
+  text-indent: 10px;
+}
+.f-title {
+  color: var(--mainGold);
+  font-weight: 600;
+  font-size: .8rem;
+}
+.f-about-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: .75px;
+}
+.footer-nav {
+  place-self: center;
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80%;
+}
+.footer-link {
+  color: var(--mainGold);
+  font-size: .7rem;
+  font-weight: 400;
+}
+.footer-contact {
+  place-self: center;
+  grid-row: 2/3;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+}
+.f-contact-top, .f-contact-bottom {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.f-contact-title {
+  margin-block-end: .5rem;
 }
 </style>
