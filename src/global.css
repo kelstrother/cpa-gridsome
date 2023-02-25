@@ -1,21 +1,27 @@
 :root {
+  /* !  COLORS */
   --mainGreen: #315c2b;
-  --mainGold: #AA8B56;
+  --mainGold: hsl(38, 33%, 58%);
   --mainGrey: #565656;
   --lightGrey: #777777;
   --lightBlue: rgb(209, 224, 224, 0.5);
   --greyGradient: -webkit-linear-gradient(left, hsl(0, 0%, 46%), hsl(0, 0%, 18%));
+  --svgLight: #e5fffd;
   /* --bgGradient: linear-gradient(165deg, hsla(180, 20%, 95%, 1) 0%, hsla(180, 20%, 85%, 1) 100%); */
   --mozGradient: -moz-linear-gradient(top left, #F0F5F5, #a3c1c8);
   --webkitGradient: -webkit-linear-gradient(top left, #F0F5F5, #9EBBC2);
-  --bgGradient: linear-gradient(165deg, #F0F5F5, #b5e2ed);
+  --bgGradient: linear-gradient(145deg, #F0F5F5, #b5e2ed);
   --rdGradient: radial-gradient(circle at top left, #F0F5F5, #b5e2ed);
   --boxGradient: linear-gradient(135deg, hsla(198, 33%, 10%, 0.95) 0%, hsla(198, 35%, 31%, 0.95) 100%);
-  --btnGradient: linear-gradient(140deg, rgb(181, 132, 48) 0%, rgb(223, 181, 108) 100%);
-  --ctaPad: .75rem 2rem;
-  --ctaMobilePad: .5rem 1rem;
-  --buttonShadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
-  --svgLight: #e5fffd;
+  --btnGradient: linear-gradient(140deg, rgb(181, 132, 48) 0%, var(--mainGold) 100%);
+
+  /* !  SIZES */
+  --ctaPad: 1.25rem 2.25rem;
+  --ctaMobilePad: .5rem .75rem;
+  --borderRadius: 4px;
+
+  /* !  SHADOWS */
+  --btnShadow: 0 .5px 10px rgba(0,0,0,0.05), 1px 1px 10px rgba(0,0,0,0.1);
 }
 *{
   margin: 0;

@@ -1,6 +1,7 @@
 .hero-section {
   position: relative;
   height: 86vh;
+  top: 0;
 }
 .hero-img {
   display: none;
@@ -10,62 +11,67 @@
 }
 .mobile-hero {
   height: 90vh;
-  width: 100%;
+  max-width: 100%;
   position: absolute;
   z-index: -1;
 }
 .hero-text-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  height: 50%;
+  padding-inline-start: 1.5rem;
 }
 .inside-hero-container {
-  margin-block-start: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 80%;
 }
 .beyond {
-  font-size: 2rem;
-  letter-spacing: -2.5px;
+  font-size: 1.75rem;
+  text-shadow: .5px .5px 2px rgba(0,0,0,.1);
   font-weight: 900;
   color: var(--mainGreen);
   z-index: 0;
 }
 .the {
   z-index: 2;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: 200;
   color: #fff;
+  margin-inline-start: -3px;
 }
 .numbers {
-  letter-spacing: -2.5px;
   font-weight: 900;
+  margin-inline-start: -3px;
   color: var(--mainGold);
-  text-shadow: 1px 2px 3px rgba(0,0,0,.15);
+  text-shadow: .5px .5px 2px rgba(0,0,0,.1);
 }
 .you, .business {
   color: var(--mainGreen);
-  font-size: 1.25rem;
-  font-weight: 600;
-  font-style: italic;
+  font-size: 1rem;
+  font-weight: 500;
 }
 .phrase {
-  text-shadow: 1px 1px 1px rgba(0,0,0,.15);
-  letter-spacing: .01rem;
+  font-weight: 200;
+  text-shadow: .5px .5px 2px rgba(0,0,0,.1);
   color: #fff;
-  font-size: 1rem;
+  font-size: .8rem;
+  margin-block-start: -.5rem;
 }
 .hero-btn {
   color: #fff;
-  text-shadow: 1px 1px 2px rgba(0,0,0,.15);
-  letter-spacing: .04em;
-  margin-top: 2rem;
-  font-size: 1rem;
+  width: max-content;
+  margin-block-start: 1rem;
+  text-shadow: 0px 1px 1px rgba(0,0,0,.1);
+  letter-spacing: .25px;
+  font-size: .8rem;
   padding: var(--ctaMobilePad);
-  border-radius: 8px;
+  border-radius: var(--borderRadius);
   border: none;
-  background: rgb(173,130,56);
-  background: linear-gradient(140deg, rgb(181, 132, 48) 0%, rgb(223, 181, 108) 100%);
-  box-shadow: var(--buttonShadow);
+  /* background: var(--mainGold); */
+  background: var(--btnGradient);
+  /* background: linear-gradient(135deg, var(--mainGold) 0%, rgb(218, 192, 147) 100%); */
+  box-shadow: var(--btnShadow);
 }
                           /* !APPROACH SECTION */
 .approach-container {
@@ -134,16 +140,16 @@
 }
 .services-link {
   cursor: pointer;
-  font-size: .9rem;
+  font-size: .8rem;
   text-align: center;
-  letter-spacing: .5px;
+  letter-spacing: .25px;
   margin-top: 1rem;
-  padding: 1rem 3rem;
-  border-radius: 8px;
+  padding: var(--ctaMobilePad);
+  border-radius: var(--borderRadius);
   border: none;
   background: var(--btnGradient);
   color: #fff;
-  box-shadow: var(--buttonShadow);
+  box-shadow: var(--btnShadow);
 }
 .service-backdrop {
   width: 100%;
@@ -163,38 +169,50 @@
   }
   .hero-img {
     display: block;
+    width: 100%;
   }
   .mobile-hero {
     display: none;
   }
   .hero-text-container {
     display: grid;
-    grid-template-columns: 1fr .75fr 3fr;
+    grid-template-columns: 1.5fr  3fr;
     grid-template-rows: 1.5fr 3fr 2fr;
+    height: 70%;
 }
   .inside-hero-container {
-    grid-column: 3/4;
-    grid-row: 1/2;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    justify-content: space-between;
+    height: 100%;
+    gap: 2rem;
   }
   .beyond {
     font-size: 6rem;
   }
   .the {
     font-size: 3.5rem;
+    margin-inline-start: -.7rem;
+  }
+  .numbers {
+    margin-inline-start: -.7rem;
+  }
+  .saying {
+    margin-block-end: 1rem;
   }
   .phrase {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   .you, .business {
-    font-size: 1.75rem;
+    font-size: 2.2rem;
   }
   .hero-btn {
     padding: var(--ctaPad);
+    font-size: 1.2rem;
+    cursor: pointer;
   }
   .approach-container {
     flex-direction: row;
-    /* justify-content: space-around; */
-    /* width: auto; */
   }
   .heading {
     max-width: 40%;
@@ -225,6 +243,7 @@
   }
   .services-link {
     margin-block-start: 2rem;
+    padding: var(--ctaPad);
   }
   .service-backdrop {
     height: 70%;

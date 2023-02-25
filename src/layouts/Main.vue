@@ -1,23 +1,31 @@
 <template>
-  <!-- <div class="layout">
+  <div class="layout">
     <header class="header">
-      <MobileLogo class="mobile-logo"/>
-      <DesktopLogo class="desktop-logo"/>
-        <div class="burger" @click="toggleNav">
-          <div class="line line-1"></div>
-          <div class="line line-2"></div>
-          <div class="line line-3"></div>
-        </div>
-          <nav :class="['nav', { 'nav-active' : isActive }]">
-            <g-link exact-active-class="nav__active" class="nav__link" to="/">Home</g-link>
-            <g-link exact-active-class="nav__active" class="nav__link" to="/services">Services</g-link>
-            <g-link exact-active-class="nav__active" class="nav__link" to="/about">About</g-link>
-            <g-link exact-active-class="nav__active" class="nav__link" to="/resources">Resources</g-link>
-            <g-link exact-active-class="nav__active" class="nav__link" to="/contact">Contact</g-link>
-          </nav>
+      <MobileLogo class="mobile-logo" />
+      <HeaderSvg class="desktop-logo" />
+      <div class="burger" @click="toggleNav">
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+        <div class="line line-3"></div>
+      </div>
+      <nav :class="['nav', { 'nav-active': isActive }]">
+        <g-link exact-active-class="nav__active" class="nav__link" to="/">Home</g-link>
+        <g-link exact-active-class="nav__active" class="nav__link" to="/services"
+          >Services</g-link
+        >
+        <g-link exact-active-class="nav__active" class="nav__link" to="/about"
+          >About</g-link
+        >
+        <g-link exact-active-class="nav__active" class="nav__link" to="/resources"
+          >Resources</g-link
+        >
+        <g-link exact-active-class="nav__active" class="nav__link" to="/contact"
+          >Contact</g-link
+        >
+      </nav>
     </header>
     <main>
-      <slot/>
+      <slot />
     </main>
     <section class="footer-container">
       <footer class="footer">
@@ -25,7 +33,11 @@
         <div class="footer-about">
           <p class="f-title f-about-title">About Strother CPA</p>
           <p class="f-about-content">
-          With over 40 years of experience in accounting, we  provide expert financial guidance to businesses and individuals throughout the country. Our experience and knowledge in the industry allows us to provide a wide range of accounting and financial services for both individuals and businesses, tailored to meet their unique needs and goals.
+            With over 40 years of experience in accounting, we provide expert financial
+            guidance to businesses and individuals throughout the country. Our experience
+            and knowledge in the industry allows us to provide a wide range of accounting
+            and financial services for both individuals and businesses, tailored to meet
+            their unique needs and goals.
           </p>
           <g-link class="f-about-link" to="/about">Learn More</g-link>
         </div>
@@ -37,45 +49,46 @@
           </div>
           <div class="f-contact-bottom">
             <p class="f-title f-contact-title">Office</p>
-            <p class="f-address">11990 Grant Street<br> Suite 550<br> Northglenn, CO 80233</p>
+            <p class="f-address">
+              11990 Grant Street<br />
+              Suite 550<br />
+              Northglenn, CO 80233
+            </p>
           </div>
         </div>
       </footer>
     </section>
-  </div> -->
+  </div>
 </template>
 
-
 <script>
-// import MobileLogo from '../components/MobileLogo.vue'
-// import DesktopLogo from '../components/DesktopLogo.vue'
-// export default {
-//   name: 'Layout',
-//   components: {
-//     DesktopLogo,
-//     MobileLogo
-//   },
-//   data() {
-//     return {
-//       isActive: false,
-//       linkActive: false,
-//       }
-//     },
-//     methods: {
-//       toggleNav() {
-//         this.isActive = !this.isActive
-//         this.linkActive = !this.linkActive
-//       },
-//     }
-//   }
+import HeaderSvg from '~/components/HeaderSvg.vue'
+import MobileLogo from "../components/MobileLogo.vue";
+export default {
+  name: "Main",
+  components: {
+    MobileLogo,
+    HeaderSvg
+  },
+  data() {
+    return {
+      isActive: false,
+      linkActive: false,
+    };
+  },
+  methods: {
+    toggleNav() {
+      this.isActive = !this.isActive;
+      this.linkActive = !this.linkActive;
+    },
+  },
+};
 </script>
 
-
-
-<style scoped>
-/* .layout {
+<style>
+.layout {
   overflow-x: hidden;
-  font-family: 'Inter';
+  font-family: "Inter";
   height: 100vh;
 }
 .header {
@@ -85,7 +98,7 @@
   align-items: center;
   background-color: transparent;
   min-height: 10vh;
-  box-shadow: 0 1px 20px 10px rgba(0,0,0,.1);
+  box-shadow: 0 1px 20px 10px rgba(0, 0, 0, 0.1);
 }
 .mobile-logo {
   margin-inline-start: 1rem;
@@ -117,7 +130,7 @@
   justify-content: space-evenly;
   width: 50%;
   transform: translateX(100%);
-  transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
 }
 .nav-active {
   transform: translateX(0);
@@ -125,29 +138,29 @@
 .nav__link {
   text-decoration: none;
   color: var(--mainGrey);
-  font-size: .8rem;
+  font-size: 0.8rem;
   letter-spacing: 1px;
   opacity: 0;
-  transition: all .15s .4s ease-in-out;
+  transition: all 0.15s 0.4s ease-in-out;
 }
 .nav-link-active {
   opacity: 1;
 }
-
-  .footer-container {
-    position: relative;
-    width: 100vw;
-    height: 35vh;
-  }
-  .footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
-    height: 100%;
-    background: var(--boxGradient);
-  } */
-  /* .footer-logo {
+/*  //! FOOTER SECTION */
+.footer-container {
+  position: relative;
+  width: 100vw;
+  height: 35vh;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background: var(--boxGradient);
+}
+/* .footer-logo {
     place-self: center;
     width: 25%;
   }
@@ -178,14 +191,14 @@
   }
   .f-contact-top, .f-contact-bottom {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
     border: 1px solid red;
   }
   .f-contact-title {
     margin-block-end: .5rem;
   }  */
-/* @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .burger {
     display: none;
   }
@@ -195,6 +208,7 @@
   .desktop-logo {
     display: block;
     margin-inline-start: 1rem;
+
   }
   .header {
     background-color: transparent;
@@ -203,7 +217,7 @@
     align-items: flex-end;
     padding: 1rem;
     min-height: fit-content;
-    box-shadow: 0 1px 10px 10px rgba(0,0,0,.2);
+    box-shadow: 0 1px 10px 10px rgba(0, 0, 0, 0.2);
   }
   .nav {
     flex-direction: row;
@@ -216,21 +230,21 @@
   }
   .nav__link {
     opacity: 1;
-    font-size: .9rem;
+    font-size: 0.9rem;
     font-weight: 300;
     cursor: pointer;
     display: block;
     position: relative;
   }
   .nav__link::after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     bottom: -4px;
     width: 0;
     height: 2px;
     background: var(--lightGrey);
-    transition: width .25s ease-in;
+    transition: width 0.25s ease-in;
   }
   .nav__link:hover::after {
     width: 100%;
@@ -241,7 +255,7 @@
     position: relative;
   }
   .nav__active::after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     bottom: -4px;
@@ -250,14 +264,14 @@
     background: var(--mainGrey);
   }
   .footer {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 1fr 8fr 1fr;
-  padding-inline: 1rem;
-  font-size: .8rem;
-  place-items: center;
-  gap: 2rem;
-  color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 8fr 1fr;
+    padding-inline: 1rem;
+    font-size: 0.8rem;
+    place-items: center;
+    gap: 2rem;
+    color: #fff;
   }
   .footer-logo {
     grid-row: 2/3;
@@ -276,7 +290,7 @@
   .f-title {
     color: var(--mainGold);
     font-weight: 600;
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
   .f-about-link {
     text-decoration: none;
@@ -295,5 +309,5 @@
   .f-contact-title {
     margin-block-end: 1rem;
   }
-} */
+}
 </style>

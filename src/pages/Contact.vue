@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <Main>
     <div class="contact-container">
       <div class="contact-info">
         <div class="contact address-container">
@@ -98,7 +98,7 @@
       <p class="thanks">Thank you! Your message has sent.</p>
       <button @click="handleClose" class="close-modal">Close</button>
     </div>
-  </Layout>
+  </Main>
 </template>
 
 <script>
