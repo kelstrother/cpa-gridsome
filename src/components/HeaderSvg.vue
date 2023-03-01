@@ -94,30 +94,19 @@
 <style>
 /* building 221.42 */
 /* dash 68.1 */
-/* s 155.9530792236328 */
-/* t-1 117.49190521240234 */
-/* r-1 80.05429077148438 */
-/* o 80.05429077148438 */
-/* t-2 117.49190521240234 */
-/* h 136.48719787597656 */
-/* e 143.72547912597656 */
-/* r-2 80.05429077148438 */
-/* c-cpa 136.28683471679688 */
-/* p-cpa 138.7086181640625 */
-/* a-cpa 169.2452392578125 */
 #building {
   stroke-width: 0;
-  stroke-opacity: 0;
+  stroke-opacity: 0.5;
   stroke-dasharray: 221.42;
   stroke-dashoffset: -221.42;
   animation: draw 2.5s ease-in-out forwards;
 }
 #dash {
-  stroke-width: 0;
-  stroke-opacity: 0;
+  stroke-width: 1;
+  stroke-opacity: 0.5;
   stroke-dasharray: 136.17999267578125;
   stroke-dashoffset: -136.17999267578125;
-  animation: draw 1.75s 1.5s ease-in-out forwards;
+  animation: draw 1.5s 1.5s ease-out forwards;
 }
 @keyframes draw {
   to {
@@ -128,56 +117,60 @@
 }
 #s {
   opacity: 0;
-  animation: sluggish 2s ease-in-out forwards;
+  animation: sluggish 1s ease-in-out forwards;
   animation-delay: 0;
 }
 #t-1 {
   opacity: 0;
-  animation: sluggish 2s ease-in-out forwards;
-  animation-delay: 0.2s;
+  animation: sluggish 1s ease-in-out forwards;
+  animation-delay: .2s;
 }
 #r-1 {
   opacity: 0;
-  animation: sluggish 2s ease-in-out forwards;
+  animation: sluggish 1s ease-in-out forwards;
   animation-delay: 0.4s;
 }
 #o {
   opacity: 0;
-  animation: sluggish 2s ease-in-out forwards;
+  animation: sluggish 1s ease-in-out forwards;
   animation-delay: 0.6s;
 }
 #t-2 {
   opacity: 0;
-  animation: sluggish 2s ease-in-out forwards;
+  animation: sluggish 1s ease-in-out forwards;
   animation-delay: 0.8s;
 }
 #h {
   opacity: 0;
-  animation: sluggish 2s ease-in-out forwards;
+  animation: sluggish 1s ease-in-out forwards;
   animation-delay: 1s;
 }
 #e {
   opacity: 0;
-  animation: sluggish 2s ease-in-out forwards;
+  animation: sluggish 1s ease-in-out forwards;
   animation-delay: 1.2s;
 }
 #r-2 {
   opacity: 0;
-  animation: sluggish 2s ease-in-out forwards;
+  animation: sluggish 1s ease-in-out forwards;
   animation-delay: 1.4s;
 }
 #cpa-c,
 #cpa-p,
 #cpa-a {
   opacity: 0;
-  animation: sluggish 2s ease-in forwards;
+  animation: sluggish 1s ease-in-out forwards;
 }
-#cpa-c { animation-delay: 1.2s; }
-#cpa-p { animation-delay: 1.4s; }
-#cpa-a { animation-delay: 1.6s; }
+#cpa-c { animation-delay: 1.4s; }
+#cpa-p { animation-delay: 1.6s; }
+#cpa-a { animation-delay: 1.8s; }
 @keyframes sluggish {
   to {
     opacity: 1;
   }
+}
+#David {
+  opacity: 0;
+  animation: sluggish 1s 2.25s ease-in-out forwards;
 }
 </style>

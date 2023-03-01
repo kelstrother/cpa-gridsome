@@ -5,7 +5,7 @@
       <g-image class="mobile-hero" src="~/assets/images/flatiron-gradient-mobile.jpg"/>
       <div class="hero-text-container">
         <div class="inside-hero-container">
-          <div class="headline">
+          <div class="headline" data-aos="fade-zoom-in">
             <p class="beyond">Beyond<span class="the">the</span><span class="numbers">Numbers</span></p>
           </div>
           <div class="saying">
@@ -17,8 +17,8 @@
     </div>
     <!-- //!   APPROACH SECTION -->
     <section class="approach-container">
-        <g-image class="heading" src="~/assets/Approach.png" />
-        <p class="summary">With over 40 years of experience in accounting, we  provide expert financial guidance to businesses and individuals throughout the country. Our experience and knowledge in the industry allows us to provide a wide range of accounting and financial services for both individuals and businesses, tailored to meet their unique needs and goals.</p>
+        <g-image class="heading" src="~/assets/Approach.png"  data-aos="zoom-in-down" data-aos-duration="1200"/>
+        <p class="summary" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1200">With over 40 years of experience in accounting, we  provide expert financial guidance to businesses and individuals throughout the country. Our experience and knowledge in the industry allows us to provide a wide range of accounting and financial services for both individuals and businesses, tailored to meet their unique needs and goals.</p>
     </section>
     <!-- //!   SERVICES SECTION -->
     <div class="services-container">

@@ -68,9 +68,7 @@
   padding: var(--ctaMobilePad);
   border-radius: var(--borderRadius);
   border: none;
-  /* background: var(--mainGold); */
   background: var(--btnGradient);
-  /* background: linear-gradient(135deg, var(--mainGold) 0%, rgb(218, 192, 147) 100%); */
   box-shadow: var(--btnShadow);
 }
                           /* !APPROACH SECTION */
@@ -230,7 +228,7 @@
     width: 100%;
     justify-content: space-evenly;
     height: 70%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
   }
   .services-box {
     gap: 0;

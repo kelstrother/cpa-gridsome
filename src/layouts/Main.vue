@@ -87,7 +87,7 @@ export default {
 
 <style>
 .layout {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   font-family: "Inter";
   height: 100vh;
 }
