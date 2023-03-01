@@ -4,7 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 // import DefaultLayout from '~/layouts/Default.vue'
 import "~/global.css";
-import "~/App.vue";
+// import "~/App.vue";
 
 export default function(Vue, { router, head, isClient }) {
   head.link.push({
