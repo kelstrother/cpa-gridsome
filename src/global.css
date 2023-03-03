@@ -14,6 +14,7 @@
   --rdGradient: radial-gradient(circle at top left, #F0F5F5, #b5e2ed);
   --boxGradient: linear-gradient(135deg, hsla(198, 33%, 10%, 0.95) 0%, hsla(198, 35%, 31%, 0.95) 100%);
   --btnGradient: linear-gradient(140deg, rgb(181, 132, 48) 0%, var(--mainGold) 100%);
+  --hoverGradient: linear-gradient(140deg, hsl(38, 58%, 55%) 0%,  hsl(38, 33%, 63%)100%);
 
   /* !  SIZES */
   --ctaPad: 1.25rem 2.25rem;
@@ -22,6 +23,7 @@
 
   /* !  SHADOWS */
   --btnShadow: 0 .5px 10px rgba(0,0,0,0.05), 1px 1px 10px rgba(0,0,0,0.1);
+  --hoverShadow: 10px 5px 10px rgba(0,0,0,0.1), 1px 1px 10px rgba(0,0,0,0.1);
 }
 *{
   margin: 0;
@@ -34,4 +36,5 @@ html {
   background: var(--webkitGradient);
   background: var(--bgGradient);
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F0F5F5", endColorstr="#CBDCDC", GradientType=1 );
+  scroll-behavior: smooth;
 }

@@ -3,28 +3,28 @@
     <div class="contact-container">
       <div class="contact-info">
         <div class="contact address-container">
-          <div class="gradient-container">
+          <div class="gradient-container" data-aos="fade-up" data-aos-duration="800">
             <HomeIcon class="home-svg" />
           </div>
-          <p class="contact-text address-info">11990 Grant Street Suite 550 <br> Northglenn, CO 80233</p>
+          <p class="contact-text address-info" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">11990 Grant Street Suite 550 <br> Northglenn, CO 80233</p>
         </div>
         <div class="contact number-container">         
-          <div class="gradient-container">
+          <div class="gradient-container" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
             <PhoneIcon class="phone-svg" />
           </div>
-          <p class="contact-text phone-info">303.439.9808</p>
+          <p class="contact-text phone-info" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">303.439.9808</p>
         </div>
         <div class="contact fax-container">         
-          <div class="gradient-container">
+          <div class="gradient-container" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
             <FaxIcon class="fax-svg" />
           </div>
-          <p class="contact-text fax-info">720.887.7105</p>
+          <p class="contact-text fax-info" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">720.887.7105</p>
         </div>
         <div class="contact email-container">
-          <div class="gradient-container">
+          <div class="gradient-container" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
             <MailIcon class="email-svg" />
           </div>
-          <p class="contact-text email-info"><a href="mailto:">david@strothercpa.com</a></p>
+          <p class="contact-text email-info" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400"><a href="mailto:">david@strothercpa.com</a></p>
         </div>
       </div>
       <div class="form-container">
@@ -102,6 +102,7 @@
 </template>
 
 <script>
+import anime from 'animejs/lib/anime.es'
 import emailjs from '@emailjs/browser'
 import HomeIcon from '../assets/icons/home.svg'
 import PhoneIcon from '../assets/icons/call.svg'

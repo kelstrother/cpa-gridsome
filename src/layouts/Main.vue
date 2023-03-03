@@ -141,7 +141,7 @@ export default {
   font-size: 0.8rem;
   letter-spacing: 1px;
   opacity: 0;
-  transition: all 0.15s 0.4s ease-in-out;
+  transition: all 0.15s  ease-in-out;
 }
 .nav-link-active {
   opacity: 1;
@@ -244,7 +244,7 @@ export default {
     width: 0;
     height: 2px;
     background: var(--lightGrey);
-    transition: width 0.25s ease-in;
+    transition: width 0.25s ease-in-out;
   }
   .nav__link:hover::after {
     width: 100%;
@@ -297,6 +297,9 @@ export default {
     color: #fff;
     font-size: 1rem;
     font-weight: 600;
+  }
+  .f-about-link:hover {
+    color: var(--mainGold);
   }
   .footer-contact {
     grid-row: 2/3;

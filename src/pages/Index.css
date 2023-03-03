@@ -208,6 +208,11 @@
     padding: var(--ctaPad);
     font-size: 1.2rem;
     cursor: pointer;
+    transition: all .2s ease-in-out;
+  }
+  .hero-btn:hover {
+    box-shadow: var(--hoverShadow);
+    opacity: .9;
   }
   .approach-container {
     flex-direction: row;
@@ -242,9 +247,34 @@
   .services-link {
     margin-block-start: 2rem;
     padding: var(--ctaPad);
+    transition: all .2s ease-in-out;
+  }
+  .services-link:hover {
+    box-shadow: var(--hoverShadow);
   }
   .service-backdrop {
     height: 70%;
     bottom: 20%;
+  }
+  .testimonial-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    padding: 2rem;
+  }
+  .quote-svg, .test-title {
+    grid-column: 1/3;
+    grid-row: 1;
+  }
+  .quote-svg {
+    place-self: start;
+  }
+  .test-title {
+    font-family: 'Spectral';
+    font-size: 6rem;
+    font-style: italic;
+    color: var(--mainGrey);
+    margin-inline-start: 5rem;
+    margin-block-start: 2rem;
   }
 }

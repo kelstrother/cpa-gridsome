@@ -9,6 +9,7 @@
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
     "@gridsome/plugin-sitemap": "^0.4.0",
+    "animejs": "^3.2.1",
     "aos": "^2.3.4",
     "emailjs-com": "^3.2.0",
     "gridsome": "^0.7.0",

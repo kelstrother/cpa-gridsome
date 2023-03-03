@@ -14,6 +14,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     box-shadow: 5px 6px 20px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
   }
   .contact {
     display: flex;
@@ -148,6 +149,12 @@
     border-radius: 5px;
     width: 5rem;
     height: 2.5rem;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+  }
+  .submit:hover {
+    box-shadow: var(--hoverShadow);
+    color: #f1f1f1;
   }
   .success {
     font-family: sans-serif;
