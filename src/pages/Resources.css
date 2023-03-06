@@ -1,0 +1,8 @@
+.resources-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-inline: 2rem;
+  align-items: center;
+  height: 83vh;
+}

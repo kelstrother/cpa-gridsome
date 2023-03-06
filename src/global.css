@@ -36,5 +36,5 @@ html {
   background: var(--webkitGradient);
   background: var(--bgGradient);
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F0F5F5", endColorstr="#CBDCDC", GradientType=1 );
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
 }

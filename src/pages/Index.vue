@@ -34,17 +34,10 @@
     </div>
     <!-- //!   APPROACH SECTION -->
     <section class="approach-container">
-      <g-image
-        class="heading"
-        src="~/assets/Approach.png"
-        data-aos="fade-right"
-        data-aos-duration="900"
-        data-aos-easing="ease-in-cubic"
-      />
+      <ApproachSvg data-aos="fade-right" data-aos-duration="900" data-aos-easing="ease-in-cubic"/>
       <p
         class="summary"
-        data-aos="fade-left"
-        data-aos-delay="100"
+        data-aos="fade-up"
         data-aos-duration="900"
         data-aos-easing="ease-in-cubic"
       >
@@ -62,6 +55,7 @@
           id="service-1"
           class="services-box"
           data-aos="fade-up"
+          data-aos-duration="800"
           data-aos-easing="ease-in-sine"
         >
           <p class="service-title">Services</p>
@@ -76,6 +70,7 @@
           id="service-2"
           class="services-box"
           data-aos="fade-up"
+          data-aos-duration="800"
           data-aos-easing="ease-in-sine"
           data-aos-delay="100"
         >
@@ -91,6 +86,7 @@
           id="service-3"
           class="services-box"
           data-aos="fade-up"
+          data-aos-duration="800"
           data-aos-easing="ease-in-sine"
           data-aos-delay="200"
         >
@@ -178,6 +174,7 @@ import Arrow from "../assets/icons/arrow.svg";
 import Finance from "../assets/icons/finance.svg";
 import Money from "../assets/icons/money.svg";
 import Briefcase from "../assets/icons/Briefcase.svg";
+import ApproachSvg from '~/components/ApproachSvg.vue'
 export default {
   name: "Home",
   components: {
@@ -186,9 +183,11 @@ export default {
     Money,
     Briefcase,
     QuoteSVG,
+    ApproachSvg
   },
   metaInfo: {
     title: "Home",
   },
 };
+
 </script>

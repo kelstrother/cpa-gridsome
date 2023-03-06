@@ -1,6 +1,11 @@
 <template>
   <Main>
-    <div class="about-container">
+    <div
+      class="about-container"
+      data-aos="fade"
+      data-aos-duration="900"
+      data-aos-easing="ease-in-out-quart"
+    >
       <h1>About us</h1>
       <div class="about-content">
         <g-image
@@ -20,41 +25,10 @@
 </template>
 
 <script>
+import "/src/pages/About.css";
 export default {
   metaInfo: {
     title: "About us",
   },
 };
 </script>
-
-<style>
-.about-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100vw;
-  min-height: 85vh;
-  padding-inline: 2rem;
-}
-.about-content {
-  display: flex;
-  flex-direction: row-reverse;
-  width: 80%;
-  justify-content: space-between;
-  align-items: center;
-}
-h1 {
-  color: var(--mainGrey);
-}
-.about-img {
-  width: 40%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: var(--btnShadow);
-}
-p {
-  max-width: 500px;
-  line-height: 1.5;
-}
-</style>

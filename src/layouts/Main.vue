@@ -216,7 +216,8 @@ export default {
     justify-content: space-between;
     align-items: flex-end;
     padding: 1rem;
-    min-height: fit-content;
+    min-height: 17vh;
+    /* min-height: fit-content; */
     box-shadow: 0 1px 10px 10px rgba(0, 0, 0, 0.2);
   }
   .nav {
@@ -251,7 +252,7 @@ export default {
   }
   .nav__active {
     color: var(--mainGrey);
-    font-weight: 500;
+    font-weight: 600;
     position: relative;
   }
   .nav__active::after {
@@ -260,7 +261,7 @@ export default {
     position: absolute;
     bottom: -4px;
     width: 100%;
-    height: 2px;
+    height: 0px;
     background: var(--mainGrey);
   }
   .footer {
