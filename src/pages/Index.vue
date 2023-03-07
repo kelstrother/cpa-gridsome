@@ -5,7 +5,7 @@
         class="hero-img"
         alt="Denver Capitol Building"
         src="~/assets/capitol-1920.jpg"
-        blur="0"
+        immediate="true"
       />
       <g-image
         class="mobile-hero"
@@ -34,7 +34,11 @@
     </div>
     <!-- //!   APPROACH SECTION -->
     <section class="approach-container">
-      <ApproachSvg data-aos="fade-right" data-aos-duration="900" data-aos-easing="ease-in-cubic"/>
+      <ApproachSvg
+        data-aos="fade-right"
+        data-aos-duration="900"
+        data-aos-easing="ease-in-cubic"
+      />
       <p
         class="summary"
         data-aos="fade-up"
@@ -101,7 +105,12 @@
       </div>
       <g-link class="service-cta" to="/services">
         <div class="service-link-container">
-          <button class="services-link">Explore Services</button>
+          <button class="services-link">
+            Explore Services
+            <span class="material-symbols-outlined arrow">
+              double_arrow
+            </span>
+          </button>
         </div>
       </g-link>
       <section class="service-backdrop"></section>
@@ -116,6 +125,40 @@
       >
         What they<span>&apos;</span>re saying
       </p>
+      <BracketSvg class="bracket-svg" />
+      <div class="test-1 test-box">
+        <div class="testimonial-inner">
+          <p class="testimonial-text">
+            David is a highly knowledgeable CPA. He has experience heading up
+            accounting for private companies plus many years as a public
+            accountant helping individuals and businesses. I highly recommend
+            David
+          </p>
+        </div>
+          <p class="testimonial-author">-Jerri Morgan</p>
+      </div>
+      <div class="test-2 test-box">
+        <div class="testimonial-inner">
+          <p class="testimonial-text">
+            David is extremely knowledgeable in the world of financial advising
+            and tax preparation. I was having trouble with my tax adviser, and
+            in only a matter of minutes he was able to identify where my
+            previous accountant made mistakes. He is a wealth of knowledge, I
+            recommend him to all.
+          </p>
+        </div>
+        <p class="testimonial-author">-Dr. Harrison<span>&apos;</span>s Center of Functional Medicine CFN</p>
+      </div>
+      <div class="test-3 test-box">
+        <div class="testimonial-inner">
+          <p class="testimonial-text">
+            David Strother is the most knowledgeable accountant I have ever run
+            across. If you are looking for a tax professional for your
+            personally or for your business David is your guy!
+          </p>
+        </div>
+        <p class="testimonial-author">-Ken Davis</p>
+      </div>
     </section>
     <!-- <div class="service-area">
       <section class="service-container"></section>
@@ -169,12 +212,13 @@
 
 <script>
 import "@/pages/Index.css";
+import BracketSvg from "~/components/BracketSvg.vue"
 import QuoteSVG from "~/components/QuoteSVG.vue";
 import Arrow from "../assets/icons/arrow.svg";
 import Finance from "../assets/icons/finance.svg";
 import Money from "../assets/icons/money.svg";
 import Briefcase from "../assets/icons/Briefcase.svg";
-import ApproachSvg from '~/components/ApproachSvg.vue'
+import ApproachSvg from "~/components/ApproachSvg.vue";
 export default {
   name: "Home",
   components: {
@@ -183,11 +227,11 @@ export default {
     Money,
     Briefcase,
     QuoteSVG,
-    ApproachSvg
+    ApproachSvg,
+    BracketSvg,
   },
   metaInfo: {
     title: "Home",
   },
 };
-
 </script>

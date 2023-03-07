@@ -93,10 +93,11 @@ export default {
 }
 .header {
   position: relative;
+  background-color: transparent;
+  backdrop-filter: blur(15px);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: transparent;
   min-height: 10vh;
   box-shadow: 0 1px 20px 10px rgba(0, 0, 0, 0.1);
 }
@@ -161,7 +162,7 @@ export default {
   background: var(--boxGradient);
 }
 /* .footer-logo {
-    place-self: center;
+  place-self: center;
     width: 25%;
   }
   .footer-about {
@@ -211,7 +212,7 @@ export default {
 
   }
   .header {
-    background-color: transparent;
+    /* background-color: #f1fbff; */
     display: flex;
     justify-content: space-between;
     align-items: flex-end;

@@ -1,8 +1,6 @@
 <template>
   <Main>
-  <!-- <Transition name="page"> -->
     <router-view />
-  <!-- </Transition> -->
   </Main>
 </template>
 
@@ -19,11 +17,3 @@ export default {
   }
 }
 </script>
-<style>
-  /* .page-enter-active {
-    transition: opacity .4s ease-in-out;
-  }
-  .page-enter{
-    opacity: 0;
-  } */
-</style>
