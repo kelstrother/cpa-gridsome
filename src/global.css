@@ -4,6 +4,7 @@
   --mainGold: hsl(38, 33%, 58%);
   --mainGrey: #565656;
   --lightGrey: #777777;
+  --darkGrey: #333333;
   --lightBlue: rgb(209, 224, 224, 0.5);
   --greyGradient: -webkit-linear-gradient(
     left,
@@ -11,7 +12,6 @@
     hsl(0, 0%, 18%)
   );
   --svgLight: #e5fffd;
-  /* --bgGradient: linear-gradient(165deg, hsla(180, 20%, 95%, 1) 0%, hsla(180, 20%, 85%, 1) 100%); */
   --mozGradient: -moz-linear-gradient(top left, #f0f5f5, #a3c1c8);
   --webkitGradient: -webkit-linear-gradient(top left, #f0f5f5, #9ebbc2);
   --bgGradient: linear-gradient(145deg, #f0f5f5, #b5e2ed);
@@ -20,6 +20,21 @@
     135deg,
     hsla(198, 33%, 10%, 0.95) 0%,
     hsla(198, 35%, 31%, 0.95) 100%
+  );
+  --lightBoxGradient: linear-gradient(
+    135deg,
+    hsla(198, 33%, 10%, 0.45) 0%,
+    hsla(198, 35%, 31%, 0.65) 100%
+  );
+  --footerGradient: linear-gradient(
+    135deg,
+    hsla(198, 33%, 10%) 0%,
+    hsla(198, 35%, 31%) 100%
+  );
+  --testGradient: linear-gradient(
+    155deg,
+    hsl(38, 58%, 65%, .2),
+    hsl(38, 58%, 45%, .7)
   );
   --btnGradient: linear-gradient(
     140deg,
@@ -31,82 +46,32 @@
     hsl(38, 58%, 55%) 0%,
     hsl(38, 33%, 63%) 100%
   );
-  --tanGradient: linear-gradient(
-    180deg,
-    #fffefa 0%,
-    #fffefa 8.1%,
-    #fefdf8 15.5%,
-    #fdfcf6 22.5%,
-    #fcfaf3 29%,
-    #faf8ef 35.3%,
-    #f9f6eb 41.2%,
-    #f7f3e7 47.1%,
-    #f5f1e3 52.9%,
-    #f3efde 58.8%,
-    #f2ecda 64.7%,
-    #f0ead6 71%,
-    #efe9d3 77.5%,
-    #eee7d0 84.5%,
-    #ede6cf 91.9%,
-    #ede6ce 100%
+  --greenBoxGradient: linear-gradient(
+    135deg,
+    hsl(129, 28%, 7%) 0%,
+    hsl(130, 29%, 17%) 100%
   );
-  --mozTanGradient: -moz-linear-gradient(
-    top,
-    #fffefa 0%,
-    #fffefa 8.1%,
-    #fefdf8 15.5%,
-    #fdfcf6 22.5%,
-    #fcfaf3 29%,
-    #faf8ef 35.3%,
-    #f9f6eb 41.2%,
-    #f7f3e7 47.1%,
-    #f5f1e3 52.9%,
-    #f3efde 58.8%,
-    #f2ecda 64.7%,
-    #f0ead6 71%,
-    #efe9d3 77.5%,
-    #eee7d0 84.5%,
-    #ede6cf 91.9%,
-    #ede6ce 100%
-  );
-  --webkitTanGradient: -webkit-linear-gradient(
-    top,
-    #fffefa 0%,
-    #fffefa 8.1%,
-    #fefdf8 15.5%,
-    #fdfcf6 22.5%,
-    #fcfaf3 29%,
-    #faf8ef 35.3%,
-    #f9f6eb 41.2%,
-    #f7f3e7 47.1%,
-    #f5f1e3 52.9%,
-    #f3efde 58.8%,
-    #f2ecda 64.7%,
-    #f0ead6 71%,
-    #efe9d3 77.5%,
-    #eee7d0 84.5%,
-    #ede6cf 91.9%,
-    #ede6ce 100%
+  --grayGradient: linear-gradient(
+    135deg,
+    hsla(0, 0%, 25%, 1) 0%,
+    hsla(0, 0%, 15%, 1) 100%
   );
 
   /* !  SIZES */
-  --ctaPad: 1.25rem 2.25rem;
   --ctaMobilePad: 0.5rem 0.75rem;
+  --ctaTabletPad: 1rem 1rem;
+  --ctaPad: 1.25rem 2.25rem;
   --borderRadius: 4px;
 
   /* !  SHADOWS */
   --btnShadow: 0 0.5px 10px rgba(0, 0, 0, 0.05), 1px 1px 10px rgba(0, 0, 0, 0.1);
   --hoverShadow: 10px 5px 10px rgba(0, 0, 0, 0.1),
     1px 1px 10px rgba(0, 0, 0, 0.1);
-  --boxShadow: 
-  2.8px 2.8px 2.2px rgba(0, 0, 0, 0.01),
-  6.7px 6.7px 5.3px rgba(0, 0, 0, 0.02),
-  12.5px 12.5px 10px rgba(0, 0, 0, 0.03),
-  22.3px 22.3px 17.9px rgba(0, 0, 0, 0.035),
-  41.8px 41.8px 33.4px rgba(0, 0, 0, 0.04),
-  75px 75px 80px rgba(0, 0, 0, 0.05)
-;
-
+  --boxShadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.01),
+    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.02),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.03),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.035),
+    41.8px 41.8px 33.4px rgba(0, 0, 0, 0.04), 75px 75px 80px rgba(0, 0, 0, 0.05);
 }
 * {
   margin: 0;
@@ -114,10 +79,5 @@
   box-sizing: border-box;
 }
 body {
-  background: #f9f6eb;
-  /* background: var(--tanGradient); */
+  background: hsl(38, 58%, 90%, 1);
 }
-/* .global-body {
-  background: #fffefa;
-  background: var(--tanGradient);
-} */

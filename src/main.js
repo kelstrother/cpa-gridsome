@@ -20,6 +20,7 @@ export default function(Vue, { router, head, isClient }) {
   });
   if (process.isClient) {
     AOS.init({
+      disable: 'phone',
       offset: 200,
       duration: 900,
     });

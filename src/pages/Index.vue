@@ -2,17 +2,23 @@
   <Main>
     <div class="hero-section">
       <g-image
+        class="mobile-hero"
+        src="~/assets/images/mobile-capitol-2.jpg"
+      />
+      <g-image src="~/assets/images/tablet-capitol.jpg" class="tablet-hero" alt="The Capitol Building in Denver." immediate="true" />
+      <g-image
         class="hero-img"
-        alt="Denver Capitol Building"
+        alt="The Capitol Building in Denver."
         src="~/assets/capitol-1920.jpg"
         immediate="true"
       />
-      <g-image
-        class="mobile-hero"
-        src="~/assets/images/flatiron-gradient-mobile.jpg"
-      />
       <div class="hero-text-container">
         <div class="inside-hero-container">
+        <div class="mobile-slogan">
+          <p class="m-beyond">Beyond</p>
+          <p class="m-the">the</p>
+          <p class="m-numbers">Numbers</p>
+        </div>
           <div class="headline">
             <p class="beyond">
               Beyond<span class="the">the</span
@@ -26,18 +32,22 @@
               get the results you deserve.
             </p>
           </div>
-          <button class="hero-btn">
-            Schedule A Free Consultation
-          </button>
         </div>
+        <g-link class="hero-link" to="/contact">
+          <button class="hero-btn">
+            Contact Us!
+          </button>
+        </g-link>
       </div>
     </div>
     <!-- //!   APPROACH SECTION -->
     <section class="approach-container">
+      <p class="responsive-approach">Our Approach</p>
       <ApproachSvg
         data-aos="fade-right"
         data-aos-duration="900"
         data-aos-easing="ease-in-cubic"
+        class="approach-svg"
       />
       <p
         class="summary"
@@ -103,16 +113,16 @@
           </p>
         </div>
       </div>
-      <g-link class="service-cta" to="/services">
         <div class="service-link-container">
-          <button class="services-link">
-            Explore Services
-            <span class="material-symbols-outlined arrow">
-              double_arrow
-            </span>
-          </button>
+          <g-link class="service-cta" to="/services">
+            <button class="services-link">
+              Explore Services
+              <span class="material-symbols-outlined arrow">
+                double_arrow
+              </span>
+            </button>
+          </g-link>
         </div>
-      </g-link>
       <section class="service-backdrop"></section>
     </div>
     <section class="testimonial-container">

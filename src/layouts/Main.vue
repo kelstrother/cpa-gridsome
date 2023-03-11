@@ -94,7 +94,7 @@ export default {
 .header {
   position: relative;
   background-color: transparent;
-  backdrop-filter: blur(15px);
+  /* backdrop-filter: blur(15px); */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -110,7 +110,7 @@ export default {
 .burger {
   display: block;
   height: 25px;
-  margin-inline-end: 1.5rem;
+  margin-inline-end: 1rem;
 }
 .burger div {
   width: 25px;
@@ -120,10 +120,10 @@ export default {
 }
 .nav {
   position: absolute;
-  top: 6vh;
+  top: 10vh;
   right: 0;
-  background-color: var(--lightBlue);
-  z-index: 10;
+  background-color: hsl(38, 58%, 90%, 1);
+  z-index: 100;
   display: flex;
   flex-direction: column;
   height: 90vh;
@@ -131,7 +131,7 @@ export default {
   justify-content: space-evenly;
   width: 50%;
   transform: translateX(100%);
-  transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in-out;
 }
 .nav-active {
   transform: translateX(0);
@@ -141,12 +141,12 @@ export default {
   color: var(--mainGrey);
   font-size: 0.8rem;
   letter-spacing: 1px;
-  opacity: 0;
+  opacity: 1;
   transition: all 0.15s  ease-in-out;
 }
-.nav-link-active {
+/* .nav-link-active {
   opacity: 1;
-}
+} */
 /*  //! FOOTER SECTION */
 .footer-container {
   position: relative;
@@ -159,7 +159,8 @@ export default {
   left: 0;
   width: 100vw;
   height: 100%;
-  background: var(--boxGradient);
+  /* background: var(--greenBoxGradient); */
+  background: var(--footerGradient);
 }
 /* .footer-logo {
   place-self: center;
@@ -199,6 +200,9 @@ export default {
   .f-contact-title {
     margin-block-end: .5rem;
   }  */
+              /*//*\\\\\\\\////////////////////////////////////*/
+              /* //           ! TABLET MEDIA QUERY            */
+              /* //&\\\\\\\\//\\\\\\\\\\\\\\\\\\//////////////*/
 @media screen and (min-width: 768px) {
   .burger {
     display: none;
@@ -217,7 +221,7 @@ export default {
     justify-content: space-between;
     align-items: flex-end;
     padding: 1rem;
-    min-height: 17vh;
+    min-height: 13vh;
     /* min-height: fit-content; */
     box-shadow: 0 1px 10px 10px rgba(0, 0, 0, 0.2);
   }
@@ -315,4 +319,18 @@ export default {
     margin-block-end: 1rem;
   }
 }
+              /*//*\\\\\\\\////////////////////////////////////*/
+              /* //           ! 1440px MEDIA QUERY            */
+              /* //&\\\\\\\\//\\\\\\\\\\\\\\\\\\//////////////*/
+  @media screen and (min-width: 1440px) {
+    
+  }
+              /*//*\\\\\\\\////////////////////////////////////*/
+              /* //           ! 1920px MEDIA QUERY            */
+              /* //&\\\\\\\\//\\\\\\\\\\\\\\\\\\//////////////*/
+  @media screen and (min-width: 1920px) {
+    .header {
+      min-height: 14vh;
+    }
+  }
 </style>
