@@ -1,5 +1,5 @@
 <template>
-  <Main>
+  <MainLayout>
     <div
       class="resources-container"
       data-aos="fade"
@@ -14,7 +14,7 @@
         reprehenderit maxime! Iusto.
       </p>
     </div>
-  </Main>
+  </MainLayout>
 </template>
 
 <script>

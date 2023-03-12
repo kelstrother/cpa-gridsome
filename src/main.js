@@ -3,7 +3,8 @@
 // import anime from 'animejs/lib/anime.es.js'
 import AOS from "aos";
 import "aos/dist/aos.css";
-// import DefaultLayout from '~/layouts/Default.vue'
+// import './App.vue'
+import MainLayout from '~/layouts/MainLayout.vue'
 import "~/global.css";
 
 export default function(Vue, { router, head, isClient }) {
@@ -20,11 +21,10 @@ export default function(Vue, { router, head, isClient }) {
   });
   if (process.isClient) {
     AOS.init({
-      disable: 'phone',
       offset: 200,
       duration: 900,
     });
   }
   // Set default layout as a global component
-  // Vue.component('Layout', DefaultLayout)
+  // Vue.component('MainLayout', MainLayout)
 }

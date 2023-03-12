@@ -1,5 +1,5 @@
 <template>
-  <Main>
+  <MainLayout>
     <div class="service-container" data-aos="fade" data-aos-duration="900" data-aos-easing="ease-in-out-quart">
       <h1>Services</h1>
       <p>
@@ -9,7 +9,7 @@
         reprehenderit maxime! Iusto.
       </p>
     </div>
-  </Main>
+  </MainLayout>
 </template>
 
 <script>

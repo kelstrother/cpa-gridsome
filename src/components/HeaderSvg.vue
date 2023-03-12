@@ -91,7 +91,7 @@
   </svg>
 </template>
 
-<style>
+<style scoped>
 /* building 221.42 */
 /* dash 68.1 */
 #building {

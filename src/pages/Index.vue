@@ -1,24 +1,30 @@
 <template>
-  <Main>
+  <MainLayout>
     <div class="hero-section">
       <g-image
         class="mobile-hero"
         src="~/assets/images/mobile-capitol-2.jpg"
+        :immediate="true"
       />
-      <g-image src="~/assets/images/tablet-capitol.jpg" class="tablet-hero" alt="The Capitol Building in Denver." immediate="true" />
+      <g-image
+        src="~/assets/images/tablet-capitol.jpg"
+        class="tablet-hero"
+        alt="The Capitol Building in Denver."
+        :immediate="true"
+      />
       <g-image
         class="hero-img"
         alt="The Capitol Building in Denver."
         src="~/assets/capitol-1920.jpg"
-        immediate="true"
+        :immediate="true"
       />
       <div class="hero-text-container">
         <div class="inside-hero-container">
-        <div class="mobile-slogan">
-          <p class="m-beyond">Beyond</p>
-          <p class="m-the">the</p>
-          <p class="m-numbers">Numbers</p>
-        </div>
+          <div class="mobile-slogan">
+            <p class="m-beyond">Beyond</p>
+            <p class="m-the">the</p>
+            <p class="m-numbers">Numbers</p>
+          </div>
           <div class="headline">
             <p class="beyond">
               Beyond<span class="the">the</span
@@ -39,6 +45,7 @@
           </button>
         </g-link>
       </div>
+      <div class="divider"></div>
     </div>
     <!-- //!   APPROACH SECTION -->
     <section class="approach-container">
@@ -113,16 +120,16 @@
           </p>
         </div>
       </div>
-        <div class="service-link-container">
-          <g-link class="service-cta" to="/services">
-            <button class="services-link">
-              Explore Services
-              <span class="material-symbols-outlined arrow">
-                double_arrow
-              </span>
-            </button>
-          </g-link>
-        </div>
+      <div class="service-link-container">
+        <g-link class="service-cta" to="/services">
+          <button class="services-link">
+            Explore Services
+            <span class="material-symbols-outlined arrow">
+              double_arrow
+            </span>
+          </button>
+        </g-link>
+      </div>
       <section class="service-backdrop"></section>
     </div>
     <section class="testimonial-container">
@@ -136,6 +143,8 @@
         What they<span>&apos;</span>re saying
       </p>
       <BracketSvg class="bracket-svg" />
+    </section>
+    <div class="test-box-container snaps-inline">
       <div class="test-1 test-box">
         <div class="testimonial-inner">
           <p class="testimonial-text">
@@ -145,7 +154,7 @@
             David
           </p>
         </div>
-          <p class="testimonial-author">-Jerri Morgan</p>
+        <p class="testimonial-author">-Jerri Morgan</p>
       </div>
       <div class="test-2 test-box">
         <div class="testimonial-inner">
@@ -157,7 +166,9 @@
             recommend him to all.
           </p>
         </div>
-        <p class="testimonial-author">-Dr. Harrison<span>&apos;</span>s Center of Functional Medicine CFN</p>
+        <p class="testimonial-author">
+          -Dr. Harrison<span>&apos;</span>s Center of Functional Medicine CFN
+        </p>
       </div>
       <div class="test-3 test-box">
         <div class="testimonial-inner">
@@ -169,7 +180,7 @@
         </div>
         <p class="testimonial-author">-Ken Davis</p>
       </div>
-    </section>
+    </div>
     <!-- <div class="service-area">
       <section class="service-container"></section>
       <div class="section-box-container">
@@ -217,12 +228,13 @@
         </div>
       </div>
     </div> -->
-  </Main>
+  </MainLayout>
 </template>
 
 <script>
+import Divider from "~/components/Divider.vue";
 import "@/pages/Index.css";
-import BracketSvg from "~/components/BracketSvg.vue"
+import BracketSvg from "~/components/BracketSvg.vue";
 import QuoteSVG from "~/components/QuoteSVG.vue";
 import Arrow from "../assets/icons/arrow.svg";
 import Finance from "../assets/icons/finance.svg";
@@ -232,6 +244,7 @@ import ApproachSvg from "~/components/ApproachSvg.vue";
 export default {
   name: "Home",
   components: {
+    Divider,
     Arrow,
     Finance,
     Money,
@@ -243,5 +256,8 @@ export default {
   metaInfo: {
     title: "Home",
   },
+  props: {
+    immediate: Boolean
+  }
 };
 </script>
