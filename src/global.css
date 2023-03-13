@@ -21,6 +21,11 @@
     hsla(198, 33%, 10%, 0.95) 0%,
     hsla(198, 35%, 31%, 0.95) 100%
   );
+  --darkBoxGradient: linear-gradient(
+    180deg,
+    hsla(198, 33%, 10%, 1) 0%,
+    hsla(198, 35%, 31%, 1) 100%
+  );
   --lightBoxGradient: linear-gradient(
     135deg,
     hsla(198, 33%, 10%, 0.45) 0%,

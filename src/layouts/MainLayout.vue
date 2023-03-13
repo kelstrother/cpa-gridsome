@@ -56,6 +56,7 @@
             </p>
           </div>
         </div>
+          <small class="copyright">&copy; Copyright {{ new Date().getFullYear() }}, David Strother CPA. All Rights Reserved</small>
       </footer>
     </section>
   </div>

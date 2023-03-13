@@ -4,19 +4,19 @@
       <g-image
         class="mobile-hero"
         src="~/assets/images/mobile-capitol-2.jpg"
-        :immediate="true"
+        immediate="true"
       />
       <g-image
         src="~/assets/images/tablet-capitol.jpg"
         class="tablet-hero"
         alt="The Capitol Building in Denver."
-        :immediate="true"
+        immediate="true"
       />
       <g-image
         class="hero-img"
         alt="The Capitol Building in Denver."
         src="~/assets/capitol-1920.jpg"
-        :immediate="true"
+        immediate="true"
       />
       <div class="hero-text-container">
         <div class="inside-hero-container">
@@ -39,11 +39,11 @@
             </p>
           </div>
         </div>
-        <g-link class="hero-link" to="/contact">
-          <button class="hero-btn">
-            Contact Us!
-          </button>
-        </g-link>
+          <g-link class="hero-link" to="/contact">
+            <button class="hero-btn">
+              Contact Us!
+            </button>
+          </g-link>
       </div>
       <div class="divider"></div>
     </div>
@@ -181,53 +181,6 @@
         <p class="testimonial-author">-Ken Davis</p>
       </div>
     </div>
-    <!-- <div class="service-area">
-      <section class="service-container"></section>
-      <div class="section-box-container">
-        <div class="service-box">
-          <g-image class="service-img service1" src="~/assets/service-1.jpg" fit="cover"/>
-          <div class="service-text">
-            <section class="title-container">
-              <p class="title">A Beginner's Guide to Filing your Taxes</p>
-              <p class="date">January 27, 2023</p>
-            </section>
-            <section class="more">
-              <g-link class="service-link" to="/about">
-                <Arrow class="arrow-svg" />
-              </g-link>
-            </section>
-          </div>
-        </div>
-        <div class="service-box">
-          <g-image class="service-img service2" src="~/assets/service-2.jpg" fit="contain"/>
-          <div class="service-text">
-            <section class="title-container">
-              <p class="title">A Beginner's Guide to Filing your Taxes</p>
-              <p class="date">January 27, 2023</p>
-            </section>
-            <section class="more">
-              <g-link class="service-link" to="/about">
-                <Arrow class="arrow-svg" />
-              </g-link>
-            </section>
-          </div>
-        </div>
-        <div class="service-box">
-          <g-image class="service-img service3" src="~/assets/service-3.jpg" fit="contain"/>
-          <div class="service-text">
-            <section class="title-container">
-              <p class="title">A Beginner's Guide to Filing your Taxes</p>
-              <p class="date">January 27, 2023</p>
-            </section>
-            <section class="more">
-              <g-link class="service-link" to="/about">
-                <Arrow class="arrow-svg" />
-              </g-link>
-            </section>
-          </div>
-        </div>
-      </div>
-    </div> -->
   </MainLayout>
 </template>
 
@@ -255,9 +208,6 @@ export default {
   },
   metaInfo: {
     title: "Home",
-  },
-  props: {
-    immediate: Boolean
   }
 };
 </script>
