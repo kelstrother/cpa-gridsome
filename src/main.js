@@ -3,8 +3,6 @@
 // import anime from 'animejs/lib/anime.es.js'
 import AOS from "aos";
 import "aos/dist/aos.css";
-// import './App.vue'
-import MainLayout from '~/layouts/MainLayout.vue'
 import "~/global.css";
 
 export default function(Vue, { router, head, isClient }) {
