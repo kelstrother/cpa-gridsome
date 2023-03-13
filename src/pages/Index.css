@@ -139,6 +139,7 @@ body {
 }
 /* ! SERVICES SECTION */
 .services-container {
+  overflow-y: hidden;
   position: relative;
   background: transparent;
   height: 18rem;
@@ -226,13 +227,18 @@ body {
   display: flex;
   flex-direction: column;
   width: 100vw;
-  height: 20vh;
   position: relative;
 }
 .quote-svg {
+  display: none;
   position: absolute;
   top: 10px;
   left: 10px;
+}
+.mobile-quote {
+  position: absolute;
+  left: 2rem;
+  transform: rotate(180deg);
 }
 .bracket-svg {
   display: none;
@@ -243,7 +249,7 @@ body {
   font-style: italic;
   color: var(--mainGrey);
   margin-inline-start: 1rem;
-  margin-block-start: 5rem;
+  margin-block-start: 1.5rem;
 }
 .test-box-container {
   position: relative;
@@ -395,6 +401,9 @@ body {
   .service-backdrop {
     height: 70%;
     bottom: 20%;
+  }
+  .mobile-quote {
+    display: none;
   }
   .bracket-svg {
     display: block;

@@ -142,6 +142,7 @@
       >
         What they<span>&apos;</span>re saying
       </p>
+      <MobileQuote class="mobile-quote" />
       <BracketSvg class="bracket-svg" />
     </section>
     <div class="test-box-container snaps-inline">
@@ -188,6 +189,7 @@
 import Divider from "~/components/Divider.vue";
 import "@/pages/Index.css";
 import BracketSvg from "~/components/BracketSvg.vue";
+import MobileQuote from '~/components/MobileQuote.vue'
 import QuoteSVG from "~/components/QuoteSVG.vue";
 import Arrow from "../assets/icons/arrow.svg";
 import Finance from "../assets/icons/finance.svg";
@@ -197,6 +199,7 @@ import ApproachSvg from "~/components/ApproachSvg.vue";
 export default {
   name: "Home",
   components: {
+    MobileQuote,
     Divider,
     Arrow,
     Finance,

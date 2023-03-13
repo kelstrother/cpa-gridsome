@@ -9,17 +9,39 @@
         <div class="line line-3"></div>
       </div>
       <nav :class="['nav', { 'nav-active': isActive }]">
-        <g-link exact-active-class="nav__active" class="nav__link" to="/">Home</g-link>
-        <g-link exact-active-class="nav__active" class="nav__link" to="/services"
+        <g-link
+          @click.native="toggleNav"
+          exact-active-class="nav__active"
+          class="nav__link"
+          to="/"
+          >Home</g-link
+        >
+        <g-link
+          @click.native="toggleNav"
+          exact-active-class="nav__active"
+          class="nav__link"
+          to="/services"
           >Services</g-link
         >
-        <g-link exact-active-class="nav__active" class="nav__link" to="/about"
+        <g-link
+          @click.native="toggleNav"
+          exact-active-class="nav__active"
+          class="nav__link"
+          to="/about"
           >About</g-link
         >
-        <g-link exact-active-class="nav__active" class="nav__link" to="/resources"
+        <g-link
+          @click.native="toggleNav"
+          exact-active-class="nav__active"
+          class="nav__link"
+          to="/resources"
           >Resources</g-link
         >
-        <g-link exact-active-class="nav__active" class="nav__link" to="/contact"
+        <g-link
+          @click.native="toggleNav"
+          exact-active-class="nav__active"
+          class="nav__link"
+          to="/contact"
           >Contact</g-link
         >
       </nav>
@@ -33,11 +55,12 @@
         <div class="footer-about">
           <p class="f-title f-about-title">About Strother CPA</p>
           <p class="f-about-content">
-            With over 40 years of experience in accounting, we provide expert financial
-            guidance to businesses and individuals throughout the country. Our experience
-            and knowledge in the industry allows us to provide a wide range of accounting
-            and financial services for both individuals and businesses, tailored to meet
-            their unique needs and goals.
+            With over 40 years of experience in accounting, we provide expert
+            financial guidance to businesses and individuals throughout the
+            country. Our experience and knowledge in the industry allows us to
+            provide a wide range of accounting and financial services for both
+            individuals and businesses, tailored to meet their unique needs and
+            goals.
           </p>
           <g-link class="f-about-link" to="/about">Learn More</g-link>
         </div>
@@ -56,21 +79,24 @@
             </p>
           </div>
         </div>
-          <small class="copyright">&copy; Copyright {{ new Date().getFullYear() }}, David Strother CPA. All Rights Reserved</small>
+        <small class="copyright"
+          >&copy; Copyright {{ new Date().getFullYear() }}, David Strother CPA.
+          All Rights Reserved</small
+        >
       </footer>
     </section>
   </div>
 </template>
 
 <script>
-import '~/layouts/MainLayout.css'
-import HeaderSvg from '~/components/HeaderSvg.vue'
+import "~/layouts/MainLayout.css";
+import HeaderSvg from "~/components/HeaderSvg.vue";
 import MobileLogo from "../components/MobileLogo.vue";
 export default {
   name: "MainLayout",
   components: {
     MobileLogo,
-    HeaderSvg
+    HeaderSvg,
   },
   data() {
     return {
@@ -84,4 +110,3 @@ export default {
   },
 };
 </script>
-

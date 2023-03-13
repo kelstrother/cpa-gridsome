@@ -6,6 +6,7 @@
   --lightGrey: #777777;
   --darkGrey: #333333;
   --lightBlue: rgb(209, 224, 224, 0.5);
+  --bodyBG: hsl(38, 58%, 90%, 1);
   --greyGradient: -webkit-linear-gradient(
     left,
     hsl(0, 0%, 46%),
@@ -38,8 +39,8 @@
   );
   --testGradient: linear-gradient(
     155deg,
-    hsl(38, 58%, 65%, .2),
-    hsl(38, 58%, 45%, .7)
+    hsl(38, 58%, 65%, 0.2),
+    hsl(38, 58%, 45%, 0.7)
   );
   --btnGradient: linear-gradient(
     140deg,
@@ -60,6 +61,12 @@
     135deg,
     hsla(0, 0%, 25%, 1) 0%,
     hsla(0, 0%, 15%, 1) 100%
+  );
+  --mobileGradient: linear-gradient(
+    to bottom,
+    hsla(38, 58%, 90%, 1),
+    /* rgb(190, 173, 145) */
+    var(--mainGold)
   );
 
   /* !  SIZES */
@@ -84,5 +91,5 @@
   box-sizing: border-box;
 }
 body {
-  background: hsl(38, 58%, 90%, 1);
+  background: var(--bodyBG);
 }
