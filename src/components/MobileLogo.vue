@@ -7,9 +7,9 @@
     xmlns="http://www.w3.org/2000/svg"
   >
     <g id="Logo">
-      <g id="dash">
+  
         <path
-          id="Vector"
+          id="dash"
           fill-rule="evenodd"
           clip-rule="evenodd"
           d="M10.7739 45.7597H45.9025H10.7739Z"
@@ -17,7 +17,7 @@
           stroke-width="1.5"
           stroke-miterlimit="1.5"
         />
-      </g>
+  
       <g id="cpa">
         <path
           id="cpa-c"
@@ -100,24 +100,14 @@ export default {
 </script>
 
 <style scoped>
-@keyframes draw {
-  to {
-    stroke-dashoffset: 0;
-    stroke-opacity: 1;
-    stroke-width: 1;
-  }
-}
-@keyframes sluggish {
-  to {
-    opacity: 1;
-  }
-}
 #building {
   stroke-width: .5;
   stroke-opacity: 0.5;
   stroke-dasharray: 113.72;
   stroke-dashoffset: -113.72;
   animation: draw 1.5s 1.5s ease-in-out forwards;
+  -webkit-animation: draw 1.5s 1.5s ease-in-out forwards;
+  -moz-animation: draw 1.5s 1.5s ease-in-out forwards;
 }
 #dash {
   stroke-width: 1;
@@ -125,51 +115,165 @@ export default {
   stroke-dasharray: 70.26;
   stroke-dashoffset: -70.26;
   animation: draw 1s 1s linear forwards;
+  -webkit-animation: draw 1.5s 1.5s ease-in-out forwards;
+  -moz-animation: draw 1.5s 1.5s ease-in-out forwards;
 }
-#s {
+#s, #t-1, #r-1, #o, #t-2, #h, #e, #r-2 {
   opacity: 0;
   animation: sluggish .35s ease-in forwards;
+  -webkit-animation: sluggish .35s ease-in forwards;
+  -moz-animation: sluggish .35s ease-in forwards;
 }
+/* #s {
+  opacity: 0;
+  animation: sluggish .35s ease-in forwards;
+  -webkit-animation: sluggish .35s ease-in forwards;
+  -moz-animation:  sluggish .35s ease-in forwards;
+} */
 #t-1 {
+  animation-delay: .1s;
+  -webkit-animation-delay: .1s;
+  -moz-animation-delay: .1s;
+}
+#r-1 {
+  animation-delay: .2s;
+  -webkit-animation-delay: .2s;
+  -moz-animation-delay: .2s;
+}
+#o {
+  animation-delay: .3s;
+  -webkit-animation-delay: .3s;
+  -moz-animation-delay: .3s;
+}
+#t-2 {
+  animation-delay: .4s;
+  -webkit-animation-delay: .4s;
+  -moz-animation-delay: .4s;
+}
+#h {
+  animation-delay: .5s;
+  -webkit-animation-delay: .5s;
+  -moz-animation-delay: .5s;
+}
+#e {
+  animation-delay: .6s;
+  -webkit-animation-delay: .6s;
+  -moz-animation-delay: .6s;
+}
+#r-2 {
+  animation-delay: .7s;
+  -webkit-animation-delay: .7s;
+  -moz-animation-delay: .7s;
+}
+/* #t-1 {
   opacity: 0;
   animation: sluggish .35s .1s ease-in forwards;
+  animation: sluggish .35s .1s ease-in forwards;
+  -moz-animation: sluggish .35s .1s ease-in forwards;
 }
 #r-1 {
   opacity: 0;
   animation: sluggish .35s .2s ease-in forwards;
+  -webkit-animation: sluggish .35s .2s ease-in forwards;
+  -moz-animation: sluggish .35s .2s ease-in forwards;
 }
 #o {
   opacity: 0;
   animation: sluggish .35s .3s ease-in forwards;
+  -webkit-animation: sluggish .35s .3s ease-in forwards;
+  -moz-animation: sluggish .35s .3s ease-in forwards;
 }
 #t-2 {
   opacity: 0;
   animation: sluggish .35s .4s ease-in forwards;
+  -webkit-animation: sluggish .35s .4s ease-in forwards;
+  -moz-animation: sluggish .35s .4s ease-in forwards;
 }
 #h {
   opacity: 0;
   animation: sluggish .35s .5s ease-in forwards;
+  -webkit-animation: sluggish .35s .5s ease-in forwards;
+  -moz-animation: sluggish .35s .5s ease-in forwards;
 }
 #e {
   opacity: 0;
   animation: sluggish .35s .6s ease-in forwards;
+  -webkit-animation: sluggish .35s .6s ease-in forwards;
+  -moz-animation: sluggish .35s .6s ease-in forwards;
 }
 #r-2 {
   opacity: 0;
   animation: sluggish .35s .7s ease-in forwards;
-}
+  -webkit-animation: sluggish .35s .7s ease-in forwards;
+  -moz-animation: sluggish .35s .7s ease-in forwards;
+} */
 #cpa-c,
 #cpa-p,
 #cpa-a {
   opacity: 0;
-  animation: sluggish .5s ease-in-out forwards;
+  animation: sluggish .5s ease-in forwards;
+  -webkit-animation: sluggish .5s ease-in forwards;
+  -moz-animation: sluggish .5s ease-in forwards;
 }
-#cpa-c { animation-delay: .8s; }
-#cpa-p { animation-delay: .9s; }
-#cpa-a { animation-delay: 1s; }
+#cpa-c { 
+  animation-delay: .8s; 
+  -webkit-animation-delay: .8s; 
+  -moz-animation-delay: .8s; 
+}
+#cpa-p { 
+  animation-delay: .9s; 
+  -webkit-animation-delay: .9s; 
+  -moz-animation-delay: .9s; 
+}
+#cpa-a { 
+  animation-delay: 1s; 
+  -webkit-animation-delay: 1s; 
+  -moz-animation-delay: 1s; 
+}
 
 #David {
   opacity: 0;
   animation: sluggish 1s 1.75s ease-in-out forwards;
+  -webkit-animation: sluggish 1s 1.75s ease-in-out forwards;
+  -moz-animation: sluggish 1s 1.75s ease-in-out forwards;
+}
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+    stroke-opacity: 1;
+    stroke-width: 1;
+    -webkit-text-stroke-width: 1;
+  }
+}
+@-webkit-keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+    stroke-opacity: 1;
+    stroke-width: 1;
+    -webkit-text-stroke-width: 1;
+  }
+}
+@-moz-keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+    stroke-opacity: 1;
+    stroke-width: 1;
+    -webkit-text-stroke-width: 1;
+  }
+}
+@keyframes sluggish {
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes sluggish {
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes sluggish {
+  to {
+    opacity: 1;
+  }
 }
 </style>
