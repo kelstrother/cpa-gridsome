@@ -92,8 +92,6 @@
 </template>
 
 <style scoped>
-/* building 221.42 */
-/* dash 68.1 */
 #building {
   stroke-width: 1;
   stroke-opacity: 0.5;

@@ -1,5 +1,5 @@
 <template>
-  <MainLayout>
+  <div>
     <div
       class="about-container"
       data-aos="fade"
@@ -21,7 +21,7 @@
         </p>
       </div>
     </div>
-  </MainLayout>
+  </div>
 </template>
 
 <script>

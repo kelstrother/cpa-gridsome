@@ -1,5 +1,5 @@
 <template>
-  <MainLayout>
+  <div>
     <div
       class="contact-container"
       data-aos="fade"
@@ -134,7 +134,7 @@
       <p class="thanks">Thank you! Your message has sent.</p>
       <button @click="handleClose" class="close-modal">Close</button>
     </div>
-  </MainLayout>
+  </div>
 </template>
 
 <script>

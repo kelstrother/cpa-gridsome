@@ -4,9 +4,10 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "~/global.css";
+import MainLayout from '~/layouts/MainLayout.vue'
 
 export default function(Vue, { router, head, isClient }) {
-  head.bodyAttrs = { class: "global-body" };
+  // head.bodyAttrs = { class: "global-body" };
   head.link.push({
     rel: "stylesheet",
     href:
@@ -24,5 +25,5 @@ export default function(Vue, { router, head, isClient }) {
     });
   }
   // Set default layout as a global component
-  // Vue.component('MainLayout', MainLayout)
+  Vue.component('MainLayout', MainLayout)
 }

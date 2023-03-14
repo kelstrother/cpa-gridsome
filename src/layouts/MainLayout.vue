@@ -3,48 +3,8 @@
     <header class="header">
       <MobileLogo class="mobile-logo" />
       <HeaderSvg class="desktop-logo" />
-      <div class="burger" @click="toggleNav">
-        <div class="line line-1"></div>
-        <div class="line line-2"></div>
-        <div class="line line-3"></div>
-      </div>
-      <nav :class="['nav', { 'nav-active': isActive }]">
-        <g-link
-          @click.native="toggleNav"
-          exact-active-class="nav__active"
-          class="nav__link"
-          to="/"
-          >Home</g-link
-        >
-        <g-link
-          @click.native="toggleNav"
-          exact-active-class="nav__active"
-          class="nav__link"
-          to="/services"
-          >Services</g-link
-        >
-        <g-link
-          @click.native="toggleNav"
-          exact-active-class="nav__active"
-          class="nav__link"
-          to="/about"
-          >About</g-link
-        >
-        <g-link
-          @click.native="toggleNav"
-          exact-active-class="nav__active"
-          class="nav__link"
-          to="/resources"
-          >Resources</g-link
-        >
-        <g-link
-          @click.native="toggleNav"
-          exact-active-class="nav__active"
-          class="nav__link"
-          to="/contact"
-          >Contact</g-link
-        >
-      </nav>
+      <MobileNav />
+      <DesktopNav />
     </header>
     <main>
       <slot />
@@ -87,26 +47,19 @@
     </section>
   </div>
 </template>
-
 <script>
 import "~/layouts/MainLayout.css";
 import HeaderSvg from "~/components/HeaderSvg.vue";
 import MobileLogo from "../components/MobileLogo.vue";
+import MobileNav from "~/components/MobileNav.vue";
+import DesktopNav from "~/components/DesktopNav.vue";
 export default {
   name: "MainLayout",
   components: {
+    DesktopNav,
     MobileLogo,
     HeaderSvg,
-  },
-  data() {
-    return {
-      isActive: false,
-    };
-  },
-  methods: {
-    toggleNav() {
-      this.isActive = !this.isActive;
-    },
+    MobileNav,
   },
 };
 </script>
