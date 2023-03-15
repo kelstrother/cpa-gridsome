@@ -40,7 +40,7 @@ export default {
     font-size: 0.9rem;
     font-weight: 300;
     cursor: pointer;
-    /* display: block; */
+    text-decoration: none;
     position: relative;
   }
   .nav__link::after {
@@ -71,7 +71,7 @@ export default {
     background: var(--mainGrey);
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1920px) {
   .desktop-nav {
     width: 60%;
   }

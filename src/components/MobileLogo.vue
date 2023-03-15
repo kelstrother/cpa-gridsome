@@ -10,7 +10,6 @@
       <path
         id="mobile-dash"
         d="M46 46L14 46"
-        stroke-width=".75"
         stroke="#565656"
         stroke-linecap="square"
       />
@@ -82,7 +81,6 @@
         id="mobile-building"
         d="M100.499 53.2427L100.588 27.8034C100.673 16.1888 100.752 9.94509 89.7272 9.59103L89.7512 1.48758C81.6152 1.48758 75.0099 8.08935 75.0099 16.2209V19.6064H70.0816L70.096 13.0797L64.643 13.0518V11.3054L59.7293 11.3331L59.6236 12.53H58.3164L58.2983 15.1789"
         stroke="#565656"
-        stroke-width=".75"
         stroke-miterlimit="1.5"
         stroke-linecap="square"
       />
@@ -195,7 +193,7 @@ export default {
     stroke-width: 0;
     stroke-opacity: 0;
   }
-  50% {
+  80% {
     stroke-width: 0.75;
   }
   to {
@@ -209,7 +207,7 @@ export default {
     stroke-width: 0;
     stroke-opacity: 0;
   }
-  50% {
+  80% {
     stroke-width: 0.75;
   }
   to {
@@ -224,7 +222,7 @@ export default {
   }
   25% {
   }
-  50% {
+  80% {
     stroke-width: 0.75;
   }
   to {

@@ -3,7 +3,7 @@
     <header class="header">
       <MobileLogo class="mobile-logo" />
       <HeaderSvg class="desktop-logo" />
-      <MobileNav />
+      <MobileNav id="mobile-navigation"/>
       <DesktopNav />
     </header>
     <main>

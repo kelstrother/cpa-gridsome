@@ -1,5 +1,5 @@
-body {
-  overscroll-behavior: none;
+html {
+  overscroll-behavior: contain;
 }
 .tablet-hero {
   display: none;
@@ -60,7 +60,7 @@ body {
   align-items: flex-start;
   margin-inline-start: 5%;
   height: 55%;
-  width: 100%;
+  /* width: 100%; */
 }
 .phrase {
   font-weight: 300;
@@ -94,17 +94,13 @@ body {
   box-shadow: var(--btnShadow);
 }
 .divider {
-  width: 100%;
+  width: 100vw;
   height: 20vh;
   position: absolute;
   bottom: -10vh;
   right: 0;
   background: var(--darkBoxGradient);
-  /* opacity: .7; */
-  /* background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,.3)); */
-  /* clip-path: polygon(0 64%, 100% 81%, 100% 100%, 0 100%); */
   clip-path: polygon(0 0, 100% 35%, 100% 65%, 0% 100%);
-  /* clip-path: polygon(0 35%, 100% 0, 100% 100%, 0 65%); */
 }
 /* !APPROACH SECTION */
 .approach-svg {
@@ -139,7 +135,8 @@ body {
 }
 /* ! SERVICES SECTION */
 .services-container {
-  overflow-y: hidden;
+  overflow-x: auto;
+  /* overflow-y: hidden; */
   position: relative;
   background: transparent;
   height: 18rem;
@@ -223,6 +220,9 @@ body {
   );
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#404040", endColorstr="#262626", GradientType=1 );
 }
+.bracket-svg {
+  display: none;
+}
 .testimonial-container {
   display: flex;
   flex-direction: column;
@@ -237,9 +237,6 @@ body {
   left: 2rem;
   transform: rotate(180deg);
 }
-.bracket-svg {
-  display: none;
-}
 .test-title {
   font-family: "Playfair Display";
   font-size: 2.5rem;
@@ -247,6 +244,7 @@ body {
   color: var(--mainGrey);
   margin-inline-start: 1rem;
   margin-block-start: 1.5rem;
+  max-width: 100vw;
 }
 .test-box-container {
   position: relative;
@@ -281,18 +279,17 @@ body {
   font-size: 0.9rem;
   color: var(--mainGrey);
   font-style: italic;
-  margin-inline-end: 10%;
+  /* margin-inline-end: 10%; */
   justify-self: end;
-  max-width: 100%;
-  text-align: left;
+  /* max-width: 100%; */
 }
 /*//*\\\\\\\\////////////////////////////////////*/
 /* //!            780px MEDIA QUERY            */
 /* //&\\\\\\\\//\\\\\\\\\\\\\\\\\\//////////////*/
 @media screen and (min-width: 768px) {
-  body {
+  /* body {
     overflow-x: hidden;
-  }
+  } */
   .mobile-hero {
     display: none;
   }
@@ -402,13 +399,14 @@ body {
   .mobile-quote {
     display: none;
   }
-  .bracket-svg {
-    display: block;
+  /* .bracket-svg {
+    display: inline-block;
+    overflow-x: hidden;
     position: absolute;
     top: 5%;
     left: 30%;
     z-index: -1;
-  }
+  } */
   .quote-svg {
     display: block;
     position: absolute;
@@ -418,7 +416,8 @@ body {
   .test-title {
     font-family: "Playfair Display";
     font-size: 4.5rem;
-    min-width: 100%;
+    display: inline-block;
+    max-width: 100vw;
     font-style: italic;
     color: var(--mainGrey);
     margin-inline-start: 5rem;
