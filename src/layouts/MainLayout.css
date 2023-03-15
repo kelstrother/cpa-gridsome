@@ -2,7 +2,6 @@
   font-family: "Inter";
   height: 100vh;
   overscroll-behavior: contain;
-  overflow-y: hidden;
 }
 .header {
   position: relative;
