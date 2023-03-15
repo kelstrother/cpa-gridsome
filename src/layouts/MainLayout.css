@@ -13,10 +13,11 @@
   box-shadow: 0 1px 20px 10px rgba(0, 0, 0, 0.1);
 }
 .mobile-logo {
+  display: none;
   margin-inline-start: 1rem;
 }
 .desktop-logo {
-  display: none;
+  /* display: none; */
 }
 /*  //! FOOTER SECTION */
 .footer-container {
