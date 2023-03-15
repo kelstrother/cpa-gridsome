@@ -14,7 +14,7 @@
             height="277"
             transform="matrix(1 0 0 -1 26 317)"
             stroke="url(#paint0_linear_155_2745)"
-            stroke-opacity="0.2"
+            stroke-opacity="0.1"
             stroke-width="2"
           />
           <rect
@@ -23,8 +23,8 @@
             height="257"
             transform="matrix(1 0 0 -1 125 186)"
             stroke="url(#paint1_linear_155_2745)"
-            stroke-opacity="0.2"
-            stroke-width="1"
+            stroke-opacity="0.1"
+            stroke-width="3"
           />
         </g>
     </svg>

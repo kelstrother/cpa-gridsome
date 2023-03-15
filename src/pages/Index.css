@@ -231,9 +231,6 @@ body {
 }
 .quote-svg {
   display: none;
-  position: absolute;
-  top: 10px;
-  left: 10px;
 }
 .mobile-quote {
   position: absolute;
@@ -271,17 +268,17 @@ body {
   background: var(--testGradient);
   border-radius: var(--borderRadius);
   box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.2);
-  font-family: 'Playfair Display';
+  font-family: "Playfair Display";
   color: var(--mainGrey);
-  font-size: .9rem;
+  font-size: 0.9rem;
   padding: 1rem;
 }
 .testimonial-text {
   text-indent: 7px;
 }
 .testimonial-author {
-  font-family: 'Playfair Display';
-  font-size: .9rem;
+  font-family: "Playfair Display";
+  font-size: 0.9rem;
   color: var(--mainGrey);
   font-style: italic;
   margin-inline-end: 10%;
@@ -292,7 +289,7 @@ body {
 /*//*\\\\\\\\////////////////////////////////////*/
 /* //!            780px MEDIA QUERY            */
 /* //&\\\\\\\\//\\\\\\\\\\\\\\\\\\//////////////*/
-@media screen and (min-width: 780px) {
+@media screen and (min-width: 768px) {
   body {
     overflow-x: hidden;
   }
@@ -409,13 +406,14 @@ body {
     display: block;
     position: absolute;
     top: 5%;
-    left: 25%;
+    left: 30%;
     z-index: -1;
   }
-  .quote-svg,
-  .test-title {
-    grid-column: 1 / span 4;
-    grid-row: 1;
+  .quote-svg {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
   }
   .test-title {
     font-family: "Playfair Display";
@@ -470,7 +468,7 @@ body {
     }
   }
   .hero-text-container {
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.0));
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
     height: 90%;
   }
   .inside-hero-container {
@@ -486,21 +484,21 @@ body {
   }
   .beyond {
     font-size: 6rem;
-    text-shadow: .5px 1px 3px rgba(0, 0, 0, 0.15);
-  font-weight: 900;
-  z-index: 2;
-  color: var(--mainGreen);
+    text-shadow: 0.5px 1px 3px rgba(0, 0, 0, 0.15);
+    font-weight: 900;
+    z-index: 2;
+    color: var(--mainGreen);
   }
   .the {
     font-size: 3rem;
     margin-inline-start: -0.5rem;
     font-weight: 200;
-  color: #fff;
+    color: #fff;
   }
   .numbers {
     margin-inline-start: -0.5rem;
     color: var(--mainGold);
-  text-shadow: .5px .5px 10px rgba(0, 0, 0, 0.15);
+    text-shadow: 0.5px 0.5px 10px rgba(0, 0, 0, 0.15);
   }
   .saying {
     margin-block-start: -2rem;
@@ -584,10 +582,15 @@ body {
     height: 70%;
     bottom: 20%;
   }
+  .quote-svg {
+    top: 1.5rem;
+    left: 2rem;
+    scale: 1.2;
+  }
   .bracket-svg {
     position: absolute;
     top: 5%;
-    left: 25%;
+    right: 5%;
     z-index: -1;
   }
   .test-title {
@@ -617,7 +620,6 @@ body {
     align-self: end;
     max-width: 100%;
     margin: 0;
-    /* text-align: right; */
     font-style: italic;
   }
 }
