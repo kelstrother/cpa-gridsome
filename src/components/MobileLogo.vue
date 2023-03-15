@@ -3,9 +3,10 @@
     <g id="mobile-logo">
       <path
         id="mobile-dash"
-        stroke-width=".75"
         stroke="#565656"
         stroke-linecap="square"
+        clip-rule="evenodd"
+        fill-rule="evenodd"
         d="M46 46H14"
       />
       <g id="mobile-cpa" fill="#565656">
@@ -63,7 +64,6 @@
       />
       <path
         id="mobile-building"
-        stroke-width=".75"
         stroke="#565656"
         stroke-linecap="square"
         stroke-miterlimit="1.5"
@@ -80,20 +80,25 @@ export default {
 
 <style scoped>
 #mobile-dash {
+  stroke-width: 0;
+  stroke-opacity: 0.5;
   stroke-dasharray: 32;
   stroke-dashoffset: -32;
-  stroke-opacity: 0.5;
-  /* -webkit-animation: mobile-draw 1.5s 1s ease-in-out forwards;
-  -moz-animation: mobile-draw 1.5s 1s ease-in-out forwards; */
   animation: mobile-draw 1.5s 1s ease-in-out forwards;
 }
 #mobile-building {
+  stroke-width: 0;
+  stroke-opacity: 0.5;
   stroke-dasharray: 113.71892547607422;
   stroke-dashoffset: -113.71892547607422;
-  stroke-opacity: 0.5;
-  /* -webkit-animation: mobile-draw 2s 1.5s cubic-bezier(0.04, 0.43, 0.91, 1.08) forwards;
-  -moz-animation: mobile-draw 2s 1.5s cubic-bezier(0.04, 0.43, 0.91, 1.08) forwards; */
   animation: mobile-draw 2s 1.5s cubic-bezier(0.04, 0.43, 0.91, 1.08) forwards;
+}
+@keyframes mobile-draw {
+  to {
+    stroke-dashoffset: 0;
+    stroke-opacity: 1;
+    stroke-width: 0.75;
+  }
 }
 #m_s,
 #m_t-1,
@@ -109,119 +114,46 @@ export default {
   animation: sluggish 0.35s cubic-bezier(0.04, 0.43, 0.91, 1.08) forwards;
 }
 #m_t-1 {
-  /* -webkit-animation-delay: 0.1s; */
-  /* -moz-animation-delay: 0.1s; */
   animation-delay: 0.1s;
 }
 #m_r-1 {
-  /* -webkit-animation-delay: 0.2s; */
-  /* -moz-animation-delay: 0.2s; */
   animation-delay: 0.2s;
 }
 #m_o {
-  /* -webkit-animation-delay: 0.3s; */
-  /* -moz-animation-delay: 0.3s; */
   animation-delay: 0.3s;
 }
 #m_t-2 {
-  /* -webkit-animation-delay: 0.4s; */
-  /* -moz-animation-delay: 0.4s; */
   animation-delay: 0.4s;
 }
 #m_h {
-  /* -webkit-animation-delay: 0.5s; */
-  /* -moz-animation-delay: 0.5s; */
   animation-delay: 0.5s;
 }
 #m_e {
-  /* -webkit-animation-delay: 0.6s; */
-  /* -moz-animation-delay: 0.6s; */
   animation-delay: 0.6s;
 }
 #m_r-2 {
-  /* -moz-animation-delay: 0.7s; */
-  /* -webkit-animation-delay: 0.7s; */
   animation-delay: 0.7s;
 }
 #m_cpa-c,
 #m_cpa-p,
 #m_cpa-a {
   opacity: 0;
-  /* -webkit-animation: sluggish 0.75s ease-in-out forwards; */
-  /* -moz-animation: sluggish 0.75s ease-in-out forwards; */
   animation: sluggish 0.75s ease-in-out forwards;
 }
 #m_cpa-c {
-  /* -webkit-animation-delay: 0.8s; */
-  /* -moz-animation-delay: 0.8s; */
   animation-delay: 0.8s;
 }
 #m_cpa-p {
-  /* -webkit-animation-delay: 0.9s; */
-  /* -moz-animation-delay: 0.9s; */
   animation-delay: 0.9s;
 }
 #m_cpa-a {
-  /* -webkit-animation-delay: 1s; */
-  /* -moz-animation-delay: 1s; */
   animation-delay: 1s;
 }
 
 #mobile-david {
   opacity: 0;
-  /* -webkit-animation: sluggish 1s 1.75s ease-in-out forwards; */
-  /* -moz-animation: sluggish 1s 1.75s ease-in-out forwards; */
   animation: sluggish 1s 1.75s ease-in-out forwards;
 }
-/* @-webkit-keyframes mobile-draw {
-  from {
-    stroke-width: 0;
-    stroke-opacity: 0;
-  }
-  80% {
-    stroke-width: 0.75;
-  }
-  to {
-    stroke-dashoffset: 0;
-    stroke-opacity: 1;
-  }
-}
-@-moz-keyframes mobile-draw {
-  from {
-    stroke-width: 0;
-    stroke-opacity: 0;
-  }
-  80% {
-    stroke-width: 0.75;
-  }
-  to {
-    stroke-dashoffset: 0;
-    stroke-opacity: 1;
-  }
-} */
-@keyframes mobile-draw {
-  0% {
-    stroke-width: 0;
-    stroke-opacity: 0.5;
-  }
-  80% {
-    stroke-width: 0.75;
-  }
-  100% {
-    stroke-opacity: 1;
-    stroke-dashoffset: 0;
-  }
-}
-/* @-moz-keyframes sluggish {
-  to {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes sluggish {
-  to {
-    opacity: 1;
-  }
-} */
 @keyframes sluggish {
   to {
     opacity: 1;

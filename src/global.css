@@ -90,6 +90,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+#app {
+  overflow-x: clip;
+}
 body {
   background: var(--bodyBG);
 }

@@ -3,11 +3,11 @@
     <g id="header-logo-svg">
       <path
         id="dash"
-        fill-rule="evenodd"
         stroke="#565656"
         stroke-miterlimit="1.5"
-        d="M20.883 87.397h68.09-68.09Z"
         clip-rule="evenodd"
+        fill-rule="evenodd"
+        d="M20.883 87.397h68.09-68.09Z"
       />
       <g id="cpa" fill="#565656">
         <path

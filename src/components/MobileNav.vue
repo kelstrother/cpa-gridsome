@@ -61,6 +61,9 @@ export default {
 };
 </script>
 <style scoped>
+.mobile-nav-container {
+  display: flex;
+}
 .burger {
   display: block;
   height: 25px;
@@ -86,13 +89,13 @@ export default {
   align-items: center;
   justify-content: space-evenly;
   width: 55%;
-  opacity: 0;
+  /* opacity: 0; */
   transform: translateX(100%);
   transition: all 0.4s ease-in-out;
 }
 .nav-active {
   transform: translateX(0);
-  opacity: 1;
+  /* opacity: 1; */
 }
 .nav__link {
   text-decoration: none;
