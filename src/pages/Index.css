@@ -441,10 +441,6 @@ body {
 /* //!           1920px MEDIA QUERY            */
 /* //&\\\\\\\\//\\\\\\\\\\\\\\\\\\//////////////*/
 @media screen and (min-width: 1920px) {
-  body {
-    overflow-x: hidden;
-    overscroll-behavior: none;
-  }
   .mobile-slogan {
     display: none;
   }
