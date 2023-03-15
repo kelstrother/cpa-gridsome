@@ -16,27 +16,27 @@
 
 <script>
 export default {
-  name: 'Divider'
-}
+  name: "Divider",
+};
 </script>
 <style scoped>
 .custom-shape-divider-top-1678648049 {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
 }
 
 .custom-shape-divider-top-1678648049 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 100px;
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 100px;
 }
 
 .custom-shape-divider-top-1678648049 .shape-fill {
-    fill: #464646;
+  fill: #464646;
 }
 </style>

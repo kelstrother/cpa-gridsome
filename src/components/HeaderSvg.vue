@@ -12,8 +12,7 @@
         fill-rule="evenodd"
         clip-rule="evenodd"
         d="M20.8833 87.3971H88.9733H20.8833Z"
-        stroke="#565656"
-        stroke-width="1.5"
+        stroke="#676767"
         stroke-miterlimit="1.5"
       />
       <g id="cpa">
@@ -84,7 +83,6 @@
         id="building"
         d="M194.797 102L194.97 52.3553C195.135 29.6895 195.288 17.5048 173.919 16.8139L173.965 1C158.195 1 145.392 13.8833 145.392 29.752V36.3588H135.84L135.867 23.6219L125.298 23.5676V20.1595L115.774 20.2134L115.569 22.5492H113.035L113 27.7185"
         stroke="#676767"
-        stroke-width="1.5"
         stroke-miterlimit="1.5"
       />
     </g>
@@ -110,7 +108,7 @@
   to {
     stroke-dashoffset: 0;
     stroke-opacity: 1;
-    stroke-width: 1.5;
+    stroke-width: 1.25;
   }
 }
 #s {
