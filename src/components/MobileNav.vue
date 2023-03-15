@@ -61,9 +61,6 @@ export default {
 };
 </script>
 <style scoped>
-.mobile-nav-container {
-  /* overflow-x: hidden; */
-}
 .burger {
   display: block;
   height: 25px;

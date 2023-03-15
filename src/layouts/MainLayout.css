@@ -1,9 +1,9 @@
 .layout {
+  overflow-x: hidden;
   font-family: "Inter";
   height: 100vh;
 }
 .header {
-  overflow-x: hidden;
   position: relative;
   background-color: transparent;
   display: flex;

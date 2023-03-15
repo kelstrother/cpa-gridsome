@@ -3,7 +3,7 @@
     <header class="header">
       <MobileLogo class="mobile-logo" />
       <HeaderSvg class="desktop-logo" />
-      <MobileNav id="mobile-navigation"/>
+      <MobileNav />
       <DesktopNav />
     </header>
     <main>
@@ -15,12 +15,11 @@
         <div class="footer-about">
           <p class="f-title f-about-title">About Strother CPA</p>
           <p class="f-about-content">
-            With over 40 years of experience in accounting, we provide expert
-            financial guidance to businesses and individuals throughout the
-            country. Our experience and knowledge in the industry allows us to
-            provide a wide range of accounting and financial services for both
-            individuals and businesses, tailored to meet their unique needs and
-            goals.
+            With over 40 years of experience in accounting, we provide expert financial
+            guidance to businesses and individuals throughout the country. Our experience
+            and knowledge in the industry allows us to provide a wide range of accounting
+            and financial services for both individuals and businesses, tailored to meet
+            their unique needs and goals.
           </p>
           <g-link class="f-about-link" to="/about">Learn More</g-link>
         </div>
@@ -40,8 +39,8 @@
           </div>
         </div>
         <small class="copyright"
-          >&copy; Copyright {{ new Date().getFullYear() }}, David Strother CPA.
-          All Rights Reserved</small
+          >&copy; Copyright {{ new Date().getFullYear() }}, David Strother CPA. All Rights
+          Reserved</small
         >
       </footer>
     </section>
