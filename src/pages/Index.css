@@ -418,6 +418,7 @@ body {
   .test-title {
     font-family: "Playfair Display";
     font-size: 4.5rem;
+    min-width: 100%;
     font-style: italic;
     color: var(--mainGrey);
     margin-inline-start: 5rem;
