@@ -11,7 +11,7 @@
     </main>
     <section class="footer-container">
       <footer class="footer">
-        <g-image class="footer-logo" src="../assets/images/footer-logo.png" />
+        <g-image class="footer-logo" src="../assets/images/footer-logo-4.png" />
         <div class="footer-about">
           <p class="f-title f-about-title">About Strother CPA</p>
           <p class="f-about-content">

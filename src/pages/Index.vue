@@ -49,7 +49,8 @@
     </div>
     <!-- //!   APPROACH SECTION -->
     <section class="approach-container">
-      <p class="responsive-approach">Our Approach</p>
+      <p data-aos="fade-up" data-aos-duration="900"
+        data-aos-easing="ease-in-cubic" class="responsive-approach">Our Approach</p>
       <ApproachSvg
         data-aos="fade-right"
         data-aos-duration="900"
@@ -60,6 +61,7 @@
         class="summary"
         data-aos="fade-up"
         data-aos-duration="900"
+        data-aos-delay="100"
         data-aos-easing="ease-in-cubic"
       >
         With over 40 years of experience in accounting, we provide expert

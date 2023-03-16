@@ -7,6 +7,8 @@
   --darkGrey: #333333;
   --lightBlue: rgb(209, 224, 224, 0.5);
   --bodyBG: hsl(38, 58%, 90%, 1);
+  --textLight: #eeeeee;
+
   --greyGradient: -webkit-linear-gradient(
     left,
     hsl(0, 0%, 46%),
@@ -65,13 +67,12 @@
   --mobileGradient: linear-gradient(
     to bottom,
     hsla(38, 58%, 90%, 1),
-    /* rgb(190, 173, 145) */
-    var(--mainGold)
+    /* rgb(190, 173, 145) */ var(--mainGold)
   );
 
   /* !  SIZES */
   --ctaMobilePad: 0.5rem 0.75rem;
-  --ctaTabletPad: 1rem 1rem;
+  --ctaTabletPad: 1.5rem 1.5rem;
   --ctaPad: 1.25rem 2.25rem;
   --borderRadius: 4px;
 
@@ -84,7 +85,15 @@
     12.5px 12.5px 10px rgba(0, 0, 0, 0.03),
     22.3px 22.3px 17.9px rgba(0, 0, 0, 0.035),
     41.8px 41.8px 33.4px rgba(0, 0, 0, 0.04), 75px 75px 80px rgba(0, 0, 0, 0.05);
+    --mobileBoxShadow: 0.9px 1px 1.3px -5px rgba(0, 0, 0, 0.01),
+      2px 2.4px 2.9px -5px rgba(0, 0, 0, 0.014),
+      3.6px 4.3px 5.2px -5px rgba(0, 0, 0, 0.017),
+      5.9px 7.1px 8.7px -5px rgba(0, 0, 0, 0.02),
+      9.8px 11.6px 14.3px -5px rgba(0, 0, 0, 0.024),
+      17.1px 20.3px 25px -5px rgba(0, 0, 0, 0.029),
+      37px 44px 54px -5px rgba(0, 0, 0, 0.04);
 }
+
 * {
   margin: 0;
   padding: 0;
