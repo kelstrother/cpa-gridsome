@@ -57,7 +57,6 @@
   align-items: flex-start;
   margin-inline-start: 5%;
   height: 55%;
-  /* width: 100%; */
 }
 .phrase {
   font-weight: 300;
@@ -184,7 +183,7 @@
   font-size: 0.8rem;
   text-align: center;
   letter-spacing: 0.25px;
-  margin-top: 1.75rem;
+  margin-block-start: 1.75rem;
   padding: var(--ctaMobilePad);
   border-radius: var(--borderRadius);
   border: none;
@@ -284,9 +283,6 @@
 /* //!            780px MEDIA QUERY            */
 /* //&\\\\\\\\//\\\\\\\\\\\\\\\\\\//////////////*/
 @media screen and (min-width: 768px) {
-  /* body {
-    overflow-x: hidden;
-  } */
   .mobile-hero {
     display: none;
   }
@@ -382,6 +378,7 @@
   .services-link {
     padding: var(--ctaTabletPad);
     font-size: 1rem;
+    margin-block-start: .75rem;
   }
   .arrow {
     margin-inline-start: 10px;
@@ -404,11 +401,14 @@
     left: 30%;
     z-index: -1;
   } */
+  .testimonial-container {
+    margin-block-start: 10%;
+  }
   .quote-svg {
     display: block;
     position: absolute;
     top: 1rem;
-    left: 1.5rem;
+    left: 2rem;
   }
   .test-title {
     font-family: "Playfair Display";
@@ -575,10 +575,13 @@
     height: 70%;
     bottom: 20%;
   }
+  .testimonial-container {
+    margin-block-start: 5%;
+  }
   .quote-svg {
     top: 1.5rem;
-    left: 2rem;
-    scale: 1.2;
+    left: 3rem;
+    scale: 1.4;
   }
   .bracket-svg {
     position: absolute;
