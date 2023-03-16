@@ -1,21 +1,20 @@
+.desktop-logo {
+  display: none;
+}
 .layout {
   font-family: "Inter";
   height: 100vh;
 }
 .header {
-  position: relative;
   background-color: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 10vh;
-  box-shadow: 0 1px 20px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 10px 10px rgba(0, 0, 0, 0.2);
 }
 .mobile-logo {
   margin-inline-start: 1rem;
-}
-.desktop-logo {
-  display: none;
 }
 /*  //! FOOTER SECTION */
 .footer-container {
@@ -94,12 +93,9 @@
     margin-inline-start: 1rem;
   }
   .header {
-    display: flex;
-    justify-content: space-between;
     align-items: flex-end;
     padding: 1rem;
     min-height: 13vh;
-    box-shadow: 0 1px 10px 10px rgba(0, 0, 0, 0.2);
   }
   .footer {
     gap: 0;
