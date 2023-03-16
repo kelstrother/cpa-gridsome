@@ -5,9 +5,7 @@
       <div class="line line-2"></div>
       <div class="line line-3"></div>
     </div>
-    <!-- <transition name="slide-in"> -->
     <transition name="slide-fade">
-    <!-- <nav :class="['mobile-nav', { 'nav-active': showNav }]"> -->
       <nav v-if="showNav" class="mobile-nav">
         <g-link
           @click.native="toggleNav"
@@ -55,13 +53,9 @@ export default {
   data() {
     return {
       showNav: false,
-      // isActive: false,
     };
   },
   methods: {
-    // toggleNav() {
-    //   this.isActive = !this.isActive;
-    // },
     toggleNav() {
       this.showNav = !this.showNav;
     },
@@ -69,13 +63,9 @@ export default {
 };
 </script>
 <style scoped>
-.mobile-nav-container {
-  /* display: flex; */
-}
 .burger {
   display: block;
   height: 25px;
-  margin-inline-end: 1rem;
 }
 .burger div {
   width: 25px;
@@ -98,15 +88,6 @@ export default {
   justify-content: space-evenly;
   width: 55%;
   opacity: 1;
-  /* opacity: 0;  */
-  /* transform: translateX(100%); */
-  /* animation: hideNav .4s ease-in-out forwards; */
-  /* transition: all 0.4s ease-in-out; */
-}
-.nav-active {
-  /* transform: translateX(0); */
-  /* animation: showNav .4s ease-in-out forwards; */
-  /* opacity: 1; */
 }
 .slide-fade-enter-active {
   transition: all .4s ease;
@@ -139,7 +120,6 @@ export default {
   color: hsl(38, 58%, 90%, 0.85);
   font-size: 0.8rem;
   letter-spacing: 1px;
-  transition: all 0.15s ease-in-out;
 }
 @media screen and (min-width: 768px) {
   .mobile-nav-container {

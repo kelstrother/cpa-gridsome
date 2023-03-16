@@ -3,6 +3,11 @@
     <g id="mobile-logo">
       <path
         id="mobile-dash"
+        stroke-width="0"
+        stroke-dasharray="1 1"
+        pathLength="1"
+        stroke-dashoffset="-1"
+        stroke-opacity="0.5"
         stroke="#565656"
         stroke-linecap="square"
         clip-rule="evenodd"
@@ -64,6 +69,11 @@
       />
       <path
         id="mobile-building"
+        stroke-width="0"
+        stroke-dasharray="1 1"
+        pathLength="1"
+        stroke-dashoffset="-1"
+        stroke-opacity="0.5"
         stroke="#565656"
         stroke-linecap="square"
         stroke-miterlimit="1.5"
@@ -79,19 +89,19 @@ export default {
 </script>
 
 <style scoped>
-#mobile-dash {
-  stroke-width: 0;
-  stroke-opacity: 0.5;
-  stroke-dasharray: 32;
-  stroke-dashoffset: -32;
-  animation: mobile-draw 1.5s 1s ease-in-out forwards;
-}
 #mobile-building {
-  stroke-width: 0;
+  /* stroke-width: 0;
   stroke-opacity: 0.5;
   stroke-dasharray: 113.71892547607422;
-  stroke-dashoffset: -113.71892547607422;
+  stroke-dashoffset: -113.71892547607422; */
   animation: mobile-draw 2s 1.5s cubic-bezier(0.04, 0.43, 0.91, 1.08) forwards;
+}
+#mobile-dash {
+  /* stroke-width: 0;
+  stroke-opacity: 0.5;
+  stroke-dasharray: 32;
+  stroke-dashoffset: -32; */
+  animation: mobile-draw 1.5s 1s ease-in-out forwards;
 }
 @keyframes mobile-draw {
   to {

@@ -10,11 +10,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10vh;
+  min-height: 10vh;
+  padding-inline: .75rem;
   box-shadow: 0 1px 10px 10px rgba(0, 0, 0, 0.2);
-}
-.mobile-logo {
-  margin-inline-start: 1rem;
 }
 /*  //! FOOTER SECTION */
 .footer-container {
@@ -154,6 +152,9 @@
 /* //           ! 1440px MEDIA QUERY            */
 /* //&\\\\\\\\//\\\\\\\\\\\\\\\\\\//////////////*/
 @media screen and (min-width: 1440px) {
+  .header {
+    min-height: 17vh;
+  }
 }
 /*//*\\\\\\\\////////////////////////////////////*/
 /* //           ! 1920px MEDIA QUERY            */

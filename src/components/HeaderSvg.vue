@@ -3,6 +3,11 @@
     <g id="header-logo-svg">
       <path
         id="dash"
+        stroke-width="1"
+        stroke-dasharray="1 1"
+        pathLength="1"
+        stroke-dashoffset="1"
+        stroke-opacity="0.5"
         stroke="#565656"
         stroke-miterlimit="1.5"
         clip-rule="evenodd"
@@ -64,6 +69,11 @@
       />
       <path
         id="building"
+        stroke-dasharray="1 1"
+        pathLength="1"
+        stroke-width="1"
+        stroke-dashoffset="-1"
+        stroke-opacity="0.5"
         stroke="#565656"
         stroke-miterlimit="1.5"
         d="m194.797 102 .173-49.645c.165-22.665.318-34.85-21.051-35.541L173.965 1c-15.77 0-28.573 12.883-28.573 28.752v6.607h-9.552l.027-12.737-10.569-.054v-3.409l-9.524.054-.205 2.336h-2.534L113 27.72"
@@ -74,18 +84,20 @@
 
 <style scoped>
 #building {
-  stroke-width: 1;
-  stroke-opacity: 0.5;
-  stroke-dasharray: 221.4385986328125;
-  stroke-dashoffset: -221.4385986328125;
+  /* stroke-width: 1;
+  stroke-opacity: 0.5; */
+  /* stroke-dasharray: 221.4385986328125; */
+  /* stroke-dasharray: 1 1; */
+  /* stroke-dashoffset: -1; */
+  /* stroke-dashoffset: -221.4385986328125; */
   animation: draw 1.5s 1.5s ease-in-out forwards;
 }
 #dash {
-  stroke-width: 1;
-  stroke-opacity: 0.5;
-  stroke-dasharray: 136.17999267578125;
-  stroke-dashoffset: -136.17999267578125;
-  animation: draw 1s 1s linear forwards;
+  /* stroke-width: 1;
+  stroke-opacity: 0.5; */
+  /* stroke-dasharray: 136.17999267578125;
+  stroke-dashoffset: -136.17999267578125; */
+  animation: draw 1.5s 1s ease-out forwards;
 }
 @keyframes draw {
   to {
