@@ -1,47 +1,51 @@
 <template>
   <div class="mobile-nav-container">
+    <!-- <div class="burger" @click="toggleNav"> -->
     <div class="burger" @click="toggleNav">
       <div class="line line-1"></div>
       <div class="line line-2"></div>
       <div class="line line-3"></div>
     </div>
-    <nav :class="['mobile-nav', { 'nav-active': isActive }]">
-      <g-link
-        @click.native="toggleNav"
-        exact-active-class="nav__active"
-        class="nav__link"
-        to="/"
-        >Home</g-link
-      >
-      <g-link
-        @click.native="toggleNav"
-        exact-active-class="nav__active"
-        class="nav__link"
-        to="/services"
-        >Services</g-link
-      >
-      <g-link
-        @click.native="toggleNav"
-        exact-active-class="nav__active"
-        class="nav__link"
-        to="/about"
-        >About</g-link
-      >
-      <g-link
-        @click.native="toggleNav"
-        exact-active-class="nav__active"
-        class="nav__link"
-        to="/resources"
-        >Resources</g-link
-      >
-      <g-link
-        @click.native="toggleNav"
-        exact-active-class="nav__active"
-        class="nav__link"
-        to="/contact"
-        >Contact</g-link
-      >
-    </nav>
+    <transition name="slide-in">
+    <!-- <nav :class="['mobile-nav', { 'nav-active': showNav }]"> -->
+      <nav v-if="showNav" class="mobile-nav">
+        <g-link
+          @click.native="toggleNav"
+          exact-active-class="nav__active"
+          class="nav__link"
+          to="/"
+          >Home</g-link
+        >
+        <g-link
+          @click.native="toggleNav"
+          exact-active-class="nav__active"
+          class="nav__link"
+          to="/services"
+          >Services</g-link
+        >
+        <g-link
+          @click.native="toggleNav"
+          exact-active-class="nav__active"
+          class="nav__link"
+          to="/about"
+          >About</g-link
+        >
+        <g-link
+          @click.native="toggleNav"
+          exact-active-class="nav__active"
+          class="nav__link"
+          to="/resources"
+          >Resources</g-link
+        >
+        <g-link
+          @click.native="toggleNav"
+          exact-active-class="nav__active"
+          class="nav__link"
+          to="/contact"
+          >Contact</g-link
+        >
+      </nav>
+    </transition>
   </div>
 </template>
 
@@ -50,12 +54,16 @@ export default {
   name: "MobileNav",
   data() {
     return {
-      isActive: false,
+      showNav: false,
+      // isActive: false,
     };
   },
   methods: {
+    // toggleNav() {
+    //   this.isActive = !this.isActive;
+    // },
     toggleNav() {
-      this.isActive = !this.isActive;
+      this.showNav = !this.showNav;
     },
   },
 };
@@ -90,13 +98,38 @@ export default {
   justify-content: space-evenly;
   width: 55%;
   /* opacity: 0; */
-  transform: translateX(100%);
-  transition: all 0.4s ease-in-out;
+  /* transform: translateX(100%); */
+  /* animation: hideNav .4s ease-in-out forwards; */
+  /* transition: all 0.4s ease-in-out; */
 }
 .nav-active {
-  transform: translateX(0);
+  /* transform: translateX(0); */
+  /* animation: showNav .4s ease-in-out forwards; */
   /* opacity: 1; */
 }
+.slide-in-enter-active {
+  animation: showNav .4s ease-in-out;
+}
+.slide-in-leave-active {
+  animation: showNav .4s ease-in-out reverse;
+}
+@keyframes showNav {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+    /* width: 0%; */
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+    /* width: 55%; */
+  }
+}
+/* @keyframes hideNav {
+  to {
+    transform: translateX(100%);
+  }
+} */
 .nav__link {
   text-decoration: none;
   color: hsl(38, 58%, 90%, 0.85);

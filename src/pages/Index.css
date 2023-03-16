@@ -1,6 +1,3 @@
-html {
-  overscroll-behavior: contain;
-}
 .tablet-hero {
   display: none;
 }
@@ -136,7 +133,6 @@ html {
 /* ! SERVICES SECTION */
 .services-container {
   overflow-x: auto;
-  /* overflow-y: hidden; */
   position: relative;
   background: transparent;
   height: 18rem;
@@ -188,7 +184,7 @@ html {
   font-size: 0.8rem;
   text-align: center;
   letter-spacing: 0.25px;
-  margin-top: 1.25rem;
+  margin-top: 1.75rem;
   padding: var(--ctaMobilePad);
   border-radius: var(--borderRadius);
   border: none;
@@ -228,13 +224,14 @@ html {
   flex-direction: column;
   width: 100vw;
   position: relative;
+  margin-block-start: 20%;
 }
 .quote-svg {
   display: none;
 }
 .mobile-quote {
   position: absolute;
-  left: 2rem;
+  left: 2.5rem;
   transform: rotate(180deg);
 }
 .test-title {
