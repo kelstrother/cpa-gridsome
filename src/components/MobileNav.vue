@@ -1,12 +1,12 @@
 <template>
   <div class="mobile-nav-container">
-    <!-- <div class="burger" @click="toggleNav"> -->
     <div class="burger" @click="toggleNav">
       <div class="line line-1"></div>
       <div class="line line-2"></div>
       <div class="line line-3"></div>
     </div>
-    <transition name="slide-in">
+    <!-- <transition name="slide-in"> -->
+    <transition name="slide-fade">
     <!-- <nav :class="['mobile-nav', { 'nav-active': showNav }]"> -->
       <nav v-if="showNav" class="mobile-nav">
         <g-link
@@ -70,7 +70,7 @@ export default {
 </script>
 <style scoped>
 .mobile-nav-container {
-  display: flex;
+  /* display: flex; */
 }
 .burger {
   display: block;
@@ -97,7 +97,8 @@ export default {
   align-items: center;
   justify-content: space-evenly;
   width: 55%;
-  /* opacity: 0; */
+  opacity: 1;
+  /* opacity: 0;  */
   /* transform: translateX(100%); */
   /* animation: hideNav .4s ease-in-out forwards; */
   /* transition: all 0.4s ease-in-out; */
@@ -106,6 +107,16 @@ export default {
   /* transform: translateX(0); */
   /* animation: showNav .4s ease-in-out forwards; */
   /* opacity: 1; */
+}
+.slide-fade-enter-active {
+  transition: all .4s ease;
+}
+.slide-fade-leave-active {
+  transition: all .4s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to {
+  transform: translateX(100%);
+  opacity: 0;
 }
 .slide-in-enter-active {
   animation: showNav .4s ease-in-out;
@@ -117,19 +128,12 @@ export default {
   from {
     transform: translateX(100%);
     opacity: 0;
-    /* width: 0%; */
   }
   to {
     transform: translateX(0);
     opacity: 1;
-    /* width: 55%; */
   }
 }
-/* @keyframes hideNav {
-  to {
-    transform: translateX(100%);
-  }
-} */
 .nav__link {
   text-decoration: none;
   color: hsl(38, 58%, 90%, 0.85);
