@@ -1,11 +1,10 @@
-
 <template>
   <div class="mobile-nav-container">
     <button class="nav-btn" @click.prevent="togglePressed">
       <svg fill="#565656" class="burger" viewBox="0 0 100 100" width="40">
         <rect
           :id="this.isPressed ? 'open' : ''"
-          class="line"
+          class="line top"
           :class="this.isPressed ? 'open-top' : 'close-top'"
           width="80"
           height="7"
@@ -15,7 +14,7 @@
         ></rect>
         <rect
           :id="this.isPressed ? 'open' : ''"
-          class="line"
+          class="line middle"
           :class="this.isPressed ? 'open-middle' : 'close-middle'"
           width="80"
           height="7"
@@ -25,7 +24,7 @@
         ></rect>
         <rect
           :id="this.isPressed ? 'open' : ''"
-          class="line"
+          class="line bottom"
           :class="this.isPressed ? 'open-bottom' : 'close-bottom'"
           width="80"
           height="7"
@@ -97,13 +96,11 @@ export default {
   border: transparent;
 }
 .line {
-  /* transition: y .2s ease-in .2s, rotate .2s ease-in, opacity 0ms .2s; */
-  transition: y .2s ease-in .2s, rotate .2s ease-in, opacity 0ms .2s;
+  transition: y 0.2s ease-in 0.2s, rotate 0.2s ease-in, opacity 0s 0.2s;
   transform-origin: center;
 }
 #open {
-  /* transition: y .2s ease-in, rotate .2s ease-in .2s, opacity 0ms .2s; */
-  transition: y .2s ease-in, rotate .2s ease-in .2s, opacity 0ms .2s;
+  transition: y 0.2s ease-in, rotate 0.2s ease-in 0.2s, opacity 0ms 0.2s;
 }
 .open-top {
   y: 45;
@@ -116,17 +113,17 @@ export default {
   y: 45;
   rotate: -45deg;
 }
+
 .close-top {
   y: 25;
+  rotate: 0deg;
+}
+.close-middle {
+  opacity: 1;
 }
 .close-bottom {
   y: 65;
-}
-.close-top,
-.close-middle,
-.close-bottom {
   rotate: 0deg;
-  opacity: 1;
 }
 .mobile-nav {
   position: absolute;
