@@ -97,25 +97,35 @@ export default {
   border: transparent;
 }
 .line {
+  /* transition: y .2s ease-in .2s, rotate .2s ease-in, opacity 0ms .2s; */
   transition: y .2s ease-in .2s, rotate .2s ease-in, opacity 0ms .2s;
   transform-origin: center;
 }
 #open {
+  /* transition: y .2s ease-in, rotate .2s ease-in .2s, opacity 0ms .2s; */
   transition: y .2s ease-in, rotate .2s ease-in .2s, opacity 0ms .2s;
 }
 .open-top {
+  y: 45;
   rotate: 45deg;
 }
 .open-middle {
   opacity: 0;
 }
 .open-bottom {
+  y: 45;
   rotate: -45deg;
+}
+.close-top {
+  y: 25;
+}
+.close-bottom {
+  y: 65;
 }
 .close-top,
 .close-middle,
 .close-bottom {
-  rotate: 0;
+  rotate: 0deg;
   opacity: 1;
 }
 .mobile-nav {
