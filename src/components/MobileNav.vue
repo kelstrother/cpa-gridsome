@@ -1,39 +1,19 @@
 <template>
   <div class="mobile-nav-container">
-    <button class="nav-btn" @click.prevent="togglePressed">
-      <svg fill="#565656" class="burger" viewBox="0 0 100 100" width="40">
-        <rect
-          :id="this.isPressed ? 'open' : ''"
-          class="line top"
-          :class="this.isPressed ? 'open-top' : 'close-top'"
-          width="80"
-          height="7"
-          x="10"
-          :y="this.isPressed ? '45' : '25'"
-          rx="5"
-        ></rect>
-        <rect
-          :id="this.isPressed ? 'open' : ''"
-          class="line middle"
-          :class="this.isPressed ? 'open-middle' : 'close-middle'"
-          width="80"
-          height="7"
-          x="10"
-          y="45"
-          rx="5"
-        ></rect>
-        <rect
-          :id="this.isPressed ? 'open' : ''"
-          class="line bottom"
-          :class="this.isPressed ? 'open-bottom' : 'close-bottom'"
-          width="80"
-          height="7"
-          x="10"
-          :y="this.isPressed ? '45' : '65'"
-          rx="5"
-        ></rect>
-      </svg>
-    </button>
+    <section class="nav-btn" @click.prevent="togglePressed">
+      <span
+        :class="this.isPressed ? 'nav-open o-top' : 'nav-closed x-top'"
+        class="bar top"
+      ></span>
+      <span
+        :class="this.isPressed ? 'nav-open o-middle' : 'nav-closed x-middle'"
+        class="bar"
+      ></span>
+      <span
+        :class="this.isPressed ? 'nav-open o-bottom' : 'nav-closed x-bottom'"
+        class="bar bottom"
+      ></span>
+    </section>
     <Transition name="slide-fade">
       <nav v-if="isPressed" class="mobile-nav">
         <g-link
@@ -92,38 +72,39 @@ export default {
 </script>
 <style scoped>
 .nav-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
   background: transparent;
-  border: transparent;
+  width: 35px;
+  height: 30px;
 }
-.line {
-  transition: y 0.2s ease-in 0.2s, rotate 0.2s ease-in, opacity 0s 0.2s;
-  transform-origin: center;
-}
-#open {
-  transition: y 0.2s ease-in, rotate 0.2s ease-in 0.2s, opacity 0ms 0.2s;
-}
-.open-top {
-  y: 45;
-  rotate: 45deg;
-}
-.open-middle {
-  opacity: 0;
-}
-.open-bottom {
-  y: 45;
-  rotate: -45deg;
+.bar {
+  display: inline-block;
+  height: 2px;
+  width: 100%;
+  background: var(--mainGrey);
 }
 
-.close-top {
-  y: 25;
-  rotate: 0deg;
+.o-top {
+  translate: 0 7.5px;
+  rotate: 45deg;
 }
-.close-middle {
-  opacity: 1;
+.o-middle {
+  opacity: 0;
 }
-.close-bottom {
-  y: 65;
-  rotate: 0deg;
+.o-bottom {
+  translate: 0 -7.5px;
+  rotate: -45deg;
+}
+.nav-closed {
+  transition: translate .3s ease-in .3s, rotate .3s ease-in, opacity 0ms linear .2s;
+  transform-origin: center;
+}
+.nav-open {
+  transition: translate .3s ease-in, rotate .3s ease-in .3s, opacity 0ms linear .2s;
+
 }
 .mobile-nav {
   position: absolute;
@@ -148,25 +129,15 @@ export default {
   letter-spacing: 1px;
 }
 .slide-fade-enter-active {
-  transition: all 0.4s ease;
+  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
 }
 .slide-fade-leave-active {
-  transition: all 0.4s cubic-bezier(1, 0.5, 0.8, 1);
+  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
 }
 .slide-fade-enter,
 .slide-fade-leave-to {
-  transform: translateX(100%);
+  translate: 100% 0;
   opacity: 0;
-}
-@keyframes isPressed {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
 }
 @media screen and (min-width: 768px) {
   .mobile-nav-container {
