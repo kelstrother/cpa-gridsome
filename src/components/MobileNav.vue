@@ -1,77 +1,122 @@
+
 <template>
   <div class="mobile-nav-container">
-    <div class="burger" @click="toggleNav">
-      <div class="line line-1"></div>
-      <div class="line line-2"></div>
-      <div class="line line-3"></div>
-    </div>
-    <transition name="slide-fade">
-      <nav v-if="showNav" class="mobile-nav">
+    <button class="nav-btn" @click.prevent="togglePressed">
+      <svg fill="#565656" class="burger" viewBox="0 0 100 100" width="40">
+        <rect
+          :id="this.isPressed ? 'open' : ''"
+          class="line"
+          :class="this.isPressed ? 'open-top' : 'close-top'"
+          width="80"
+          height="7"
+          x="10"
+          :y="this.isPressed ? '45' : '25'"
+          rx="5"
+        ></rect>
+        <rect
+          :id="this.isPressed ? 'open' : ''"
+          class="line"
+          :class="this.isPressed ? 'open-middle' : 'close-middle'"
+          width="80"
+          height="7"
+          x="10"
+          y="45"
+          rx="5"
+        ></rect>
+        <rect
+          :id="this.isPressed ? 'open' : ''"
+          class="line"
+          :class="this.isPressed ? 'open-bottom' : 'close-bottom'"
+          width="80"
+          height="7"
+          x="10"
+          :y="this.isPressed ? '45' : '65'"
+          rx="5"
+        ></rect>
+      </svg>
+    </button>
+    <Transition name="slide-fade">
+      <nav v-if="isPressed" class="mobile-nav">
         <g-link
-          @click.native="toggleNav"
+          @click.native="togglePressed"
           exact-active-class="nav__active"
           class="nav__link"
           to="/"
           >Home</g-link
         >
         <g-link
-          @click.native="toggleNav"
+          @click.native="togglePressed"
           exact-active-class="nav__active"
           class="nav__link"
           to="/services"
           >Services</g-link
         >
         <g-link
-          @click.native="toggleNav"
+          @click.native="togglePressed"
           exact-active-class="nav__active"
           class="nav__link"
           to="/about"
           >About</g-link
         >
         <g-link
-          @click.native="toggleNav"
+          @click.native="togglePressed"
           exact-active-class="nav__active"
           class="nav__link"
           to="/resources"
           >Resources</g-link
         >
         <g-link
-          @click.native="toggleNav"
+          @click.native="togglePressed"
           exact-active-class="nav__active"
           class="nav__link"
           to="/contact"
           >Contact</g-link
         >
       </nav>
-    </transition>
+    </Transition>
   </div>
 </template>
-
 <script>
 export default {
   name: "MobileNav",
   data() {
     return {
-      showNav: false,
+      isPressed: false,
     };
   },
   methods: {
-    toggleNav() {
-      this.showNav = !this.showNav;
+    togglePressed() {
+      this.isPressed = !this.isPressed;
     },
   },
 };
 </script>
 <style scoped>
-.burger {
-  display: block;
-  height: 25px;
+.nav-btn {
+  background: transparent;
+  border: transparent;
 }
-.burger div {
-  width: 25px;
-  height: 2px;
-  background-color: var(--mainGrey);
-  margin: 4px;
+.line {
+  transition: y .2s ease-in .2s, rotate .2s ease-in, opacity 0ms .2s;
+  transform-origin: center;
+}
+#open {
+  transition: y .2s ease-in, rotate .2s ease-in .2s, opacity 0ms .2s;
+}
+.open-top {
+  rotate: 45deg;
+}
+.open-middle {
+  opacity: 0;
+}
+.open-bottom {
+  rotate: -45deg;
+}
+.close-top,
+.close-middle,
+.close-bottom {
+  rotate: 0;
+  opacity: 1;
 }
 .mobile-nav {
   position: absolute;
@@ -89,23 +134,24 @@ export default {
   width: 55%;
   opacity: 1;
 }
+.nav__link {
+  text-decoration: none;
+  color: hsl(38, 58%, 90%, 0.85);
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
 .slide-fade-enter-active {
-  transition: all .4s ease;
+  transition: all 0.4s ease;
 }
 .slide-fade-leave-active {
-  transition: all .4s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  transition: all 0.4s cubic-bezier(1, 0.5, 0.8, 1);
 }
-.slide-fade-enter, .slide-fade-leave-to {
+.slide-fade-enter,
+.slide-fade-leave-to {
   transform: translateX(100%);
   opacity: 0;
 }
-.slide-in-enter-active {
-  animation: showNav .4s ease-in-out;
-}
-.slide-in-leave-active {
-  animation: showNav .4s ease-in-out reverse;
-}
-@keyframes showNav {
+@keyframes isPressed {
   from {
     transform: translateX(100%);
     opacity: 0;
@@ -114,12 +160,6 @@ export default {
     transform: translateX(0);
     opacity: 1;
   }
-}
-.nav__link {
-  text-decoration: none;
-  color: hsl(38, 58%, 90%, 0.85);
-  font-size: 0.8rem;
-  letter-spacing: 1px;
 }
 @media screen and (min-width: 768px) {
   .mobile-nav-container {
