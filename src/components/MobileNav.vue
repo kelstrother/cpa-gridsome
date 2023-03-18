@@ -116,7 +116,7 @@ export default {
   z-index: 100;
   display: flex;
   flex-direction: column;
-  height: 91vh;
+  height: 90vh;
   align-items: center;
   justify-content: space-evenly;
   width: 55%;
@@ -127,6 +127,7 @@ export default {
   color: hsl(38, 58%, 90%, 0.85);
   font-size: 0.8rem;
   letter-spacing: 1px;
+  margin-block-end: 2rem;
 }
 .slide-fade-enter-active {
   transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);

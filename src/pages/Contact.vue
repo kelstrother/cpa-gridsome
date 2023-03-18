@@ -83,13 +83,7 @@
       </div>
     </div>
     <div class="form-container">
-      <div class="contact-headline">
         <p class="invitation">We'd love to hear from you!</p>
-        <!-- <p class="subtext">
-          Fill out this form and we will get back to you as soon as possible.
-        </p> -->
-        <p class="required"><span class="red">* </span>fields are required</p>
-      </div>
       <form class="form" ref="form" @submit.prevent="sendMail">
         <div class="form-group">
           <label>Name <span class="red">*</span></label>
@@ -107,7 +101,7 @@
           <label>Subject <span class="red">*</span></label>
           <input name="subject" type="text" v-model="subject" required />
         </div>
-        <div class="form-group">
+        <div class="form-group message-container">
           <label>Message <span class="red">*</span></label>
           <textarea
             class="text-area"
@@ -118,8 +112,9 @@
           >
           </textarea>
         </div>
-        <div class="form-group contact-btn">
+        <div class="form-group contact-btn-container">
           <button class="submit" type="submit" name="send">Submit</button>
+          <p class="required"><span class="red">*</span> fields are required</p>
         </div>
       </form>
     </div>
@@ -130,19 +125,19 @@
         height="50px"
         viewBox="0 0 24 24"
         width="50px"
-        fill="rgb(32, 77, 37)"
+        fill="hsl(38, 33%, 58%)"
       >
         <path d="M0 0h24v24H0V0z" fill="none" />
         <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
       </svg>
-      <p class="thanks">Thank you! Your message has sent.</p>
+      <p class="thanks">Thank you!</p>
+      <p class="message-sent">Your message has been received.</p>
       <button @click="handleClose" class="close-modal">Close</button>
     </div>
   </div>
 </template>
 
 <script>
-import anime from "animejs/lib/anime.es";
 import emailjs from "@emailjs/browser";
 import MobileHome from '~/assets/icons/mobile-home-contact.svg'
 import MobilePhone from '~/assets/icons/mobile-phone-icon.svg'

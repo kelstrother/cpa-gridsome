@@ -51,7 +51,7 @@
     <section class="approach-container">
       <p data-aos="fade-up" data-aos-duration="900"
         data-aos-easing="ease-in-cubic" class="responsive-approach">Our Approach</p>
-      <g-image data-aos="fade-right" data-aos-duration="900"
+      <g-image class="approach-img" data-aos="fade-right" data-aos-duration="900"
         data-aos-easing="ease-in-cubic" src="~/assets/images/approach.png" />
       <p
         class="summary"

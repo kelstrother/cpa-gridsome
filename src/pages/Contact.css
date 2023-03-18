@@ -95,18 +95,11 @@
     color: var(--mainGrey);
     font-size: 1.5rem;
     text-align: center;
-    margin-block-start: 2rem;
-  }
-  .subtext {
-    font-size: .8rem;
+    margin-block: 2rem 1rem;
   }
   .red {
     color: rgb(172, 1, 1);
-  }
-  .required {
-    margin-block-end: 1rem;
-    font-size: 0.7rem;
-    font-style: italic;
+    margin-inline-end: 5px;
   }
   .form {
     display: flex;
@@ -123,17 +116,20 @@
     width: 90%;
   }
   label {
+    font-size: .9rem;
     font-weight: 300;
     margin: 5px 0;
   }
   input {
     font-family: var(--serifFont);
+    font-size: .8rem;
+    text-indent: 5px;
     letter-spacing: .25px;
     background: transparent;
     border: 1px groove rgba(51, 51, 51, 0.2);
+    border-radius: var(--borderRadius);
     height: 4vh;
     width: 100%;
-    margin: 5px 0;
   }
   .tel {
     font-size: 0.8rem;
@@ -142,28 +138,30 @@
   }
   textarea {
     font-family: var(--serifFont);
-  letter-spacing: .25px;
+    font-size: .8rem;
+    text-indent: 5px;
+    letter-spacing: .25px;
     border: 1px groove rgba(51, 51, 51, 0.2);
+    border-radius: var(--borderRadius);
     background: transparent;
-    margin-top: 5px;
     height: 100px;
     width: 100%;
   }
-  .contact-btn {
+  .contact-btn-container {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: flex-start;
-    margin-block-end: 1vh;
+    margin-block-end: 3vh;
   }
   .submit {
     border: none;
     box-shadow: 4px 3px 5px rgba(77, 77, 77, 0.3);
     background: var(--btnGradient);
     color: #fff;
-    margin-top: 30px;
-    border-radius: 5px;
-    width: 5rem;
-    height: 2.5rem;
+    margin-top: 1rem;
+    border-radius: var(--borderRadius);
+    padding: var(--ctaMobilePad);
     cursor: pointer;
     transition: all .2s ease-in-out;
   }
@@ -171,36 +169,45 @@
     box-shadow: var(--hoverShadow);
     color: #f1f1f1;
   }
-  .success {
-    font-family: sans-serif;
-    color: rgb(63, 133, 54);
-    font-size: 1.5rem;
-  }
-  .thanks {
-    font-family: sans-serif;
-    text-align: center;
-    margin-bottom: 2rem;
+  .required {
+    color: var(--mainGrey);
+    bottom: 0%;
+    right: 3%;
+    font-size: 0.7rem;
+    font-style: italic;
   }
   .modal {
     position: absolute;
     display: flex;
     flex-direction: column;
     top: 20%;
-    left: 30%;
-    justify-content: center;
+    left: 12%;
+    justify-content: space-evenly;
     align-items: center;
-    width: 25vw;
-    height: 15rem;
-    background: rgb(216, 216, 216);
-    border-radius: 5px;
-    box-shadow: 10px 15px 20px 1px rgba(0, 0, 0, 0.1);
+    width: 75vw;
+    height: 30vh;
+    background: var(--boxGradient);
+    border-radius: var(--borderRadius);
+    box-shadow: var(--boxShadow);
+  }
+  .thanks {
+    font-family: var(--serifFont);
+    color: var(--textLight);
+    font-size: 1.1rem;
+    text-align: center;
+    margin-block-end: .5rem;
+  }
+  .message-sent {
+    font-family: var(--serifFont);
+    color: var(--textLight);
+    font-size: .8rem;
   }
   .close-modal {
     margin-top: 1rem;
-    padding: 0.7rem;
-    border-radius: 5px;
-    background: var(--green);
-    color: #fff;
+    padding: var(--ctaMobilePad);
+    border-radius: var(--borderRadius);
+    background: var(--mainGrey);
+    color: var(--textLight);
     border: none;
   }
   /*//*\\\\\\\\////////////////////////////////////*/
@@ -235,6 +242,11 @@
   .form-container {
     width: 90%;
   }
+  .modal {
+    top: 30%;
+    left: 25%;
+    width: 50vw;
+  }
 }
   /*//*\\\\\\\\////////////////////////////////////*/
 /* //!           1440px MEDIA QUERY            */
@@ -265,5 +277,17 @@
   }
   textarea {
     font-size: 1rem;
+  }
+  .submit {
+    margin-block-start: 2rem;
+    padding: var(--ctaPad);
+  }
+  .required {
+    margin-block-start: 5px;
+    font-size: .9rem;
+  }
+  .modal {
+    width: 25vw;
+    left: 35%;
   }
 }
