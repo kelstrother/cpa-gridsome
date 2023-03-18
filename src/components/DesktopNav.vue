@@ -49,16 +49,16 @@ export default {
     position: absolute;
     bottom: -4px;
     width: 0;
-    height: 2px;
+    height: 1px;
     background: var(--lightGrey);
     transition: width 0.25s ease-in-out;
   }
   .nav__link:hover::after {
-    width: 100%;
+    width: 75%;
   }
   .nav__active {
     color: var(--mainGrey);
-    font-weight: 600;
+    font-weight: 400;
     position: relative;
   }
   .nav__active::after {
@@ -66,9 +66,9 @@ export default {
     display: block;
     position: absolute;
     bottom: -4px;
-    width: 100%;
-    height: 0px;
-    background: var(--mainGrey);
+    width: 75%;
+    height: 1px;
+    background: var(--lightGrey);
   }
 }
 @media screen and (min-width: 1920px) {

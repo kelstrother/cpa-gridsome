@@ -1,47 +1,61 @@
-.contact-container {
-  font-family: "Spectral";
+.contact-component-container {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column-reverse;
+  margin-block-start: 5%;
+  justify-content: space-between;
   align-items: center;
   width: 100vw;
 }
+.contact-container {
+  font-family: "var(--serifFont)";
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 65vh;
+}
 .contact-info {
     z-index: -2;
-    width: 30%;
+    width: 100%;
+    height: 85%;
     background: var(--boxGradient);
     display: grid;
     gap: .5rem;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    box-shadow: var(--mobileBoxShadow);
     box-shadow: 5px 6px 20px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
   }
   .contact {
     display: flex;
     gap: 1rem;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     height: 100%;
-    padding: 1rem 1.5rem;
     z-index: -1;
     border: 1px groove rgb(255, 255, 255, .1);
   }
-  /* .green-container {
-    --borderWidth: 2px;
-    --borderRadius: 50%;
-    width: 95px;
-    height: 95px;
-    position: relative;
-    border: 0;
-    background: var(--btnGradient);
-    border-radius: var(--borderRadius);
-    z-index: 1;
-  } */
+  .address-container {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .number-container {
+    grid-row: 1;
+    grid-column: 2;
+  }
+  .fax-container {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .email-container {
+    grid-row: 2;
+    grid-column: 2;
+  }
   .gradient-container {
     position: relative;
-    width: 95px;
-    height: 95px;
+    width: 75px;
+    height: 75px;
     border: double 3px transparent;
     border-radius: 50%;
     background-image: var(--boxGradient), var(--btnGradient);
@@ -50,81 +64,76 @@
     display: inline-block;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.15);
   }
-  .gold-container {
-    width: 96px;
-    height: 96px;
-    position: relative;
-    border: 2px solid var(--mainGold);
-    background: #fff;
-    border-radius: 50%;
-    top: 0;
-  }
-  .home-svg, .phone-svg, .fax-svg, .email-svg {
+  .m-icon {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 2; 
   }
+  .d-icon {
+    display: none; 
+  }
   .contact-text {
     text-align: center;
-    color: #fff;
+    color: var(--textLight);
     font-size: .8rem;
-    display: inline-block;
   }
   p a {
-    color: #fff;
+    color: var(--textLight);
     text-decoration: none;
   }
+  /*  //! MOBILE FORM SECTION */
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-family: var(--serifFont);
+  }
   .invitation {
-    font-size: 2rem;
+    color: var(--mainGrey);
+    font-size: 1.5rem;
     text-align: center;
+    margin-block-start: 2rem;
   }
   .subtext {
-    font-size: 1rem;
+    font-size: .8rem;
   }
   .red {
     color: rgb(172, 1, 1);
   }
   .required {
-    margin-top: -10px;
-    font-size: 0.9rem;
+    margin-block-end: 1rem;
+    font-size: 0.7rem;
     font-style: italic;
   }
-  .form-container {
+  .form {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 20px 0;
-  }
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* width: 100%; */
+    margin-inline: 1rem;
+    width: 90%;
   }
   .form-group {
-    font-family: "abel";
     color: #333;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    /* width: 100%; */
+    width: 90%;
   }
   label {
     font-weight: 300;
     margin: 5px 0;
   }
   input {
-    font-family: "abel";
+    font-family: var(--serifFont);
+    letter-spacing: .25px;
     background: transparent;
     border: 1px groove rgba(51, 51, 51, 0.2);
-    /* border-bottom: 1px groove rgba(51, 51, 51, 0.254); */
-    /* border-radius: 5px; */
-    height: 25px;
-    width: 500px;
+    height: 4vh;
+    width: 100%;
     margin: 5px 0;
-    /* margin-left: 10px; */
   }
   .tel {
     font-size: 0.8rem;
@@ -132,13 +141,19 @@
     color: rgb(104, 104, 104);
   }
   textarea {
-    font-family: "abel";
+    font-family: var(--serifFont);
+  letter-spacing: .25px;
     border: 1px groove rgba(51, 51, 51, 0.2);
-    /* border-bottom: 1px groove rgba(51, 51, 51, 0.254); */
     background: transparent;
     margin-top: 5px;
     height: 100px;
-    width: 500px;
+    width: 100%;
+  }
+  .contact-btn {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-block-end: 1vh;
   }
   .submit {
     border: none;
@@ -188,3 +203,67 @@
     color: #fff;
     border: none;
   }
+  /*//*\\\\\\\\////////////////////////////////////*/
+/* //!            780px MEDIA QUERY            */
+/* //&\\\\\\\\//\\\\\\\\\\\\\\\\\\//////////////*/
+@media screen and (min-width: 768px) {
+  .contact-component-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .contact-info {
+    width: 95%;
+    height: 80%;
+    border-radius: var(--borderRadius);
+  }
+  .gradient-container {
+    width: 95px;
+    height: 95px;
+  }
+  .m-icon {
+    display: none;
+  }
+  .d-icon {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; 
+  }
+  /*  //! TABLET FORM SECTION */
+  .form-container {
+    width: 90%;
+  }
+}
+  /*//*\\\\\\\\////////////////////////////////////*/
+/* //!           1440px MEDIA QUERY            */
+/* //&\\\\\\\\//\\\\\\\\\\\\\\\\\\//////////////*/
+  /*//*\\\\\\\\////////////////////////////////////*/
+/* //!           1920px MEDIA QUERY            */
+/* //&\\\\\\\\//\\\\\\\\\\\\\\\\\\//////////////*/
+@media screen and (min-width: 1920px) {
+  .contact-component-container {
+    margin-block-end: 10vh;
+  }
+  .contact-info {
+    width: 60%;
+  }
+  .contact-text {
+    margin-block-start: 1rem;
+    font-size: 1rem;
+  }
+  /*  //! DESKTOP FORM SECTION */
+  .invitation {
+    font-size: 2rem;
+  }
+  .subtext {
+    font-size: 1rem;
+  }
+  input {
+    font-size: 1rem;
+  }
+  textarea {
+    font-size: 1rem;
+  }
+}

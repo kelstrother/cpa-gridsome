@@ -146,15 +146,7 @@
 /* //&\\\\\\\\//\\\\\\\\\\\\\\\\\\//////////////*/
 @media screen and (min-width: 1440px) {
   .header {
-    min-height: 17vh;
-  }
-}
-/*//*\\\\\\\\////////////////////////////////////*/
-/* //           ! 1920px MEDIA QUERY            */
-/* //&\\\\\\\\//\\\\\\\\\\\\\\\\\\//////////////*/
-@media screen and (min-width: 1920px) {
-  .header {
-    min-height: 14vh;
+    height: 17vh;
   }
   .footer {
     gap: 0;
@@ -170,5 +162,13 @@
   }
   .copyright {
     grid-column: 1;
+  }
+}
+/*//*\\\\\\\\////////////////////////////////////*/
+/* //           ! 1920px MEDIA QUERY            */
+/* //&\\\\\\\\//\\\\\\\\\\\\\\\\\\//////////////*/
+@media screen and (min-width: 1920px) {
+  .header {
+    height: 14vh;
   }
 }
