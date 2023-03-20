@@ -134,6 +134,8 @@ main {
 }
 .service-box-container {
   display: flex;
+  align-items: center;
+  height:  40vh;
   /* max-height: 30vh; */
   /* display: grid;
   grid-auto-flow: column;
@@ -142,17 +144,19 @@ main {
   padding-inline: 1rem;
   overflow-x: auto;
   overscroll-behavior-inline: contain;
+
 }
 .services-box {
   display: flex;
   flex-direction: column;
   min-width: 73%;
-  justify-content: space-evenly;
+  height: 90%;
+  justify-content: space-between;
   align-items: center;
   /* display: grid;
   grid-template-rows: min-content;
   place-items: center; */
-  gap: 1.5rem;
+  /* gap: 1.5rem; */
   color: var(--textLight);
   padding: 1rem;
   border-radius: var(--borderRadius);
@@ -237,7 +241,6 @@ main {
   display: none;
 }
 .approach-container {
-  position: relative;
   display: flex;
   flex-direction: column;
   height: 55vh;
@@ -399,33 +402,21 @@ main {
     font-size: 1.2rem;
     margin-block-start: 1rem;
   }
-  /* ! 768px APPROACH SECTION */
-  .approach-container {
-    margin-block: 5% 0;
-  }
-  .approach-title {
-    font-size: 5.5rem;
-    /* margin-inline-end: 25vw; */
-  }
-  .summary {
-    font-size: 1rem;
-  }
   /* ! 768px SERVICES SECTION */
   .services-container {
-    height: 40rem;
+    height: 40vh;
   }
   .service-section-title {
     font-size: 5.5rem;
   }
   .service-box-container {
-    grid-auto-columns: 67%;
-    gap: 2rem;
+    /* grid-auto-columns: 67%; */
+    /* gap: 2rem; */
     padding-inline: 2rem;
+    height: 35vh;
   }
   .services-box {
-    gap: 3rem;
-    height: 25rem;
-    padding: 2rem 2rem 1rem 2rem;
+    min-width: 57%;
   }
   .service-description {
     font-size: 1rem;
@@ -437,7 +428,7 @@ main {
   .services-link {
     padding: var(--ctaTabletPad);
     font-size: 1rem;
-    margin-block-start: 6vh;
+    margin-block-start: 8vh;
   }
   .arrow {
     margin-inline-start: 10px;
@@ -448,6 +439,18 @@ main {
   .service-backdrop {
     height: 70%;
     bottom: 20%;
+  }
+  /* ! 768px APPROACH SECTION */
+  .approach-container {
+    margin-block: 5% 0;
+    height: 40vh;
+  }
+  .approach-title {
+    font-size: 5.5rem;
+    /* margin-inline-end: 25vw; */
+  }
+  .summary {
+    font-size: 1rem;
   }
   /* ! 768px TESTIMONIAL SECTION */
   .mobile-quote {
@@ -591,23 +594,23 @@ main {
   }
   /* ! 1440 SERVICES SECTION */
   .services-container {
-    height: 30rem;
+    height: 40vh;
     width: 100vw;
   }
   .service-box-container {
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-    height: 70%;
-  }
-  .services-box {
+     justify-content: space-evenly;
+     height: 70%;
+    }
+    .services-box {
+    /* border: 1px solid red; */
     gap: 0;
-    display: flex;
+    /* display: flex; */
     padding: 1rem;
-    flex-direction: column;
-    justify-content: space-evenly;
+    /* flex-direction: column; */
+    /* justify-content: space-evenly; */
+    min-width: 0;
     width: 25%;
-    height: 95%;
+    /* height: 30vh; */
   }
   .services-link {
     font-size: 1rem;
