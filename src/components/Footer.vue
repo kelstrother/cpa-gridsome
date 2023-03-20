@@ -46,7 +46,7 @@ export default {
   padding-inline: 1rem;
   place-items: center;
   width: 100vw;
-  height: 35vh;
+  height: 35%;
   background: var(--footerGradient);
 }
 .footer-logo {

@@ -66,7 +66,7 @@ main {
   height: 55%;
 }
 .phrase {
-  font-weight: 200;
+  font-weight: 300;
   text-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.1);
   color: #fff;
   /* font-size: clamp(1rem, 2.2vw, 2rem); */
@@ -118,7 +118,7 @@ main {
   /* border: 1px solid red; */
   margin-block-start: 5vh;
   overflow-x: auto;
-  overflow-y: clip;
+  overflow-y: hidden;
   position: relative;
   width: 100vw;
   display: flex;
@@ -133,9 +133,9 @@ main {
   margin-inline: 1rem 0;
 }
 .service-box-container {
-  position: relative;
   display: grid;
   gap: 1rem;
+  /* grid-template-rows: 1fr; */
   grid-auto-flow: column;
   grid-auto-columns: 77%;
   padding-inline: 1rem;

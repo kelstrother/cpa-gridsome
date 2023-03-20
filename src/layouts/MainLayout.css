@@ -1,17 +1,9 @@
 .layout {
-  /* position: relative; */
   font-family: "Inter";
-  height: 100vh;
+  min-height: 100vh;
+  width: 100vw;
 }
-.header {
-  background-color: transparent;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 10vh;
-  padding-inline: 0.75rem;
-  box-shadow: 0 1px 10px 10px rgba(0, 0, 0, 0.2);
-}
+
 /*  //! FOOTER SECTION */
 /* .footer-container {
   position: relative;
