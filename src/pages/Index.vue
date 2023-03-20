@@ -48,38 +48,6 @@
       </div>
       <div class="divider"></div>
     </section>
-    //! APPROACH SECTION
-    <!-- <section class="approach-container">
-      <h1
-        data-aos="fade-up"
-        data-aos-duration="900"
-        data-aos-easing="ease-in-cubic"
-        class="approach-title"
-      >
-        How we do it
-      </h1>
-      <g-image
-        alt="Image that says Our Approach"
-        class="approach-img"
-        data-aos="fade-right"
-        data-aos-duration="900"
-        data-aos-easing="ease-in-cubic"
-        src="~/assets/images/approach.png"
-      />
-      <summary
-        class="summary"
-        data-aos="fade-up"
-        data-aos-duration="900"
-        data-aos-delay="100"
-        data-aos-easing="ease-in-cubic"
-      >
-        With over 40 years of experience in accounting, we provide expert
-        financial guidance to businesses and individuals throughout the country.
-        Our experience and knowledge in the industry allows us to provide a wide
-        range of accounting and financial services for both individuals and
-        businesses, tailored to meet their unique needs and goals.
-      </summary>
-    </section> -->
     <!-- //!   SERVICES SECTION -->
     <div class="service-title-container">
       <h1
@@ -155,7 +123,6 @@
     </section>
     <!-- //!   APPROACH SECTION -->
     <section class="approach-container">
-      <!-- <div class="testimoniall-divider"></div> -->
       <h1
         data-aos="fade-up"
         data-aos-duration="900"
@@ -187,7 +154,14 @@
       </summary>
     </section>
     <!-- //!   TESTIMONIAL SECTION -->
-      <div data-aos="fade" data-aos-anchor-placement="top-bottom" data-aos-easing="ease-in-out-quart" data-aos-duration="1200" data-aos-delay="200" class="testimonial-divider"></div>
+    <div
+      data-aos="fade"
+      data-aos-anchor-placement="top-bottom"
+      data-aos-easing="ease-in-out-quart"
+      data-aos-duration="1200"
+      data-aos-delay="200"
+      class="testimonial-divider"
+    ></div>
     <section class="testimonial-container">
       <QuoteSVG class="quote-svg" />
       <p
