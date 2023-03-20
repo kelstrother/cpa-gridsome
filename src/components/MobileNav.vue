@@ -1,6 +1,6 @@
 <template>
-  <div class="mobile-nav-container">
-    <section class="nav-btn" @click.prevent="togglePressed">
+  <article class="mobile-nav-container">
+    <button class="nav-btn" @click.prevent="togglePressed">
       <span
         :class="this.isPressed ? 'nav-open o-top' : 'nav-closed x-top'"
         class="bar top"
@@ -13,7 +13,7 @@
         :class="this.isPressed ? 'nav-open o-bottom' : 'nav-closed x-bottom'"
         class="bar bottom"
       ></span>
-    </section>
+    </button>
     <Transition name="slide-fade">
       <nav v-if="isPressed" class="mobile-nav">
         <g-link
@@ -53,7 +53,7 @@
         >
       </nav>
     </Transition>
-  </div>
+  </article>
 </template>
 <script>
 export default {

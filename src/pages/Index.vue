@@ -1,8 +1,9 @@
 <template>
-  <div>
-    <div class="hero-section">
+  <main>
+    <section class="hero-section">
       <g-image
         class="mobile-hero"
+        alt="The Capitol Building in Denver."
         src="~/assets/images/mobile-capitol-2.jpg"
         :immediate="true"
       />
@@ -33,8 +34,8 @@
           </div>
           <div class="saying">
             <p class="phrase">
-              Ensuring <span class="you">you</span> & your
-              <span class="business">business</span><br />
+              Ensuring <i class="you">you</i> & your
+              <i class="business">business</i><br />
               get the results you deserve.
             </p>
           </div>
@@ -46,14 +47,14 @@
         </g-link>
       </div>
       <div class="divider"></div>
-    </div>
+    </section>
     <!-- //!   APPROACH SECTION -->
     <section class="approach-container">
       <p data-aos="fade-up" data-aos-duration="900"
         data-aos-easing="ease-in-cubic" class="responsive-approach">Our Approach</p>
-      <g-image class="approach-img" data-aos="fade-right" data-aos-duration="900"
+      <g-image alt="Image that says Our Approach" class="approach-img" data-aos="fade-right" data-aos-duration="900"
         data-aos-easing="ease-in-cubic" src="~/assets/images/approach.png" />
-      <p
+      <summary
         class="summary"
         data-aos="fade-up"
         data-aos-duration="900"
@@ -65,27 +66,27 @@
         Our experience and knowledge in the industry allows us to provide a wide
         range of accounting and financial services for both individuals and
         businesses, tailored to meet their unique needs and goals.
-      </p>
+      </summary>
     </section>
     <!-- //!   SERVICES SECTION -->
-    <div class="services-container">
+    <section class="services-container">
       <div class="service-box-container snaps-inline">
-        <div
+        <article
           id="service-1"
           class="services-box"
           data-aos="fade-up"
           data-aos-duration="800"
           data-aos-easing="ease-in-sine"
         >
-          <p class="service-title">Services</p>
+          <h2 class="service-title">Services</h2>
           <Money />
           <p class="service-description">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
             voluptas quia recusandae ipsa aperiam neque aliquam dicta, nesciunt
             praesentium repellat?
           </p>
-        </div>
-        <div
+        </article>
+        <article
           id="service-2"
           class="services-box"
           data-aos="fade-up"
@@ -93,15 +94,15 @@
           data-aos-easing="ease-in-sine"
           data-aos-delay="100"
         >
-          <p class="service-title">Services</p>
+          <h2 class="service-title">Services</h2>
           <Finance />
           <p class="service-description">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
             voluptas quia recusandae ipsa aperiam neque aliquam dicta, nesciunt
             praesentium repellat?
           </p>
-        </div>
-        <div
+        </article>
+        <article
           id="service-3"
           class="services-box"
           data-aos="fade-up"
@@ -109,14 +110,14 @@
           data-aos-easing="ease-in-sine"
           data-aos-delay="200"
         >
-          <p class="service-title">Services</p>
+          <h2 class="service-title">Services</h2>
           <Briefcase />
           <p class="service-description">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
             voluptas quia recusandae ipsa aperiam neque aliquam dicta, nesciunt
             praesentium repellat?
           </p>
-        </div>
+        </article>
       </div>
       <div class="service-link-container">
         <g-link class="service-cta" to="/services">
@@ -128,8 +129,8 @@
           </button>
         </g-link>
       </div>
-      <section class="service-backdrop"></section>
-    </div>
+      <div class="service-backdrop"></div>
+    </section>
     <!-- //!   TESTIMONIAL SECTION -->
     <section class="testimonial-container">
       <QuoteSVG class="quote-svg" />
@@ -144,20 +145,20 @@
       <MobileQuote class="mobile-quote" />
       <BracketSvg class="bracket-svg" />
     </section>
-    <div class="test-box-container snaps-inline">
+    <section class="test-box-container snaps-inline">
       <div class="test-1 test-box">
-        <div class="testimonial-inner">
+        <article class="testimonial-inner">
           <p class="testimonial-text">
             David is a highly knowledgeable CPA. He has experience heading up
             accounting for private companies plus many years as a public
             accountant helping individuals and businesses. I highly recommend
             David
           </p>
-        </div>
+        </article>
         <p class="testimonial-author">-Jerri Morgan</p>
       </div>
       <div class="test-2 test-box">
-        <div class="testimonial-inner">
+        <article class="testimonial-inner">
           <p class="testimonial-text">
             David is extremely knowledgeable in the world of financial advising
             and tax preparation. I was having trouble with my tax adviser, and
@@ -165,23 +166,23 @@
             previous accountant made mistakes. He is a wealth of knowledge, I
             recommend him to all.
           </p>
-        </div>
+        </article>
         <p class="testimonial-author">
           -Dr. Harrison<span>&apos;</span>s Center of Functional Medicine CFN
         </p>
       </div>
       <div class="test-3 test-box">
-        <div class="testimonial-inner">
+        <article class="testimonial-inner">
           <p class="testimonial-text">
             David Strother is the most knowledgeable accountant I have ever run
             across. If you are looking for a tax professional for your
             personally or for your business David is your guy!
           </p>
-        </div>
+        </article>
         <p class="testimonial-author">-Ken Davis</p>
       </div>
-    </div>
-  </div>
+    </section>
+  </main>
 </template>
 
 <script>

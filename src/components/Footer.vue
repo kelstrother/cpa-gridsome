@@ -1,34 +1,52 @@
-.layout {
-  /* position: relative; */
-  font-family: "Inter";
-  height: 100vh;
-}
-.header {
-  background-color: transparent;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 10vh;
-  padding-inline: 0.75rem;
-  box-shadow: 0 1px 10px 10px rgba(0, 0, 0, 0.2);
-}
-/*  //! FOOTER SECTION */
-/* .footer-container {
-  position: relative;
-  width: 100vw;
-  height: 35vh;
-}
+<template>
+  <footer class="footer">
+    <g-image class="footer-logo" src="../assets/images/footer-logo-4.png" />
+    <div class="footer-about">
+      <p class="f-title f-about-title">About Strother CPA</p>
+      <p class="f-about-content">
+        With over 40 years of experience in accounting, we provide expert
+        financial guidance to businesses and individuals throughout the country.
+        Our experience and knowledge in the industry allows us to provide a wide
+        range of accounting and financial services for both individuals and
+        businesses, tailored to meet their unique needs and goals.
+      </p>
+      <g-link class="f-about-link" to="/about">Learn More</g-link>
+    </div>
+    <div class="footer-contact">
+      <div class="f-contact-top">
+        <p class="f-title f-contact-title">Connect With Us</p>
+        <a href="tel:+3034399808" class="f-phone">303.439.9808</a>
+        <a href="mailto:david@strothercpa.com" class="f-email">david@strothercpa.com</a>
+      </div>
+      <div class="f-contact-bottom">
+        <p class="f-title f-contact-title">Office</p>
+        <address class="f-address">
+          11990 Grant Street<br />
+          Suite 550<br />
+          Northglenn, CO 80233
+        </address>
+      </div>
+    </div>
+    <small class="copyright"
+      >&copy; Copyright {{ new Date().getFullYear() }}, David Strother CPA. All
+      Rights Reserved</small
+    >
+  </footer>
+</template>
+<script>
+export default {
+  name: "Footer",
+};
+</script>
+<style scoped>
 .footer {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 8fr 1fr;
   padding-inline: 1rem;
   place-items: center;
-  position: absolute;
-  bottom: 0;
-  left: 0;
   width: 100vw;
-  height: 100%;
+  height: 35vh;
   background: var(--footerGradient);
 }
 .footer-logo {
@@ -60,14 +78,22 @@
   flex-direction: column;
   align-items: flex-start;
 }
+.f-contact-top {
+}
 .f-contact-title {
   margin-block-end: 0.5rem;
 }
 .f-phone,
+.f-email {
+  line-height: 1.5;
+}
+.f-phone,
 .f-email,
 .f-address {
+  color: var(--textLight);
   font-size: 0.8rem;
   font-weight: 300;
+  
 }
 .copyright {
   grid-row: 3;
@@ -75,23 +101,11 @@
   font-size: 0.6rem;
   color: #9c9c9c;
   margin-block-end: 0.5rem;
-} */
+}
 /*//*\\\\\\\\////////////////////////////////////*/
 /* //           ! TABLET MEDIA QUERY            */
 /* //&\\\\\\\\//\\\\\\\\\\\\\\\\\\//////////////*/
-/* @media screen and (min-width: 768px) {
-  .mobile-logo {
-    display: none;
-  }
-  .desktop-logo {
-    display: block;
-    margin-inline-start: 1rem;
-  }
-  .header {
-    align-items: flex-end;
-    padding: 1rem;
-    min-height: 13vh;
-  }
+@media screen and (min-width: 768px) {
   .footer {
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 1fr 8fr 1fr;
@@ -138,14 +152,11 @@
   .copyright {
     font-size: 0.7rem;
   }
-} */
+}
 /*//*\\\\\\\\////////////////////////////////////*/
 /* //           ! 1440px MEDIA QUERY            */
 /* //&\\\\\\\\//\\\\\\\\\\\\\\\\\\//////////////*/
-/* @media screen and (min-width: 1440px) {
-  .header {
-    height: 17vh;
-  }
+@media screen and (min-width: 1440px) {
   .footer {
     gap: 0;
     padding-inline: 2rem;
@@ -161,12 +172,8 @@
   .copyright {
     grid-column: 1;
   }
-} */
+}
 /*//*\\\\\\\\////////////////////////////////////*/
 /* //           ! 1920px MEDIA QUERY            */
 /* //&\\\\\\\\//\\\\\\\\\\\\\\\\\\//////////////*/
-/* @media screen and (min-width: 1920px) {
-  .header {
-    height: 14vh;
-  }
-} */
+</style>

@@ -36,6 +36,9 @@
     z-index: -1;
     border: 1px groove rgb(255, 255, 255, .1);
   }
+  address {
+    font-style: normal;
+  }
   .address-container {
     grid-row: 1;
     grid-column: 1;

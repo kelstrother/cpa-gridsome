@@ -1,8 +1,6 @@
 <template>
   <div class="contact-component-container">
-    <div
-      class="contact-container"
-     >
+    <div class="contact-container">
       <div class="contact-info">
         <div class="contact address-container">
           <div
@@ -10,10 +8,10 @@
             data-aos="fade-up"
             data-aos-duration="800"
           >
-            <MobileHome class="m-home m-icon"/>
+            <MobileHome class="m-home m-icon" />
             <HomeIcon class="home-svg d-icon" />
           </div>
-          <p
+          <address
             class="contact-text address-info"
             data-aos="fade-up"
             data-aos-duration="800"
@@ -21,7 +19,7 @@
           >
             11990 Grant Street Suite 550 <br />
             Northglenn, CO 80233
-          </p>
+          </address>
         </div>
         <div class="contact number-container">
           <div
@@ -30,7 +28,7 @@
             data-aos-duration="800"
             data-aos-delay="100"
           >
-          <MobilePhone class="m-phone m-icon"/>
+            <MobilePhone class="m-phone m-icon" />
             <PhoneIcon class="phone-svg d-icon" />
           </div>
           <p
@@ -39,7 +37,7 @@
             data-aos-duration="800"
             data-aos-delay="200"
           >
-            303.439.9808
+            (303)&nbsp; 439-9808
           </p>
         </div>
         <div class="contact fax-container">
@@ -49,7 +47,7 @@
             data-aos-duration="800"
             data-aos-delay="200"
           >
-          <MobileFax class="m-fax m-icon"/>
+            <MobileFax class="m-fax m-icon" />
             <FaxIcon class="fax-svg d-icon" />
           </div>
           <p
@@ -58,7 +56,7 @@
             data-aos-duration="800"
             data-aos-delay="300"
           >
-            720.887.7105
+            (720)&nbsp; 887-7105
           </p>
         </div>
         <div class="contact email-container">
@@ -68,7 +66,7 @@
             data-aos-duration="800"
             data-aos-delay="300"
           >
-          <MobileMail class="m-mail m-icon"/>
+            <MobileMail class="m-mail m-icon" />
             <MailIcon class="email-svg d-icon" />
           </div>
           <p
@@ -77,13 +75,13 @@
             data-aos-duration="800"
             data-aos-delay="400"
           >
-            <a href="mailto:">david@strothercpa.com</a>
+            david@strothercpa.com
           </p>
         </div>
       </div>
     </div>
     <div class="form-container">
-        <p class="invitation">We'd love to hear from you!</p>
+      <p class="invitation">We'd love to hear from you!</p>
       <form class="form" ref="form" @submit.prevent="sendMail">
         <div class="form-group">
           <label>Name <span class="red">*</span></label>
@@ -139,10 +137,10 @@
 
 <script>
 import emailjs from "@emailjs/browser";
-import MobileHome from '~/assets/icons/mobile-home-contact.svg'
-import MobilePhone from '~/assets/icons/mobile-phone-icon.svg'
-import MobileFax from '~/assets/icons/mobile-fax-icon.svg'
-import MobileMail from '~/assets/icons/mobile-mail-icon.svg'
+import MobileHome from "~/assets/icons/mobile-home-contact.svg";
+import MobilePhone from "~/assets/icons/mobile-phone-icon.svg";
+import MobileFax from "~/assets/icons/mobile-fax-icon.svg";
+import MobileMail from "~/assets/icons/mobile-mail-icon.svg";
 import HomeIcon from "../assets/icons/home.svg";
 import PhoneIcon from "../assets/icons/call.svg";
 import FaxIcon from "../assets/icons/fax.svg";
