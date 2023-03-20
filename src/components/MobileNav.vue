@@ -79,6 +79,7 @@ export default {
   background: transparent;
   width: 35px;
   height: 30px;
+  border: transparent;
 }
 .bar {
   display: inline-block;

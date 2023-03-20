@@ -15,7 +15,7 @@
     <div class="footer-contact">
       <div class="f-contact-top">
         <p class="f-title f-contact-title">Connect With Us</p>
-        <a href="tel:+3034399808" class="f-phone">303.439.9808</a>
+        <a href="tel:+3034399808" class="f-phone">(303)&nbsp; 439-9808</a>
         <a href="mailto:david@strothercpa.com" class="f-email">david@strothercpa.com</a>
       </div>
       <div class="f-contact-bottom">

@@ -4,6 +4,10 @@
 .hero-img {
   display: none;
 }
+main {
+  width: 100vw;
+  overflow-x: hidden;
+}
 .hero-section {
   position: relative;
   height: 90vh;
@@ -69,7 +73,6 @@
 .you,
 .business {
   color: var(--mainGold);
-  font-style: italic;
   font-size: 1.2rem;
   font-weight: 500;
   text-shadow: 1px 0.5px 2px rgba(0, 0, 0, 0.2);
@@ -91,7 +94,7 @@
   box-shadow: var(--btnShadow);
 }
 .divider {
-  width: 100vw;
+  width: 100%;
   height: 20vh;
   position: absolute;
   bottom: -10vh;
@@ -106,13 +109,6 @@
 .approach-svg {
   display: none;
 }
-.responsive-approach {
-  font-family: "Playfair Display";
-  font-style: italic;
-  font-size: clamp(3rem, 10vw, 5rem);
-  color: var(--mainGrey);
-  opacity: .7;
-}
 .approach-container {
   position: relative;
   display: flex;
@@ -120,22 +116,49 @@
   height: 55vh;
   width: 100vw;
   gap: 3rem;
-  margin-block-start: 15vh;
+  margin-block: 10vh 0;
   align-items: center;
+}
+.approach-title {
+  font-family: var(--serifFont);
+  font-style: italic;
+  font-size: 3rem;
+  font-weight: 400;
+  width: 100%;
+  color: var(--lightGrey);
+  margin-inline-start: 20%;
+  /* margin-inline: 0 10% ; */
 }
 .summary {
   font-size: 1rem;
   align-items: center;
-  max-width: 80%;
+  width: 80%;
   line-height: 1.3;
   text-indent: 0.7rem;
   color: var(--mainGrey);
 }
 /* ! MOBILE SERVICES SECTION */
+.service-title-container {
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  margin-block-start: 15vh;
+}
 .services-container {
+  margin-block-start: 5vh;
   overflow-x: auto;
   position: relative;
-  background: transparent;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+.service-section-title {
+  color: var(--lightGrey);
+  font-family: var(--serifFont);
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: 400;
+  margin-inline: 1rem 0;
 }
 .service-box-container {
   position: relative;
@@ -158,6 +181,11 @@
   background: var(--boxGradient);
   box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.2);
 }
+.service-title {
+  font-family: var(--sansFont);
+  font-weight: 400;
+  font-size: 1.4rem;
+}
 .snaps-inline {
   scroll-snap-type: inline mandatory;
   scroll-padding-inline: 1rem;
@@ -166,6 +194,8 @@
   scroll-snap-align: start;
 }
 .service-description {
+  font-family: var(--sansFont);
+  /* letter-spacing: .25px; */
   text-align: center;
   font-size: 0.75rem;
   font-weight: 200;
@@ -227,24 +257,32 @@
   flex-direction: column;
   width: 100vw;
   position: relative;
-  margin-block-start: 20%;
+  margin-block-start: 0%;
+}
+.testimonial-divider {
+  background: var(--darkBoxGradient);
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 85%);
+  height: 25vh;
+  width: 100%;
 }
 .quote-svg {
   display: none;
 }
 .mobile-quote {
   position: absolute;
+  top: 2rem;
   left: 2.5rem;
   transform: rotate(180deg);
 }
 .test-title {
-  font-family: "Playfair Display";
+  font-family: var(--serifFont);
   font-size: 2.5rem;
   font-style: italic;
-  color: var(--mainGrey);
+  font-weight: 400;
+  color: var(--lightGrey);
   margin-inline-start: 1rem;
-  margin-block-start: 1.5rem;
-  max-width: 100vw;
+  margin-block-start: 20%;
+  width: 100vw;
 }
 .test-box-container {
   position: relative;
@@ -255,7 +293,7 @@
   padding: 1rem 1rem 3rem 1rem;
   overflow-x: auto;
   overscroll-behavior-inline: contain;
-  margin-block-start: 2rem;
+  margin-block-start: 10%;
 }
 .test-box {
   display: grid;
@@ -266,17 +304,17 @@
   background: var(--testGradient);
   border-radius: var(--borderRadius);
   box-shadow: var(--mobileBoxShadow);
-  font-family: "Playfair Display";
+  font-family: var(--serifFont);
   color: var(--mainGrey);
   padding: .5rem;
 }
 .testimonial-text {
   font-size: .9rem;
-  text-align: center;
+  text-align: left;
   padding: .5rem;
 }
 .testimonial-author {
-  font-family: "Playfair Display";
+  font-family: var(--serifFont);
   font-size: 0.9rem;
   color: var(--mainGrey);
   font-style: italic;
@@ -346,13 +384,22 @@
     margin-block-start: 1rem;
   }
   /* ! 768px APPROACH SECTION */
+  .approach-container {
+    margin-block: 5% 0;
+  }
+  .approach-title {
+    font-size: 5.5rem;
+    /* margin-inline-end: 25vw; */
+  }
   .summary {
-    max-width: 60%;
     font-size: 1rem;
   }
   /* ! 768px SERVICES SECTION */
   .services-container {
     height: 40rem;
+  }
+  .service-section-title {
+    font-size: 5.5rem;
   }
   .service-box-container {
     grid-auto-columns: 67%;
@@ -374,7 +421,7 @@
   .services-link {
     padding: var(--ctaTabletPad);
     font-size: 1rem;
-    margin-block-start: 9vh;
+    margin-block-start: 6vh;
   }
   .arrow {
     margin-inline-start: 10px;
@@ -401,12 +448,7 @@
     left: 2rem;
   }
   .test-title {
-    font-family: var(--serifFont);
-    font-size: 4.5rem;
-    display: inline-block;
-    max-width: 100vw;
-    font-style: italic;
-    color: var(--mainGrey);
+    font-size: 5.5rem;
     margin-inline-start: 5rem;
     margin-block-start: 4rem;
   }
@@ -419,9 +461,9 @@
     padding: 2rem 1rem;
   }
   .testimonial-text {
-    /* text-align: left; */
     font-size: 1rem;
     padding: 1rem;
+    text-align: center;
   }
 }
 /*//*\\\\\\\\////////////////////////////////////*/

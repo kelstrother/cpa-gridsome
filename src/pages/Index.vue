@@ -48,12 +48,24 @@
       </div>
       <div class="divider"></div>
     </section>
-    <!-- //!   APPROACH SECTION -->
-    <section class="approach-container">
-      <p data-aos="fade-up" data-aos-duration="900"
-        data-aos-easing="ease-in-cubic" class="responsive-approach">Our Approach</p>
-      <g-image alt="Image that says Our Approach" class="approach-img" data-aos="fade-right" data-aos-duration="900"
-        data-aos-easing="ease-in-cubic" src="~/assets/images/approach.png" />
+    //! APPROACH SECTION
+    <!-- <section class="approach-container">
+      <h1
+        data-aos="fade-up"
+        data-aos-duration="900"
+        data-aos-easing="ease-in-cubic"
+        class="approach-title"
+      >
+        How we do it
+      </h1>
+      <g-image
+        alt="Image that says Our Approach"
+        class="approach-img"
+        data-aos="fade-right"
+        data-aos-duration="900"
+        data-aos-easing="ease-in-cubic"
+        src="~/assets/images/approach.png"
+      />
       <summary
         class="summary"
         data-aos="fade-up"
@@ -67,8 +79,18 @@
         range of accounting and financial services for both individuals and
         businesses, tailored to meet their unique needs and goals.
       </summary>
-    </section>
+    </section> -->
     <!-- //!   SERVICES SECTION -->
+    <div class="service-title-container">
+      <h1
+        class="service-section-title"
+        data-aos="fade-up"
+        data-aos-duration="700"
+        data-aos-easing="ease-in-sine"
+      >
+        What we do
+      </h1>
+    </div>
     <section class="services-container">
       <div class="service-box-container snaps-inline">
         <article
@@ -131,7 +153,41 @@
       </div>
       <div class="service-backdrop"></div>
     </section>
+    <!-- //!   APPROACH SECTION -->
+    <section class="approach-container">
+      <!-- <div class="testimoniall-divider"></div> -->
+      <h1
+        data-aos="fade-up"
+        data-aos-duration="900"
+        data-aos-easing="ease-in-cubic"
+        class="approach-title"
+      >
+        Who We Are
+      </h1>
+      <g-image
+        alt="Image that says Our Approach"
+        class="approach-img"
+        data-aos="fade-right"
+        data-aos-duration="900"
+        data-aos-easing="ease-in-cubic"
+        src="~/assets/images/approach.png"
+      />
+      <summary
+        class="summary"
+        data-aos="fade-up"
+        data-aos-duration="900"
+        data-aos-delay="100"
+        data-aos-easing="ease-in-cubic"
+      >
+        With over 40 years of experience in accounting, we provide expert
+        financial guidance to businesses and individuals throughout the country.
+        Our experience and knowledge in the industry allows us to provide a wide
+        range of accounting and financial services for both individuals and
+        businesses, tailored to meet their unique needs and goals.
+      </summary>
+    </section>
     <!-- //!   TESTIMONIAL SECTION -->
+      <div data-aos="fade" data-aos-anchor-placement="top-bottom" data-aos-easing="ease-in-out-quart" data-aos-duration="1200" data-aos-delay="200" class="testimonial-divider"></div>
     <section class="testimonial-container">
       <QuoteSVG class="quote-svg" />
       <p
@@ -155,7 +211,7 @@
             David
           </p>
         </article>
-        <p class="testimonial-author">-Jerri Morgan</p>
+        <p class="testimonial-author">- Jerri Morgan</p>
       </div>
       <div class="test-2 test-box">
         <article class="testimonial-inner">
@@ -168,7 +224,7 @@
           </p>
         </article>
         <p class="testimonial-author">
-          -Dr. Harrison<span>&apos;</span>s Center of Functional Medicine CFN
+          - Dr. Harrison<span>&apos;</span>s Center of Functional Medicine CFN
         </p>
       </div>
       <div class="test-3 test-box">
@@ -179,7 +235,7 @@
             personally or for your business David is your guy!
           </p>
         </article>
-        <p class="testimonial-author">-Ken Davis</p>
+        <p class="testimonial-author">- Ken Davis</p>
       </div>
     </section>
   </main>
@@ -208,7 +264,7 @@ export default {
     Money,
     Briefcase,
     QuoteSVG,
-    BracketSvg
+    BracketSvg,
   },
   metaInfo: {
     title: "Home",
