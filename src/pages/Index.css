@@ -142,13 +142,12 @@ main {
   padding-inline: 1rem;
   overflow-x: auto;
   overscroll-behavior-inline: contain;
-  border: 1px solid red;
 }
 .services-box {
   display: flex;
   flex-direction: column;
   min-width: 73%;
-  height: min-content;
+  justify-content: space-evenly;
   align-items: center;
   /* display: grid;
   grid-template-rows: min-content;
