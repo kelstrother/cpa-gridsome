@@ -133,21 +133,27 @@ main {
   margin-inline: 1rem 0;
 }
 .service-box-container {
-  display: grid;
-  gap: 1rem;
-  /* grid-template-rows: 1fr; */
+  display: flex;
+  /* max-height: 30vh; */
+  /* display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 77%;
+  grid-auto-columns: 77%; */
+  gap: 1rem;
   padding-inline: 1rem;
   overflow-x: auto;
   overscroll-behavior-inline: contain;
-  /* border: 1px solid red; */
+  border: 1px solid red;
 }
 .services-box {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  min-width: 73%;
+  height: min-content;
+  align-items: center;
+  /* display: grid;
   grid-template-rows: min-content;
+  place-items: center; */
   gap: 1.5rem;
-  place-items: center;
   color: var(--textLight);
   padding: 1rem;
   border-radius: var(--borderRadius);
