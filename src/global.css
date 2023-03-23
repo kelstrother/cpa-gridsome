@@ -7,12 +7,15 @@
   /* !  COLORS */
   --mainGreen: #315c2b;
   --mainGold: hsl(38, 33%, 58%);
+  --opacityGold: hsla(38, 33%, 58%, 0.615);
   --mainGrey: #565656;
   --lightGrey: #777777;
+  --darkWhite: #ecececd9;
   --darkGrey: #333333;
   --lightBlue: rgb(209, 224, 224, 0.5);
   --bodyBG: hsl(38, 58%, 90%, 1);
   --textLight: #eeeeee;
+  --darkBlue: rgb(32, 49, 57);
 
   --greyGradient: -webkit-linear-gradient(
     left,

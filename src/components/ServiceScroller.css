@@ -1,14 +1,23 @@
 .component-container {
   width: 100vw;
-  margin-block-end: 5vh;
+  margin-block: 10vh;
+}
+.service-title {
+  color: var(--lightGrey);
+  font-family: var(--serifFont);
+  font-weight: 400;
+  font-size: 3rem;
+  margin-block: 2rem 1rem;
+  margin-inline-start: 1rem;
 }
 .service-scroller {
+  overflow-y: clip;
   position: relative;
   width: 100vw;
-  overflow-y: hidden;
   padding-block-end: 5vh;
 }
 .service-scroller::after {
+  overflow-y: clip;
   content: "";
   background: var(--greyGradient);
   position: absolute;
@@ -21,7 +30,7 @@
   align-items: center;
   height: 50vh;
   padding-inline: 1rem;
-  margin-block-start: -1.5vh;
+  margin-block-start: 0vh;
   overflow-x: auto;
   overscroll-behavior-inline: contain;
 }
@@ -36,8 +45,9 @@
   display: flex;
   flex-direction: column;
   min-width: 77%;
+  overflow-y: hidden;
   width: 70%;
-  height: 90%;
+  height: 85%;
   justify-content: space-between;
   align-items: center;
   color: var(--textLight);
@@ -53,10 +63,9 @@
   font-size: 1.2rem;
 }
 .service-description {
-  font-family: var(--sansFont);
+  font-family: var(--serifFont);
   text-align: center;
   font-size: 0.75rem;
-  font-weight: 200;
   width: 90%;
 }
 .service-link-container {
@@ -81,35 +90,31 @@
 .arrow {
   margin-inline-start: 5px;
 }
-/* @media screen and (min-width: 768px) {
+@media screen and (min-width: 1440px) {
   .component-container {
-    margin-block-start: 10vh;
-    width: 100%;
+    border: 1px solid red;
   }
-  .service-scroller {
-    overflow-y: auto;
-    width: 100%;
+  .service-title {
+    font-size: 7rem;
+    margin-inline-start: 3.5vw;
   }
   .service-box-container {
-    height: 40vh;
-    width: 100%;
     justify-content: space-evenly;
   }
   .service-box {
-    min-width: none;
-    width: 30%;
-    height: 90%;
+    min-width: 0;
+    width: 28%;
     padding: 2rem;
   }
-  .service-description {
-    font-size: 1rem;
+  .service-btn {
+    padding: var(--ctaPad);
+    font-size: 1.1rem;
+    transition: all 300ms ease-in-out;
   }
-  .service-link-container {
-  margin-block-start: -2.5vh;
+  .service-btn:hover {
+    box-shadow: var(--hoverShadow);
+  }
+  .arrow {
+    margin-inline-start: 15px;
+  }
 }
-.service-btn {
-  padding: var(--ctaPad);
-  font-size: 1.2rem;
-  font-weight: 500;
-}
-} */

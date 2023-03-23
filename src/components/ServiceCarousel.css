@@ -1,12 +1,16 @@
 
 
 @media screen and (min-width: 768px) {
+  .carousel-component {
+    height: auto;
+    overflow-y: hidden;
+  }
   .carousel {
     position: relative;
-    height: 45vh;
+    height: 50vh;
     width: 80vw;
     margin: 0 auto;
-    margin-block: 0vh 7vh;
+    margin-block: 7vh;
   }
   .carousel-track-container {
     height: 100%;
@@ -77,7 +81,7 @@
     background: var(--darkGrey);
   }
 }
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1440px) {
   .carousel {
     width: 60vw;
   }

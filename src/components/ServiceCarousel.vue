@@ -1,5 +1,5 @@
 <template>
-  <div >
+  <div class="carousel-component">
     <section class="carousel">
       <button
       data-aos="fade-right"

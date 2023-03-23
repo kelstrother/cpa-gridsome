@@ -7,3 +7,13 @@
     />
   </svg>
 </template>
+<style scoped>
+svg {
+  scale: .9;
+}
+@media screen and (min-width: 768px) {
+  svg {
+    scale: 1.3;
+  }
+}
+</style>

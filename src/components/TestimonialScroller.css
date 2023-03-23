@@ -1,0 +1,129 @@
+/* .testimonial-component > * {
+  outline: 1px solid red;
+} */
+.testimonial-component {
+  position: relative;
+  /* border: 1px solid red; */
+  height: 60vh;
+}
+.testimonial-header {
+  height: 25vh;
+  display: flex;
+  /* border: 1px solid red; */
+}
+.testimonial-header::after {
+  content: '';
+  background: var(--testGradient);
+  clip-path: polygon(0 0, 100% 25%, 100% 70%, 0% 100%);
+  height: 35%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+.desktop-quote, .mobile-quote {
+  position: absolute;
+}
+.desktop-quote {
+  /* display: none; */
+  left: 1vw;
+  top: -2vh;
+}
+.mobile-quote {
+  display: none;
+  top: 4vh;
+  left: 15vw;
+  transform: rotate(180deg);
+}
+.testimonial-title {
+  margin-block-start: 7vh;
+  margin-inline-start: 5vw;
+  font-size: 2.5rem;
+  font-family: var(--serifFont);
+  color: var(--mainGrey);
+  width: max-content;
+}
+.testimonial-scroll-container {
+  position: relative;
+  display: grid;
+  gap: 1rem;
+  grid-auto-flow: column;
+  grid-auto-columns: 73%;
+  place-items: center;
+  padding: 1rem 1rem 0 1rem;
+  max-height: 40vh;
+  overflow-x: scroll;
+  overscroll-behavior-inline: contain;
+}
+.snaps-inline {
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 1rem;
+}
+.snaps-inline > * {
+  scroll-snap-align: start;
+}
+.testimonial-box-container {
+  display: grid;
+  grid-template-rows: min-content;
+  gap: 1rem;
+  font-size: .9rem;
+}
+.testimonial-box {
+  padding: .5rem;
+  border-radius: var(--borderRadius);
+  background: var(--testGradient);
+  box-shadow: var(--mobileBoxShadow);
+  color: var(--mainGrey);
+}
+.testimonial-text {
+  font-family: var(--serifFont);
+  text-align: center;
+}
+.testimonial-author {
+  justify-self: flex-end;
+  text-align: right;
+}
+@media screen and (min-width: 768px) {
+  .desktop-quote {
+    left: 8vw;
+    top: 4vh;
+  }
+  .testimonial-title {
+    font-size: 4.5rem;
+  }
+  .testimonial-scroll-container {
+    
+    grid-auto-columns: 56%;
+    height: 60vh;
+  }
+  .testimonial-box {
+    display: flex;
+    align-items: center;
+    padding: 2rem 1rem;
+  }
+}
+@media  screen and (min-width: 1440px) {
+  .desktop-quote {
+    left: 4vw;
+  }
+  .testimonial-scroll-container {
+    overflow: hidden;
+    grid-auto-columns: 25%;
+    gap: 8vw;
+    place-content: center;
+    overscroll-behavior-inline: contain;
+  }
+  .snaps-inline {
+  scroll-snap-type: none;
+  scroll-padding-inline: 0;
+}
+.snaps-inline > * {
+  scroll-snap-align: 0;
+}
+  .testimonial-box {
+    place-content: center;
+    padding: 2rem 0rem;
+  }
+  .testimonial-text {
+    width: 90%;
+  }
+}
