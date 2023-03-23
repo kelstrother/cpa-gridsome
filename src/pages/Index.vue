@@ -59,68 +59,16 @@
         What we do
       </h1>
     </div>
-    <section class="services-container">
-      <div class="service-box-container snaps-inline">
-        <article
-          id="service-1"
-          class="services-box"
-          data-aos="fade-up"
-          data-aos-duration="800"
-          data-aos-easing="ease-in-sine"
-        >
-          <h2 class="service-title">Services</h2>
-          <Money />
-          <p class="service-description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-            voluptas quia recusandae ipsa aperiam neque aliquam dicta, nesciunt
-            praesentium repellat?
-          </p>
-        </article>
-        <article
-          id="service-2"
-          class="services-box"
-          data-aos="fade-up"
-          data-aos-duration="800"
-          data-aos-easing="ease-in-sine"
-          data-aos-delay="100"
-        >
-          <h2 class="service-title">Services</h2>
-          <Finance />
-          <p class="service-description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-            voluptas quia recusandae ipsa aperiam neque aliquam dicta, nesciunt
-            praesentium repellat?
-          </p>
-        </article>
-        <article
-          id="service-3"
-          class="services-box"
-          data-aos="fade-up"
-          data-aos-duration="800"
-          data-aos-easing="ease-in-sine"
-          data-aos-delay="200"
-        >
-          <h2 class="service-title">Services</h2>
-          <Briefcase />
-          <p class="service-description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-            voluptas quia recusandae ipsa aperiam neque aliquam dicta, nesciunt
-            praesentium repellat?
-          </p>
-        </article>
-      </div>
-      <div class="service-link-container">
-        <g-link class="service-cta" to="/services">
-          <button class="services-link">
-            Explore Services
-            <span class="material-symbols-outlined arrow">
-              double_arrow
-            </span>
-          </button>
-        </g-link>
-      </div>
-      <div class="service-backdrop"></div>
-    </section>
+    <ServiceScroller class="service-scroller-component"/>
+    <ServiceCarousel class="carousel-component "/>
+    <div
+      data-aos="fade"
+      data-aos-anchor-placement="top-bottom"
+      data-aos-easing="ease-in-out-quart"
+      data-aos-duration="1200"
+      data-aos-delay="200"
+      class="service-divider"
+    ></div>
     <!-- //!   APPROACH SECTION -->
     <section class="approach-container">
       <h1
@@ -225,12 +173,16 @@ import Arrow from "../assets/icons/arrow.svg";
 import Finance from "../assets/icons/finance.svg";
 import Money from "../assets/icons/money.svg";
 import Briefcase from "../assets/icons/Briefcase.svg";
+import ServiceScroller from "../components/ServiceScroller.vue"
+import ServiceCarousel from "~/components/ServiceCarousel.vue";
 export default {
   props: {
     immediate: Boolean,
   },
   name: "Home",
   components: {
+    ServiceCarousel,
+    ServiceScroller,
     MobileQuote,
     Divider,
     Arrow,

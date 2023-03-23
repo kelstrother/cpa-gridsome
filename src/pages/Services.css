@@ -1,8 +1,10 @@
-.service-container {
+.page-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  margin-inline: 2rem;
+  justify-content: space-evenly;
+  /* margin-inline: 2rem; */
   align-items: center;
-  height: 83vh;
+  height: 80vh;
+  width: 100vw;
 }
+

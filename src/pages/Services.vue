@@ -1,21 +1,21 @@
 <template>
-  <div>
-    <div class="service-container" data-aos="fade" data-aos-duration="900" data-aos-easing="ease-in-out-quart">
-      <h1>Services</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error
-        doloremque omnis animi, eligendi magni a voluptatum, vitae, consequuntur
-        rerum illum odit fugit assumenda rem dolores inventore iste
-        reprehenderit maxime! Iusto.
-      </p>
-    </div>
+  <div class="page-container">
+      <!-- <h1>Services</h1> -->
+    <ServiceScroller />
+    <!-- <Carousel /> -->
   </div>
 </template>
 
 <script>
 import "/src/pages/Services.css";
+import Carousel from "~/components/ServiceCarousel.vue";
+import ServiceScroller from '~/components/ServiceScroller.vue'
 export default {
   name: "Services",
+  components: {
+    Carousel,
+    ServiceScroller,
+  },
   metaInfo: {
     title: "Services",
   },

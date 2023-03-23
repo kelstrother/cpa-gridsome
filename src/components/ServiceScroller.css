@@ -1,0 +1,111 @@
+.component-container {
+  width: 100vw;
+}
+.service-scroller {
+  position: relative;
+  width: 100vw;
+  overflow-y: hidden;
+  padding-block-end: 5vh;
+}
+.service-scroller::after {
+  content: "";
+  background: var(--greyGradient);
+  position: absolute;
+  inset: 0;
+  translate: 0 10vh;
+  z-index: -1;
+}
+.service-box-container {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 50vh;
+  padding-inline: 1rem;
+  margin-block-start: -1.5vh;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+.snaps-inline {
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 1rem;
+}
+.snaps-inline > * {
+  scroll-snap-align: start;
+}
+.service-box {
+  display: flex;
+  flex-direction: column;
+  min-width: 77%;
+  height: 90%;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--textLight);
+  padding: 1rem;
+  border-radius: var(--borderRadius);
+  background: var(--boxGradient);
+  box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.2);
+}
+.service-name {
+  font-family: var(--sansFont);
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.service-description {
+  font-family: var(--sansFont);
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 200;
+  width: 90%;
+}
+.service-link-container {
+  margin-block-start: -3vh;
+}
+.service-link {
+  text-decoration: none;
+}
+.service-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--ctaMobilePad);
+  background: var(--btnGradient);
+  border: 0;
+  border-radius: var(--borderRadius);
+  color: var(--textLight);
+  box-shadow: var(--btnShadow);
+}
+.arrow {
+  margin-inline-start: 5px;
+}
+@media screen and (min-width: 768px) {
+  .component-container {
+    margin-block-start: 10vh;
+    width: 100%;
+  }
+  .service-scroller {
+    overflow-y: auto;
+    width: 100%;
+  }
+  .service-box-container {
+    height: 40vh;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+  .service-box {
+    min-width: none;
+    width: 30%;
+    height: 90%;
+    padding: 2rem;
+  }
+  .service-description {
+    font-size: 1rem;
+  }
+  .service-link-container {
+  margin-block-start: -2.5vh;
+}
+.service-btn {
+  padding: var(--ctaPad);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+}
