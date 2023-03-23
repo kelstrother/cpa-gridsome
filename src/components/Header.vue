@@ -27,7 +27,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 10vh;
+  min-height: 11vh;
   padding-inline: 0.75rem;
   box-shadow: 0 1px 10px 10px rgba(0, 0, 0, 0.2);
 }

@@ -109,7 +109,7 @@ export default {
 }
 .mobile-nav {
   position: absolute;
-  top: 10vh;
+  top: 11vh;
   right: 0;
   background-color: hsl(38, 58%, 0%, 0.4);
   backdrop-filter: blur(8px);

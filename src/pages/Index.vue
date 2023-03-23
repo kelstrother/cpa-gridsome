@@ -111,7 +111,11 @@
       class="testimonial-divider"
     ></div>
     <section class="testimonial-container">
-      <QuoteSVG class="quote-svg" />
+    <div data-aos="zoom-in"
+        data-aos-duration="1400"
+        data-aos-easing="ease-in-out-quart" class="quote-svg">
+      <QuoteSVG  class="quote-svg" />
+    </div>
       <p
         class="test-title"
         data-aos="fade-down-right"
@@ -120,7 +124,11 @@
       >
         What they<span>&apos;</span>re saying
       </p>
+      <div data-aos="zoom-in"
+        data-aos-duration="1400"
+        data-aos-easing="ease-in-out-quart" class="mobile-quote-container" >
       <MobileQuote class="mobile-quote" />
+      </div>
       <BracketSvg class="bracket-svg" />
     </section>
     <section class="test-box-container snaps-inline">

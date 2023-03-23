@@ -18,7 +18,7 @@
         <div class="carousel-track" ref="track">
           <div class="service-slide current-slide" ref="slide">
             <h2 class="service-name">Tax Preperation</h2>
-            <MoneyIcon />
+            <MoneyIcon class="icon" />
             <p class="service-description">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto
               reiciendis, harum similique est autem illum omnis asperiores
@@ -27,7 +27,7 @@
           </div>
           <div class="service-slide" ref="slide">
             <h2 class="service-name">Tax Planning</h2>
-            <FinanceIcon />
+            <FinanceIcon class="icon" />
             <p class="service-description">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
               praesentium ex enim unde autem et corporis aut, iste libero
@@ -36,7 +36,7 @@
           </div>
           <div class="service-slide" ref="slide">
             <h2 class="service-name">Business Consulting</h2>
-            <BriefcaseIcon />
+            <BriefcaseIcon class="icon" />
             <p class="service-description">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
               quisquam quae libero itaque ducimus odio ad, incidunt quidem ex.
