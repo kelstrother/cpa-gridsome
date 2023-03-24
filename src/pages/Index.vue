@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="index-container">
     <section class="hero-section">
       <g-image
         class="mobile-hero"
@@ -46,120 +46,64 @@
           </button>
         </g-link>
       </div>
-      <div class="divider"></div>
+      <!-- <div class="divider"></div> -->
     </section>
     <!-- //!   SERVICES SECTION -->
     <main id="main-content">
-    <ServiceScroller class="service-scroller-component"/>
-    <ServiceCarousel class="carousel-component "/>
-    <!-- //!   APPROACH SECTION -->
-    <section class="approach-container">
-      <h1
-        data-aos="fade-up"
-        data-aos-duration="900"
-        data-aos-easing="ease-in-cubic"
-        class="approach-title"
-      >
-        Who We Are
-      </h1>
-      <summary
-        class="summary"
-        data-aos="fade-up"
-        data-aos-duration="900"
-        data-aos-delay="100"
-        data-aos-easing="ease-in-cubic"
-      >
-        With over 40 years of experience in accounting, we provide expert
-        financial guidance to businesses and individuals throughout the country.
-        Our experience and knowledge in the industry allows us to provide a wide
-        range of accounting and financial services for both individuals and
-        businesses, tailored to meet their unique needs and goals.
-      </summary>
-    </section>
-    <!-- //!   TESTIMONIAL SECTION -->
-    <!-- <div
-      data-aos="fade"
-      data-aos-anchor-placement="top-bottom"
-      data-aos-easing="ease-in-out-quart"
-      data-aos-duration="1200"
-      data-aos-delay="200"
-      class="testimonial-divider"
-    ></div> -->
-    <TestimonialScroller />
-    <!-- <section class="testimonial-container">
-    <div data-aos="zoom-in"
-        data-aos-duration="1400"
-        data-aos-easing="ease-in-out-quart" class="quote-svg">
-      <QuoteSVG  class="quote-svg" />
-    </div>
-      <p
-        class="test-title"
-        data-aos="fade-down-right"
-        data-aos-duration="1400"
-        data-aos-easing="ease-in-out-quart"
-      >
-        What they<span>&apos;</span>re saying
-      </p>
-      <div data-aos="zoom-in"
-        data-aos-duration="1400"
-        data-aos-easing="ease-in-out-quart" class="mobile-quote-container" >
-      <MobileQuote class="mobile-quote" />
-      </div>
-
-    </section>
-    
-    <section class="test-box-container snaps-inline">
-      <div class="test-1 test-box">
-        <article class="testimonial-inner">
-          <p class="testimonial-text">
-            David is a highly knowledgeable CPA. He has experience heading up
-            accounting for private companies plus many years as a public
-            accountant helping individuals and businesses. I highly recommend
-            David
-          </p>
-        </article>
-        <p class="testimonial-author">- Jerri Morgan</p>
-      </div>
-      <div class="test-2 test-box">
-        <article class="testimonial-inner">
-          <p class="testimonial-text">
-            David is extremely knowledgeable in the world of financial advising
-            and tax preparation. I was having trouble with my tax adviser, and
-            in only a matter of minutes he was able to identify where my
-            previous accountant made mistakes. He is a wealth of knowledge, I
-            recommend him to all.
-          </p>
-        </article>
-        <p class="testimonial-author">
-          - Dr. Harrison<span>&apos;</span>s Center of Functional Medicine CFN
+      <ServiceScroller class="service-scroller-component" />
+      <ServiceCarousel class="carousel-component " />
+      <!-- //!   APPROACH SECTION -->
+      <section class="approach-container">
+        <h1
+          data-aos="fade-up"
+          data-aos-duration="900"
+          data-aos-easing="ease-in-cubic"
+          class="approach-title"
+        >
+          Who We Are
+        </h1>
+        <p
+          class="summary"
+          data-aos="fade-up"
+          data-aos-duration="900"
+          data-aos-delay="100"
+          data-aos-easing="ease-in-cubic"
+        >
+          With over 40 years of experience in accounting, we provide expert
+          financial guidance to businesses and individuals throughout the
+          country. Our experience and knowledge in the industry allows us to
+          provide a wide range of accounting and financial services for both
+          individuals and businesses, tailored to meet their unique needs and
+          goals. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         </p>
-      </div>
-      <div class="test-3 test-box">
-        <article class="testimonial-inner">
-          <p class="testimonial-text">
-            David Strother is the most knowledgeable accountant I have ever run
-            across. If you are looking for a tax professional for your
-            personally or for your business David is your guy!
-          </p>
-        </article>
-        <p class="testimonial-author">- Ken Davis</p>
-      </div>
-    </section> -->
+        <p
+          class="summary"
+          data-aos="fade-up"
+          data-aos-duration="900"
+          data-aos-delay="100"
+          data-aos-easing="ease-in-cubic"
+        >
+          Aut incidunt magni suscipit repellendus dolore harum voluptatem quo
+          expedita repellat sed, laboriosam nesciunt natus veniam consequatur!
+          Perferendis excepturi odit inventore quae velit perspiciatis vitae
+          possimus quas delectus accusamus ratione consequuntur minima et
+          distinctio, totam ducimus amet officiis tempora porro voluptas enim?
+        </p>
+      </section>
+      <!-- //!   TESTIMONIAL SECTION -->
+      <TestimonialScroller />
     </main>
   </div>
 </template>
 
 <script>
-import TestimonialScroller from '../components/TestimonialScroller.vue'
+import TestimonialScroller from "../components/TestimonialScroller.vue";
 import Divider from "~/components/Divider.vue";
 import "@/pages/Index.css";
 import MobileQuote from "~/components/MobileQuote.vue";
 import QuoteSVG from "~/components/QuoteSVG.vue";
 import Arrow from "../assets/icons/arrow.svg";
-import Finance from "../assets/icons/finance.svg";
-import Money from "../assets/icons/money.svg";
-import Briefcase from "../assets/icons/Briefcase.svg";
-import ServiceScroller from "../components/ServiceScroller.vue"
+import ServiceScroller from "../components/ServiceScroller.vue";
 import ServiceCarousel from "~/components/ServiceCarousel.vue";
 export default {
   props: {
@@ -173,9 +117,6 @@ export default {
     MobileQuote,
     Divider,
     Arrow,
-    Finance,
-    Money,
-    Briefcase,
     QuoteSVG,
   },
   metaInfo: {

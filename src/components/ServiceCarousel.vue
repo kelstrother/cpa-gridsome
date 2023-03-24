@@ -1,8 +1,18 @@
 <template>
   <div class="carousel-component">
+    <h2
+      class="service-title"
+      data-aos="fade-up"
+      data-aos-duration="700"
+      data-aos-easing="ease-in-sine"
+    >
+      <em>
+        What we do
+      </em>
+    </h2>
     <section class="carousel">
       <button
-      data-aos="fade-right"
+        data-aos="fade-right"
         data-aos-duration="700"
         data-aos-delay="100"
         data-aos-easing="ease-in-out-quart"
@@ -12,9 +22,12 @@
       >
         <ArrowBack />
       </button>
-      <div data-aos="fade-up"
+      <div
+        data-aos="fade-up"
         data-aos-duration="800"
-        data-aos-easing="ease-in-sine" class="carousel-track-container">
+        data-aos-easing="ease-in-sine"
+        class="carousel-track-container"
+      >
         <div class="carousel-track" ref="track">
           <div class="service-slide current-slide" ref="slide">
             <h2 class="service-name">Tax Preperation</h2>
@@ -45,7 +58,7 @@
         </div>
       </div>
       <button
-      data-aos="fade-left"
+        data-aos="fade-left"
         data-aos-duration="700"
         data-aos-delay="100"
         data-aos-easing="ease-in-out-quart"
@@ -55,10 +68,15 @@
       >
         <ArrowForward />
       </button>
-      <div data-aos="zoom-in"
+      <div
+        data-aos="zoom-in"
         data-aos-duration="700"
         data-aos-delay="0"
-        data-aos-easing="ease-in-out-quart" @click="navigate" ref="carouselNav" class="carousel-nav">
+        data-aos-easing="ease-in-out-quart"
+        @click="navigate"
+        ref="carouselNav"
+        class="carousel-nav"
+      >
         <button class="carousel-dot current-slide"></button
         ><button class="carousel-dot"></button
         ><button class="carousel-dot"></button>
@@ -70,9 +88,9 @@
 import "~/components/ServiceCarousel.css";
 import ArrowBack from "~/components/ArrowBack.vue";
 import ArrowForward from "~/components/ArrowForward.vue";
-import MoneyIcon from "~/assets/icons/money.svg";
-import FinanceIcon from "~/assets/icons/finance.svg";
-import BriefcaseIcon from "~/assets/icons/Briefcase.svg";
+import FinanceIcon from "~/components/FinanceIcon.vue";
+import MoneyIcon from "~/components/MoneyIcon.vue";
+import BriefcaseIcon from "~/components/BriefcaseIcon.vue";
 
 export default {
   name: "ServiceCarousel",
@@ -122,7 +140,7 @@ export default {
     previousSlide() {
       const currentSlide = this.$refs.track.querySelector(".current-slide");
       const prevSlide = currentSlide.previousElementSibling;
-      const currentDot = this.$refs.carouselNav.querySelector('.current-slide')
+      const currentDot = this.$refs.carouselNav.querySelector(".current-slide");
       const targetDot = currentDot.previousElementSibling;
       this.moveToSlide(this.$refs.track, currentSlide, prevSlide);
       this.updateDots(currentDot, targetDot);
@@ -133,7 +151,7 @@ export default {
       const navDots = Array.from(carouselNav.children);
       const currentDot = this.$refs.carouselNav.querySelector(".current-slide");
       const currentSlide = this.$refs.track.querySelector(".current-slide");
-      
+
       //! what dot was clicked on?
       const targetDot = e.target.closest("button");
       if (!targetDot) return;

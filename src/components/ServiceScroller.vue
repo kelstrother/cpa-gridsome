@@ -18,7 +18,9 @@
           data-aos-easing="ease-in-sine"
         >
           <h2 class="service-name">Tax Preperation</h2>
-          <Money />
+          <div class="icon-container">
+          <MoneyIcon class="icon" />
+          </div>
           <p class="service-description">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea illo
             fugit modi esse praesentium voluptate exercitationem saepe sapiente
@@ -32,8 +34,8 @@
           data-aos-easing="ease-in-sine"
           data-aos-delay="100"
         >
-          <h2 class="service-name">Services</h2>
-          <Finance />
+          <h2 class="service-name">Tax Planning</h2>
+          <FinanceIcon class="icon" />
           <p class="service-description">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
             voluptas quia recusandae ipsa aperiam neque aliquam dicta, nesciunt
@@ -47,8 +49,8 @@
           data-aos-easing="ease-in-sine"
           data-aos-delay="200"
         >
-          <h2 class="service-name">Services</h2>
-          <Briefcase />
+          <h2 class="service-name">Business Consulting</h2>
+          <BriefcaseIcon class="icon" />
           <p class="service-description">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
             officia alias distinctio laborum? Quibusdam, exercitationem. Optio,
@@ -71,15 +73,15 @@
 </template>
 <script>
 import "~/components/ServiceScroller.css";
-import Finance from "../assets/icons/finance.svg";
-import Money from "../assets/icons/money.svg";
-import Briefcase from "../assets/icons/Briefcase.svg";
+import FinanceIcon from "~/components/FinanceIcon.vue";
+import MoneyIcon from "~/components/MoneyIcon.vue";
+import BriefcaseIcon from "~/components/BriefcaseIcon.vue";
 export default {
   name: "ServiceScroller",
   components: {
-    Finance,
-    Money,
-    Briefcase,
+    FinanceIcon,
+    MoneyIcon,
+    BriefcaseIcon,
   },
 };
 </script>

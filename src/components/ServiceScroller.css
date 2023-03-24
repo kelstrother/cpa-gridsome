@@ -9,17 +9,17 @@
   font-size: 3rem;
   margin-block: 2rem 1rem;
   margin-inline-start: 1rem;
+  text-shadow: var(--textShadow);
 }
 .service-scroller {
-  overflow-y: clip;
+  overflow-y: hidden;
   position: relative;
   width: 100vw;
   padding-block-end: 5vh;
 }
 .service-scroller::after {
-  overflow-y: clip;
   content: "";
-  background: var(--greyGradient);
+  background: var(--grayGradient);
   position: absolute;
   inset: 0;
   translate: 0 10vh;
@@ -32,7 +32,7 @@
   padding-inline: 1rem;
   margin-block-start: 0vh;
   overflow-x: auto;
-  overscroll-behavior-inline: contain;
+  overscroll-behavior: contain;
 }
 .snaps-inline {
   scroll-snap-type: inline mandatory;
@@ -42,15 +42,18 @@
   scroll-snap-align: start;
 }
 .service-box {
+  position: relative;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   min-width: 77%;
   overflow-y: hidden;
   width: 70%;
   height: 85%;
   justify-content: space-between;
   align-items: center;
-  color: var(--textLight);
+  color: var(--darkWhite);
   padding: 1rem;
   margin-inline: 1rem;
   border-radius: var(--borderRadius);
@@ -58,15 +61,16 @@
   box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.2);
 }
 .service-name {
-  font-family: var(--sansFont);
-  font-weight: 500;
+  font-family: var(--serifFont);
+  font-weight: 400;
   font-size: 1.2rem;
 }
 .service-description {
   font-family: var(--serifFont);
   text-align: center;
   font-size: 0.75rem;
-  width: 90%;
+  font-weight: 400;
+  /* width: 90%; */
 }
 .service-link-container {
   margin-block-start: -3vh;
@@ -77,6 +81,7 @@
   text-decoration: none;
 }
 .service-btn {
+  font-size: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -91,12 +96,12 @@
   margin-inline-start: 5px;
 }
 @media screen and (min-width: 1440px) {
-  .component-container {
-    border: 1px solid red;
-  }
   .service-title {
     font-size: 7rem;
     margin-inline-start: 3.5vw;
+  }
+  .service-description {
+    min-width: 90%;
   }
   .service-box-container {
     justify-content: space-evenly;

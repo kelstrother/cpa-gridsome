@@ -10,7 +10,8 @@
   --opacityGold: hsla(38, 33%, 58%, 0.615);
   --mainGrey: #565656;
   --lightGrey: #777777;
-  --darkWhite: #ecececd9;
+  --xLightGrey: #b7b7b7;
+  --darkWhite: hsl(0, 0%, 84%);
   --darkGrey: #333333;
   --lightBlue: rgb(209, 224, 224, 0.5);
   --bodyBG: hsl(38, 58%, 90%, 1);
@@ -26,7 +27,7 @@
   --mozGradient: -moz-linear-gradient(top left, #f0f5f5, #a3c1c8);
   --webkitGradient: -webkit-linear-gradient(top left, #f0f5f5, #9ebbc2);
   --bgGradient: linear-gradient(145deg, #f0f5f5, #b5e2ed);
-  --rdGradient: radial-gradient(circle at top left, #f0f5f5, #b5e2ed);
+  --rdGradient: radial-gradient(circle at center, hsla(198, 33%, 20%, 0.85), hsla(198, 35%, 21%, 1));
   --boxGradient: linear-gradient(
     135deg,
     hsla(198, 33%, 10%, 0.95) 0%,
@@ -51,6 +52,11 @@
     155deg,
     hsl(38, 58%, 65%, 0.2),
     hsl(38, 58%, 45%, 0.7)
+  );
+  --rdTestGradient: radial-gradient(
+    circle at center,
+    hsl(38, 58%, 45%, 0.5),
+    hsl(38, 58%, 55%, 0.2)
   );
   --btnGradient: linear-gradient(
     140deg,
@@ -101,13 +107,20 @@
       9.8px 11.6px 14.3px -5px rgba(0, 0, 0, 0.024),
       17.1px 20.3px 25px -5px rgba(0, 0, 0, 0.029),
       37px 44px 54px -5px rgba(0, 0, 0, 0.04);
+    --textShadow: 1px 0.5px 2px rgba(0, 0, 0, 0.1);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+html {
+  scroll-behavior: smooth;
 }
 body {
-  background: var(--bodyBG);
+  background: var(--darkWhite);
+  height: 100%;
+  width: 100%;
 }

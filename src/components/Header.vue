@@ -1,5 +1,9 @@
 <template>
   <header class="header-component-container">
+    <a class="skip-to-main" href="#main-content">
+  Main Content
+  </a>
+  
     <MobileLogo />
     <HeaderLogo />
     <MobileNav />
@@ -23,13 +27,31 @@ export default {
 </script>
 <style>
 .header-component-container {
+  position: relative;
   background-color: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 11vh;
+  height: 11vh;
   padding-inline: 0.75rem;
   box-shadow: 0 1px 10px 10px rgba(0, 0, 0, 0.2);
+}
+.skip-to-main {
+  text-decoration: none;
+  font-family: var(--sansFont);
+  font-weight: 600;
+  padding: var(--ctaTabletPad);
+  border: transparent;
+  background: var(--lightGrey);
+  color: var(--darkWhite);
+  position: absolute;
+  translate: 15vw -20vh;
+  transition: all .45s ease-in-out;
+  opacity: 0;
+}
+.skip-to-main:focus {
+  translate: 15vw -2vh;
+  opacity: 1;
 }
 /*//*\\\\\\\\////////////////////////////////////*/
 /* //           ! TABLET MEDIA QUERY            */
@@ -38,7 +60,7 @@ export default {
   .header-component-container {
     align-items: flex-end;
     padding: 1rem;
-    min-height: 13vh;
+    height: 13vh;
   }
 }
 /*//*\\\\\\\\////////////////////////////////////*/

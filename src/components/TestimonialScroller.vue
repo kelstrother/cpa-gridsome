@@ -9,14 +9,6 @@
       >
         <QuoteSVG class="desktop-quote" />
       </div>
-      <div
-        data-aos="zoom-in"
-        data-aos-duration="1400"
-        data-aos-easing="ease-in-out-quart"
-        class="mobile-quote-container"
-      >
-        <MobileQuote class="mobile-quote" />
-      </div>
       <p
         class="testimonial-title"
         data-aos="fade-down-right"
@@ -29,7 +21,10 @@
       </p>
     </div>
     <section class="testimonial-scroll-container snaps-inline">
-      <article class="testimonial-box-container">
+      <article data-aos="fade-up"
+        data-aos-duration="1400"
+        data-aos-delay="150"
+        data-aos-easing="ease-in-out-quart" class="testimonial-box-container">
         <div class="testimonial-box">
           <p class="testimonial-text">
             David is a highly knowledgeable CPA. He has experience heading up
@@ -41,7 +36,10 @@
 
         <p class="testimonial-author">- Jerri Morgan</p>
       </article>
-      <article class="testimonial-box-container">
+      <article data-aos="fade-up"
+        data-aos-duration="1400"
+        data-aos-delay="300"
+        data-aos-easing="ease-in-out-quart" class="testimonial-box-container">
         <div class="testimonial-box">
           <p class="testimonial-text">
             David is extremely knowledgeable in the world of financial advising
@@ -56,7 +54,10 @@
           - Dr. Harrison<span>&apos;</span>s Center of Functional Medicine CFN
         </p>
       </article>
-      <article class="testimonial-box-container">
+      <article data-aos="fade-up"
+        data-aos-duration="1400"
+        data-aos-delay="450"
+        data-aos-easing="ease-in-out-quart" class="testimonial-box-container">
         <div class="testimonial-box">
           <p class="testimonial-text">
             David Strother is the most knowledgeable accountant I have ever run
