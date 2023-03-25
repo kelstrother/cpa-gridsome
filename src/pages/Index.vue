@@ -52,7 +52,8 @@
       <ServiceScroller class="service-scroller-component" />
       <!-- <ServiceCarousel class="carousel-component " /> -->
       <!-- //!   APPROACH SECTION -->
-      <section class="approach-container">
+      <ApproachSection />
+      <!-- <section class="approach-container">
         <h1
           data-aos="fade-up"
           data-aos-duration="900"
@@ -88,7 +89,7 @@
           possimus quas delectus accusamus ratione consequuntur minima et
           distinctio, totam ducimus amet officiis tempora porro voluptas enim?
         </p>
-      </section>
+      </section> -->
       <!-- //!   TESTIMONIAL SECTION -->
       <TestimonialScroller />
       <!-- <a class="back-to-top" href="#top">^</a> -->
@@ -104,6 +105,7 @@ import MobileQuote from "~/components/MobileQuote.vue";
 import QuoteSVG from "~/components/QuoteSVG.vue";
 import Arrow from "../assets/icons/arrow.svg";
 import ServiceScroller from "../components/ServiceScroller.vue";
+import ApproachSection from "../components/ApproachSection.vue";
 // import ServiceCarousel from "~/components/ServiceCarousel.vue";
 export default {
   props: {
@@ -111,6 +113,7 @@ export default {
   },
   name: "Home",
   components: {
+    ApproachSection,
     TestimonialScroller,
     ServiceScroller,
     MobileQuote,

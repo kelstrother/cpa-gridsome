@@ -131,7 +131,7 @@
   display: none;
 }
 /* !  MOBILE APPROACH SECTION */
-.approach-container {
+/* .approach-container {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -160,7 +160,7 @@
   text-indent: 0.7rem;
   color: var(--mainGrey);
   /* margin-block: .75rem; */
-}
+/* } */
 /*//*\\\\\\\\////////////////////////////////////*/
 /* //!            768px MEDIA QUERY            */
 /* //&\\\\\\\\//\\\\\\\\\\\\\\\\\\//////////////*/
@@ -230,7 +230,7 @@
   }
 
   /* ! 768px APPROACH SECTION */
-  .approach-container {
+  /* .approach-container {
     margin-block: 10%;
   }
   .approach-title {
@@ -239,7 +239,7 @@
   .summary {
     font-size: 1.3rem;
     width: 80%;
-  }
+  } */
 }
 /*//*\\\\\\\\////////////////////////////////////*/
 /* //!           1440px MEDIA QUERY            */
@@ -338,14 +338,14 @@
     display: none;
   } */
   /* ! 1440 APPROACH SECTION */
-  .approach-title {
+  /* .approach-title {
     font-size: 7rem;
     margin-inline-end: 12vw;
   }
   .summary {
     width: 50%;
     font-size: 1.2rem;
-  }
+  } */
 }
 /*//*\\\\\\\\////////////////////////////////////*/
 /* //!           1920px MEDIA QUERY            */
@@ -363,10 +363,10 @@
   .hero-btn {
     margin-block-start: -1rem;
   }
-  .approach-title {
+  /* .approach-title {
     margin-inline-end: 8vw;
   }
   .summary {
     width: 35%;
-  }
+  } */
 }

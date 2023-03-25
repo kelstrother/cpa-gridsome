@@ -1,7 +1,7 @@
 .service-component {
   width: 100vw;
   margin-block-start: 10vh;
-  margin-block-end: 0%;
+  margin-block-end: 10%;
 }
 .service-title {
   color: var(--lightGrey);
@@ -42,15 +42,16 @@
   scroll-snap-align: start;
 }
 .service-box {
+  position: relative;
   overflow-y: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   min-width: 77%;
   height: 100%;
   color: var(--darkWhite);
-  padding-block: 1.5rem;
+  padding-block: 2rem;
   padding-inline: 1rem;
   margin-inline: 1rem;
   border-radius: var(--borderRadius);
@@ -63,7 +64,7 @@
   font-size: 1.5rem;
 }
 .icon {
-  scale: 0.5;
+  scale: 0.4;
 }
 .service-description {
   font-family: var(--serifFont);
