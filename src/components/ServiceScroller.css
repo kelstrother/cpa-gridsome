@@ -5,7 +5,8 @@
 .service-title {
   color: var(--lightGrey);
   font-family: var(--serifFont);
-  font-weight: 400;
+  font-style: italic;
+  font-weight: 200;
   font-size: 3rem;
   margin-block: 2rem 1rem;
   margin-inline-start: 1rem;
@@ -30,7 +31,6 @@
   align-items: center;
   height: 50vh;
   padding-inline: 1rem;
-  margin-block-start: 0vh;
   overflow-x: auto;
   overscroll-behavior: contain;
 }
@@ -46,7 +46,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   min-width: 77%;
   overflow-y: hidden;
   width: 70%;
@@ -61,16 +60,15 @@
   box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.2);
 }
 .service-name {
-  font-family: var(--serifFont);
-  font-weight: 400;
+  font-family: var(--sansFont);
+  font-weight: 500;
   font-size: 1.2rem;
 }
 .service-description {
   font-family: var(--serifFont);
   text-align: center;
   font-size: 0.75rem;
-  font-weight: 400;
-  /* width: 90%; */
+  font-weight: 200;
 }
 .service-link-container {
   margin-block-start: -3vh;
@@ -81,6 +79,9 @@
   text-decoration: none;
 }
 .service-btn {
+  font-family: var(--sansfFont);
+  font-weight: 600;
+  letter-spacing: .75px;
   font-size: 1rem;
   display: flex;
   align-items: center;
@@ -95,13 +96,46 @@
 .arrow {
   margin-inline-start: 5px;
 }
+
+/*//*\\\\\\\\////////////////////////////////////*/
+/* //!            768px MEDIA QUERY            */
+/* //&\\\\\\\\//\\\\\\\\\\\\\\\\\\//////////////*/
+@media screen and (min-width: 768px) {
+  .service-title {
+    font-size: 5rem;
+  }
+  .service-name {
+    font-size: 2rem;
+  }
+  .service-description {
+    letter-spacing: .25px;
+    font-size: 1.25rem;
+    width: 80%;
+    margin-block-start: -3rem;
+    /* font-weight: 200; */
+  }
+  .service-box {
+    min-width: 65%;
+  }
+  .service-btn {
+    padding: var(--ctaTabletPad);
+  }
+}
 @media screen and (min-width: 1440px) {
   .service-title {
     font-size: 7rem;
+    font-weight: 300;
     margin-inline-start: 3.5vw;
   }
+  .service-name {
+    font-size: 2rem;
+    font-weight: 400;
+  }
   .service-description {
-    min-width: 90%;
+    letter-spacing: .5px;
+    font-size: 1rem;
+    width: 70%;
+    font-weight: 200;
   }
   .service-box-container {
     justify-content: space-evenly;

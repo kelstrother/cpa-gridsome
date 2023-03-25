@@ -1,3 +1,4 @@
+
 @media screen and (min-width: 768px) {
   .carousel-component {
     height: auto;
@@ -6,7 +7,7 @@
   .service-title {
     color: var(--lightGrey);
     font-family: var(--serifFont);
-    font-weight: 400;
+    font-weight: 200;
     margin-block: 2rem 1rem;
     text-shadow: var(--textShadow);
     font-size: 5.5rem;

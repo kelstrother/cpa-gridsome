@@ -16,7 +16,9 @@
       <div class="f-contact-top">
         <p class="f-title f-contact-title">Connect With Us</p>
         <a href="tel:+3034399808" class="f-phone">(303)&nbsp; 439-9808</a>
-        <a href="mailto:david@strothercpa.com" class="f-email">david@strothercpa.com</a>
+        <a href="mailto:david@strothercpa.com" class="f-email"
+          >david@strothercpa.com</a
+        >
       </div>
       <div class="f-contact-bottom">
         <p class="f-title f-contact-title">Office</p>
@@ -27,6 +29,7 @@
         </address>
       </div>
     </div>
+    <a class="back-to-top" href="#top"><Arrow class="top-arrow"/></a>
     <small class="copyright"
       >&copy; Copyright {{ new Date().getFullYear() }}, David Strother CPA. All
       Rights Reserved</small
@@ -34,12 +37,17 @@
   </footer>
 </template>
 <script>
+import Arrow from "~/assets/icons/arrow.svg";
 export default {
   name: "Footer",
+  components: {
+    Arrow,
+  },
 };
 </script>
 <style scoped>
 .footer {
+  position: relative;
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 8fr 1fr;
@@ -52,7 +60,7 @@ export default {
 .footer-logo {
   grid-column: 1;
   grid-row: 2;
-  width: 40vw;
+  width: 100%;
 }
 .footer-about {
   display: none;
@@ -70,7 +78,7 @@ export default {
   height: 100%;
   justify-content: space-evenly;
   align-items: flex-start;
-  color: var(--textLight);
+  color: var(--darkWhite);
 }
 .f-contact-top,
 .f-contact-bottom {
@@ -78,28 +86,41 @@ export default {
   flex-direction: column;
   align-items: flex-start;
 }
-.f-contact-top {
-}
 .f-contact-title {
-  margin-block-end: 0.5rem;
+  font-size: 0.9rem;
+  margin-block-end: 0.25rem;
 }
 .f-phone,
 .f-email {
-  line-height: 1.5;
+  line-height: 1.25;
 }
 .f-phone,
 .f-email,
 .f-address {
-  color: var(--textLight);
-  font-size: 0.8rem;
-  font-weight: 300;
-  
+  font-style: normal;
+  font-family: var(--serifFont);
+  color: var(--darkWhite);
+  font-size: 0.7rem;
+  font-weight: 200;
+}
+.back-to-top {
+  position: absolute;
+  top: 70%;
+  left: 3vw;
+  display: grid;
+  place-items: center;
+}
+.top-arrow {
+  fill: rgba(183, 183, 183, 0.3);
+  rotate: -90deg;
+  width: 40px;
 }
 .copyright {
   grid-row: 3;
   grid-column: 1 / span 3;
+  font-family: var(--serifFont);
   font-size: 0.6rem;
-  color: #9c9c9c;
+  color: var(--xLightGrey);
   margin-block-end: 0.5rem;
 }
 /*//*\\\\\\\\////////////////////////////////////*/
@@ -111,6 +132,7 @@ export default {
     grid-template-rows: 1fr 8fr 1fr;
     gap: 0.5rem;
     padding-inline: 1rem;
+    height: 30vh;
   }
   .footer-logo {
     width: 100%;
@@ -122,24 +144,26 @@ export default {
     flex-direction: column;
     height: 100%;
     max-width: 85%;
+    gap: 2vh;
     align-items: flex-start;
-    justify-content: space-evenly;
+    justify-content: center;
+    margin-block-start: 3vh;
   }
   .f-about-content {
     text-indent: 10px;
-    font-size: 0.8rem;
-    font-weight: 300;
-    color: var(--textLight);
+    font-size: 0.9rem;
+    font-family: var(--serifFont);
+    font-weight: 200;
+    color: var(--darkWhite);
   }
   .f-title {
-    color: var(--mainGold);
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .f-about-link {
     text-decoration: none;
-    color: #fff;
-    font-size: 0.8rem;
+    color: var(--darkWhite);
+    font-size: 0.9rem;
     font-weight: 500;
     letter-spacing: 0.75px;
   }
@@ -149,8 +173,20 @@ export default {
   .footer-contact {
     grid-row: 1 / span 2;
   }
+  .f-phone,
+  .f-email,
+  .f-address {
+    font-size: 0.9rem;
+  }
   .copyright {
     font-size: 0.7rem;
+  }
+  .back-to-top {
+    top: 75%;
+    left: 4vw;
+  }
+  .top-arrow {
+    width: 55px;
   }
 }
 /*//*\\\\\\\\////////////////////////////////////*/
@@ -171,6 +207,12 @@ export default {
   }
   .copyright {
     grid-column: 1;
+  }
+  .back-to-top {
+    left: 1vw;
+  }
+  .top-arrow {
+    width: 55px;
   }
 }
 /*//*\\\\\\\\////////////////////////////////////*/

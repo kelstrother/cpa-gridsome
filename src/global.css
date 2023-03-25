@@ -2,16 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
   /* !  COLORS */
   --mainGreen: #315c2b;
   --mainGold: hsl(38, 33%, 58%);
+  /* --mainGold: #b79d71; */
   --opacityGold: hsla(38, 33%, 58%, 0.615);
   --mainGrey: #565656;
   --lightGrey: #777777;
   --xLightGrey: #b7b7b7;
   --darkWhite: hsl(0, 0%, 84%);
+  /* --darkWhite: #d6d6d6; */
   --darkGrey: #333333;
   --lightBlue: rgb(209, 224, 224, 0.5);
   --bodyBG: hsl(38, 58%, 90%, 1);
@@ -82,7 +85,8 @@
   /* --serifFont: 'Playfair Display'; */
   /* --serifFont: 'IBM Plex Serif', serif; */
   /* --serifFont: 'Noto Serif Display', serif; */
-  --serifFont: 'EB Garamond', serif;
+  /* --serifFont: 'EB Garamond', serif; */
+  --serifFont: 'Crimson Pro', serif;
   --sansFont: 'Inter', sans-serif;
 
   /* !  SIZES */
@@ -123,4 +127,10 @@ body {
   background: var(--darkWhite);
   height: 100%;
   width: 100%;
+}
+button {
+  cursor: pointer;
+}
+a {
+  cursor: pointer;
 }

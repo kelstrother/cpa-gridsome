@@ -46,12 +46,11 @@
           </button>
         </g-link>
       </div>
-      <!-- <div class="divider"></div> -->
     </section>
     <!-- //!   SERVICES SECTION -->
-    <main id="main-content">
+    <section id="main-content">
       <ServiceScroller class="service-scroller-component" />
-      <ServiceCarousel class="carousel-component " />
+      <!-- <ServiceCarousel class="carousel-component " /> -->
       <!-- //!   APPROACH SECTION -->
       <section class="approach-container">
         <h1
@@ -92,7 +91,8 @@
       </section>
       <!-- //!   TESTIMONIAL SECTION -->
       <TestimonialScroller />
-    </main>
+      <!-- <a class="back-to-top" href="#top">^</a> -->
+    </section>
   </div>
 </template>
 
@@ -104,7 +104,7 @@ import MobileQuote from "~/components/MobileQuote.vue";
 import QuoteSVG from "~/components/QuoteSVG.vue";
 import Arrow from "../assets/icons/arrow.svg";
 import ServiceScroller from "../components/ServiceScroller.vue";
-import ServiceCarousel from "~/components/ServiceCarousel.vue";
+// import ServiceCarousel from "~/components/ServiceCarousel.vue";
 export default {
   props: {
     immediate: Boolean,
@@ -112,7 +112,6 @@ export default {
   name: "Home",
   components: {
     TestimonialScroller,
-    ServiceCarousel,
     ServiceScroller,
     MobileQuote,
     Divider,

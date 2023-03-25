@@ -1,5 +1,5 @@
 <template>
-  <header class="header-component-container">
+  <header id="top" class="header-component-container">
     <a class="skip-to-main" href="#main-content">
   Main Content
   </a>

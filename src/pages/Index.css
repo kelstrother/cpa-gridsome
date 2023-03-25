@@ -2,7 +2,6 @@
   width: 100%;
   position: relative;
 }
-
 .tablet-hero {
   display: none;
 }
@@ -26,6 +25,7 @@
     rgba(0, 0, 0, 0.3)
   );
   clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 90%);
+  z-index: -1;
 }
 .mobile-hero {
   height: 90vh;
@@ -80,9 +80,8 @@
 }
 .phrase {
   font-weight: 300;
-  text-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.1);
+  text-shadow: var(--textShadow);
   color: #fff;
-  /* font-size: clamp(1rem, 2.2vw, 2rem); */
   font-size: 2.5vh;
   min-width: max-content;
 }
@@ -103,9 +102,12 @@
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
   letter-spacing: 0.25px;
   font-size: 1rem;
+  font-family: var(--sansFont);
+  font-weight: 600;
+  letter-spacing: 0.75px;
   padding: var(--ctaMobilePad);
   border-radius: var(--borderRadius);
-  border: none;
+  border: 0;
   background: var(--btnGradient);
   box-shadow: var(--btnShadow);
 }
@@ -142,7 +144,7 @@
   font-family: var(--serifFont);
   font-style: italic;
   font-size: 3rem;
-  font-weight: 400;
+  font-weight: 200;
   width: fit-content;
   color: var(--lightGrey);
   margin-inline-start: -4rem;
@@ -152,12 +154,24 @@
 .summary {
   font-family: var(--serifFont);
   font-size: 0.9rem;
+  font-weight: 200;
   align-items: center;
-  font-weight: 400;
   width: 80%;
   text-indent: 0.7rem;
   color: var(--mainGrey);
 }
+/* .back-to-top {
+  position: absolute;
+  bottom: -8vh;
+  left: 5vw;
+  text-decoration: none;
+  color: var(--darkWhite);
+  background: var(--testGradient);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+} */
 /*//*\\\\\\\\////////////////////////////////////*/
 /* //!            768px MEDIA QUERY            */
 /* //&\\\\\\\\//\\\\\\\\\\\\\\\\\\//////////////*/
@@ -224,17 +238,6 @@
     padding: var(--ctaTabletPad);
     font-size: 1.2rem;
     margin-block-start: 1rem;
-  }
-  /* ! 768px SERVICE SECTION */
-  .service-scroller-component {
-    display: none;
-  }
-  .carousel-component {
-    display: block;
-  }
-  .service-section-title {
-    font-size: 5rem;
-    margin-inline-start: 4rem;
   }
 
   /* ! 768px APPROACH SECTION */
@@ -327,7 +330,7 @@
     margin-block-start: -2rem;
   }
   .phrase {
-    font-size: clamp(1.5rem, 1.5vw, 2rem);
+    font-size: 2.25rem;
   }
   .you,
   .business {
@@ -339,7 +342,7 @@
   .hero-btn {
     padding: var(--ctaPad);
     font-size: 1.2rem;
-    cursor: pointer;
+    /* cursor: pointer; */
     transition: all 0.2s ease-in-out;
   }
   .hero-btn:hover {
@@ -361,8 +364,9 @@
     margin-block: 6rem;
   }
   .approach-title {
-    margin: 0;
+    margin-inline-start: -12vw;
     width: fit-content;
+    margin-block-end: 5vh;
   }
   .heading {
     max-width: 40%;
@@ -380,7 +384,7 @@
     height: 86vh;
   }
   .summary {
-    width: 50%;
+    width: 35%;
   }
   .divider {
     height: 25vh;

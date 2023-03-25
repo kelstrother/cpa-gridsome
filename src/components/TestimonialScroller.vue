@@ -65,7 +65,6 @@
             personally or for your business David is your guy!
           </p>
         </div>
-
         <p class="testimonial-author">- Ken Davis</p>
       </article>
     </section>

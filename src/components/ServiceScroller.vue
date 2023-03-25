@@ -5,9 +5,8 @@
       data-aos="fade-up"
       data-aos-duration="700"
       data-aos-easing="ease-in-sine"
-    ><em>
+    >
       What we do
-    </em>
     </h2>
     <section class="service-scroller">
       <div class="service-box-container snaps-inline">
