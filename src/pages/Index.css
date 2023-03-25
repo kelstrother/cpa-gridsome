@@ -134,32 +134,32 @@
 .approach-container {
   display: flex;
   flex-direction: column;
-  height: 50vh;
-  width: 100vw;
-  gap: 1rem;
-  margin-block: 8vh 20vh;
+  height: 100%;
+  width: 90vw;
+  gap: 1.5rem;
+  margin-block: 10%;
   align-items: center;
+  margin: 0 auto;
 }
 .approach-title {
   font-family: var(--serifFont);
   font-style: italic;
   font-size: 3rem;
   font-weight: 200;
-  width: fit-content;
+  width: max-content;
   color: var(--lightGrey);
-  margin-inline-start: -4rem;
-  margin-block-end: 2vh;
-  text-shadow: var(--textShadow);
+  margin-inline-end: 6vw;
+  margin-block-end: 2rem;
+  text-shadow: var(--lgTextShadow);
 }
 .summary {
   font-family: var(--serifFont);
   font-size: 0.9rem;
   font-weight: 200;
-  align-items: center;
   width: 80%;
   text-indent: 0.7rem;
   color: var(--mainGrey);
-  margin-block: .75rem;
+  /* margin-block: .75rem; */
 }
 /*//*\\\\\\\\////////////////////////////////////*/
 /* //!            768px MEDIA QUERY            */
@@ -231,11 +231,10 @@
 
   /* ! 768px APPROACH SECTION */
   .approach-container {
-    height: 35vh;
+    margin-block: 10%;
   }
   .approach-title {
     font-size: 5rem;
-    width: fit-content;
   }
   .summary {
     font-size: 1.3rem;
@@ -274,7 +273,6 @@
     z-index: -1;
     position: absolute;
     width: 100%;
-    opacity: -5vh;
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 90%);
     animation: appear 1s ease-in-out forwards;
   }
@@ -284,22 +282,20 @@
     }
   }
   .hero-text-container {
-    height: 90%;
+    height: 100%;
   }
   .inside-hero-container {
     grid-column: 2;
     grid-row: 1 / span 2;
-    margin-block-start: 2rem;
-    justify-content: space-evenly;
-    height: 75%;
+    margin-block-start: 0;
     gap: 2rem;
   }
   .headline {
     display: flex;
   }
   .beyond {
-    font-size: clamp(5rem, 5vw, 6.5rem);
-    text-shadow: 0.5px 1px 3px rgba(0, 0, 0, 0.15);
+    font-size: 4.25rem;
+    text-shadow: var(--lgTextShadow);
     font-weight: 900;
     z-index: 2;
     color: var(--mainGreen);
@@ -313,56 +309,41 @@
   .numbers {
     margin-inline-start: -0.5rem;
     color: var(--mainGold);
-    text-shadow: 0.5px 0.5px 10px rgba(0, 0, 0, 0.15);
+    text-shadow: var(--lgTextShadow);
   }
   .saying {
     margin-block-start: -2rem;
   }
   .phrase {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
   .you,
   .business {
-    font-size: 2.4rem;
+    font-size: 2.3rem;
   }
   .hero-link {
-    margin-block-start: -4rem;
+    margin-block-start: -3rem;
   }
   .hero-btn {
     padding: var(--ctaPad);
     font-size: 1.2rem;
-    /* cursor: pointer; */
     transition: all 0.2s ease-in-out;
   }
   .hero-btn:hover {
     box-shadow: var(--hoverShadow);
-    opacity: 0.9;
   }
 
   /* ! 1440 SERVICES SECTION */
-  .carousel-component {
+  /* .carousel-component {
     display: none;
-  }
-  .service-scroller-component {
-    display: block;
-  }
+  } */
   /* ! 1440 APPROACH SECTION */
-  .approach-container {
-    align-items: center;
-    justify-content: space-evenly;
-    margin-block: 6rem;
-  }
   .approach-title {
     font-size: 7rem;
-    margin-inline-start: -12vw;
-    width: fit-content;
-    margin-block-end: 5vh;
-  }
-  .heading {
-    max-width: 40%;
+    margin-inline-end: 12vw;
   }
   .summary {
-    width: 60%;
+    width: 50%;
     font-size: 1.2rem;
   }
 }
@@ -372,6 +353,18 @@
 @media screen and (min-width: 1920px) {
   .hero-section {
     height: 86vh;
+  }
+  .inside-hero-container {
+    gap: 0;
+  }
+  .beyond {
+    font-size: 5rem;
+  }
+  .hero-btn {
+    margin-block-start: -1rem;
+  }
+  .approach-title {
+    margin-inline-end: 8vw;
   }
   .summary {
     width: 35%;

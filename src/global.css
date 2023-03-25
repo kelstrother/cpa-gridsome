@@ -88,9 +88,9 @@
   --sansFont: 'Inter', sans-serif;
 
   /* !  SIZES */
-  --ctaMobilePad: .75rem 1.25rem;
+  --ctaMobilePad: 1rem 1.25rem;
   --ctaTabletPad: 1.5rem 1.5rem;
-  --ctaPad: 1.25rem 2.25rem;
+  --ctaPad: 1.5rem 2.25rem;
   --borderRadius: 6px;
 
   /* !  SHADOWS */
@@ -109,13 +109,15 @@
       9.8px 11.6px 14.3px -5px rgba(0, 0, 0, 0.024),
       17.1px 20.3px 25px -5px rgba(0, 0, 0, 0.029),
       37px 44px 54px -5px rgba(0, 0, 0, 0.04);
-    --textShadow: 1px 0.5px 2px rgba(0, 0, 0, 0.1);
+    --smTextShadow: 1px 0.5px 2px rgba(0, 0, 0, 0.1);
+    --lgTextShadow: 0.5px 1px 3px rgba(0, 0, 0, 0.15);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 html {
   scroll-behavior: smooth;

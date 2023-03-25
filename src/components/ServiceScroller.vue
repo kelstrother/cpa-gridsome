@@ -1,5 +1,5 @@
 <template>
-  <div class="component-container">
+  <div class="service-component">
     <h2
       class="service-title"
       data-aos="fade-up"

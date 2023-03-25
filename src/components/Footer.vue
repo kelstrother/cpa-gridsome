@@ -194,17 +194,32 @@ export default {
 /* //&\\\\\\\\//\\\\\\\\\\\\\\\\\\//////////////*/
 @media screen and (min-width: 1440px) {
   .footer {
+    height: 40vh;
     gap: 0;
     padding-inline: 2rem;
     padding-block-start: 1rem;
+  }
+  .footer-logo {
+    width: 50%;
   }
   .footer-about {
     max-width: 45%;
     height: 90%;
   }
-  .footer-logo {
-    width: 50%;
+  .f-about-content {
+    font-size: .97rem;
   }
+  .footer-contact {
+    gap: 2rem;
+  }
+  .f-title {
+  font-size: 1rem;
+}
+.f-phone,
+.f-email,
+.f-address {
+  font-size: 0.9rem;
+}
   .copyright {
     grid-column: 1;
   }
