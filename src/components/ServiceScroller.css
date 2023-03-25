@@ -136,6 +136,9 @@
     font-size: 2rem;
     font-weight: 400;
   }
+  .icon {
+    scale: .8;
+  }
   .service-description {
     letter-spacing: .5px;
     font-size: 1rem;
@@ -149,6 +152,7 @@
     min-width: 0;
     width: 28%;
     padding: 2rem;
+    height: 90%;
   }
   .service-btn {
     padding: var(--ctaPad);

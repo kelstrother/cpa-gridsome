@@ -160,18 +160,6 @@
   text-indent: 0.7rem;
   color: var(--mainGrey);
 }
-/* .back-to-top {
-  position: absolute;
-  bottom: -8vh;
-  left: 5vw;
-  text-decoration: none;
-  color: var(--darkWhite);
-  background: var(--testGradient);
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-} */
 /*//*\\\\\\\\////////////////////////////////////*/
 /* //!            768px MEDIA QUERY            */
 /* //&\\\\\\\\//\\\\\\\\\\\\\\\\\\//////////////*/
@@ -334,7 +322,7 @@
   }
   .you,
   .business {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
   }
   .hero-link {
     margin-block-start: -4rem;
@@ -364,6 +352,7 @@
     margin-block: 6rem;
   }
   .approach-title {
+    font-size: 7rem;
     margin-inline-start: -12vw;
     width: fit-content;
     margin-block-end: 5vh;
@@ -385,9 +374,5 @@
   }
   .summary {
     width: 35%;
-  }
-  .divider {
-    height: 25vh;
-    bottom: -10vh;
   }
 }
