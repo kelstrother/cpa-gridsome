@@ -31,7 +31,7 @@
   font-family: var(--serifFont);
   font-weight: 200;
   color: var(--lightGrey);
-  width: max-content;
+  min-width: max-content;
   text-shadow: var(--textShadow);
 }
 .testimonial-scroll-container {

@@ -8,7 +8,7 @@
   font-style: italic;
   font-weight: 200;
   font-size: 3rem;
-  margin-block: 2rem 1rem;
+  margin-block: 2rem 3rem;
   margin-inline-start: 1rem;
   text-shadow: var(--textShadow);
 }
@@ -49,8 +49,8 @@
   min-width: 77%;
   overflow-y: hidden;
   width: 70%;
-  height: 85%;
-  justify-content: space-between;
+  height: 100%;
+  justify-content: space-around;
   align-items: center;
   color: var(--darkWhite);
   padding: 1rem;
@@ -63,6 +63,9 @@
   font-family: var(--sansFont);
   font-weight: 500;
   font-size: 1.2rem;
+}
+.icon {
+  scale: .6;
 }
 .service-description {
   font-family: var(--serifFont);
@@ -107,12 +110,14 @@
   .service-name {
     font-size: 2rem;
   }
+  .icon {
+    scale: .7;
+  }
   .service-description {
     letter-spacing: .25px;
     font-size: 1.25rem;
     width: 80%;
     margin-block-start: -3rem;
-    /* font-weight: 200; */
   }
   .service-box {
     min-width: 65%;
