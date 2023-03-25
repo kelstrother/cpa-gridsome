@@ -170,8 +170,6 @@ export default {
 </script>
 <style scoped>
   #preparation-svg {
-
     opacity: .9;
-    margin: 0 auto;
   }
 </style>

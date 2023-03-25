@@ -144,6 +144,5 @@ export default {
 <style scoped>
 #planning-svg {
     opacity: .9;
-    margin: 0 auto;
   }
 </style>

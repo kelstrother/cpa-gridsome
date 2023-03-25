@@ -92,38 +92,40 @@ export default {
 
 <style scoped>
 #mobile-building {
-  animation: mobile-draw 2s 1.5s cubic-bezier(0.04, 0.43, 0.91, 1.08) forwards;
+  animation: mobile-draw 1.5s 1.5s ease-in-out forwards;
 }
 #mobile-dash {
-  animation: mobile-draw 1.5s 1s ease-in-out forwards;
+  animation: mobile-draw 1.5s 1s ease-out forwards;
 }
 @keyframes mobile-draw {
-    from {
-      stroke-dashoffset: -1;
-      stroke-opacity: 0;
-      stroke-width: 0;
-      filter: drop-shadow(0px 0px 0px hsl(0, 0%, 84%));
-    }
-    95% {
-      filter: drop-shadow(0px 0px 0px hsl(0, 0%, 84%));
-    }
-    to {
-      stroke-dashoffset: 0;
-      stroke-opacity: 1;
-      stroke-width: .75;
-      filter: drop-shadow(1px 1px 1px hsl(0, 0%, 65%));
-    }
+  from {
+    stroke-dashoffset: -1;
+    stroke-opacity: 0;
+    stroke-width: 0;
+    filter: drop-shadow(0px 0px 0px hsl(0, 0%, 84%));
   }
-  #m_s,
-  #m_t-1,
-  #m_r-1,
-  #m_o,
-  #m_t-2,
-  #m_h,
-  #m_e,
-  #m_r-2 {
-    filter: drop-shadow(1px 1px 1px hsl(0, 0%, 65%));
-    opacity: 0;
+  95% {
+    filter: drop-shadow(0px 0px 0px hsl(0, 0%, 84%));
+  }
+  to {
+    stroke-dashoffset: 0;
+    stroke-opacity: 1;
+    stroke-width: 0.75;
+    filter: drop-shadow(1px 1.5px 2px hsl(0, 0%, 65%));
+  }
+}
+#mobile-strother {
+  filter: drop-shadow(1px 1px 1px hsl(0, 0%, 65%));
+}
+#m_s,
+#m_t-1,
+#m_r-1,
+#m_o,
+#m_t-2,
+#m_h,
+#m_e,
+#m_r-2 {
+  opacity: 0;
   -webkit-animation: sluggish 0.35s ease-in forwards;
   -moz-animation: sluggish 0.35s ease-in forwards;
   animation: sluggish 0.35s cubic-bezier(0.04, 0.43, 0.91, 1.08) forwards;
@@ -149,10 +151,12 @@ export default {
 #m_r-2 {
   animation-delay: 0.7s;
 }
+#mobile-cpa {
+  filter: drop-shadow(1px 1px 1px hsl(0, 0%, 65%));
+}
 #m_cpa-c,
 #m_cpa-p,
 #m_cpa-a {
-  filter: drop-shadow(1px 1px 1px hsl(0, 0%, 65%));
   opacity: 0;
   animation: sluggish 0.75s ease-in-out forwards;
 }
@@ -165,7 +169,6 @@ export default {
 #m_cpa-a {
   animation-delay: 1s;
 }
-
 #mobile-david {
   opacity: 0;
   animation: sluggish 1s 1.75s ease-in-out forwards;
@@ -179,7 +182,8 @@ export default {
 /* //           ! TABLET MEDIA QUERY            */
 /* //&\\\\\\\\//\\\\\\\\\\\\\\\\\\//////////////*/
 @media screen and (min-width: 768px) {
-  svg, a {
+  svg,
+  a {
     display: none;
   }
 }

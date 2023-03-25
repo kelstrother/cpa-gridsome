@@ -159,6 +159,7 @@
   width: 80%;
   text-indent: 0.7rem;
   color: var(--mainGrey);
+  margin-block: .75rem;
 }
 /*//*\\\\\\\\////////////////////////////////////*/
 /* //!            768px MEDIA QUERY            */
