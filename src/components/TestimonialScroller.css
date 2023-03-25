@@ -25,7 +25,16 @@
   left: 1vw;
   top: -2vh;
 }
-
+.testimonial-title {
+  margin-block-start: 7vh;
+  margin-inline-start: 5vw;
+  font-size: 2.5rem;
+  font-family: var(--serifFont);
+  font-weight: 200;
+  color: var(--lightGrey);
+  min-width: 100%;
+  text-shadow: var(--textShadow);
+}
 .testimonial-scroll-container {
   position: relative;
   display: grid;
@@ -58,16 +67,7 @@
   background: var(--rdGradient);
   box-shadow: var(--hoverShadow);
 }
-.testimonial-title {
-  margin-block-start: 7vh;
-  margin-inline-start: 5vw;
-  font-size: 2.5rem;
-  font-family: var(--serifFont);
-  font-weight: 200;
-  color: var(--lightGrey);
-  min-width: max-content;
-  text-shadow: var(--textShadow);
-}
+
 .testimonial-text {
   color: var(--xLightGrey);
   font-family: var(--serifFont);
@@ -121,9 +121,8 @@
     left: 4vw;
   }
   .testimonial-scroll-container {
-    /* overflow: hidden; */
     grid-auto-columns: 25%;
-    gap: 8vw;
+    gap: 7vw;
     place-content: center;
     overscroll-behavior-inline: contain;
   }
@@ -137,6 +136,10 @@
   .testimonial-box {
     place-content: center;
     padding: 2rem 0;
+    transition: all .25s linear;
+  }
+  .testimonial-box:hover {
+    scale: 1.02;
   }
   .testimonial-text {
     width: 90%;

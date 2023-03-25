@@ -16,7 +16,7 @@
 .service-scroller {
   overflow-y: hidden;
   position: relative;
-  height: 60vh;
+  height: 50vh;
   width: 100%;
 }
 .service-scroller::after {
@@ -29,8 +29,7 @@
 }
 .service-box-container {
   display: flex;
-  align-items: center;
-  height: 50vh;
+  height: 85%;
   padding-inline: 1rem;
   overflow-x: auto;
   overscroll-behavior: contain;
@@ -44,30 +43,27 @@
 }
 .service-box {
   overflow-y: hidden;
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   min-width: 77%;
-  width: 70%;
-  height: 90%;
+  height: 100%;
   color: var(--darkWhite);
-  padding: 1rem;
+  padding-block: 1.5rem;
+  padding-inline: 1rem;
   margin-inline: 1rem;
   border-radius: var(--borderRadius);
   background: var(--boxGradient);
   box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.2);
 }
 .service-name {
-  font-family: var(--sansFont);
-  font-weight: 400;
-  font-size: 1.2rem;
+  font-family: var(--serifFont);
+  font-weight: 300;
+  font-size: 1.5rem;
 }
 .icon {
-  scale: .5;
-  margin: 0 auto;
-  /* margin-block-end: -1.5rem; */
+  scale: 0.5;
 }
 .service-description {
   font-family: var(--serifFont);
@@ -86,7 +82,7 @@
 .service-btn {
   font-family: var(--sansfFont);
   font-weight: 600;
-  letter-spacing: .75px;
+  letter-spacing: 0.75px;
   font-size: 1rem;
   display: flex;
   align-items: center;
@@ -112,22 +108,24 @@
   .service-title {
     font-size: 5rem;
   }
+  .service-box-container {
+    height: 80%;
+    margin-block-start: 3vh;
+  }
+  .service-box {
+    min-width: 60%;
+  }
   .service-name {
     font-size: 1.75rem;
   }
   .icon {
-    /* scale: .6; */
-    /* margin: 0 auto; */
+    scale: .6;
   }
   .service-description {
-    letter-spacing: .25px;
+    letter-spacing: 0.25px;
     font-size: 1rem;
     width: 80%;
     margin-block-start: -3vh;
-  }
-  .service-box {
-    min-width: 65%;
-    justify-content: space-around;
   }
   .service-btn {
     padding: var(--ctaTabletPad);
@@ -142,9 +140,6 @@
     font-weight: 200;
     margin-inline-start: 3.5vw;
   }
-  .icon {
-    scale: .6;
-  }
   .service-description {
     width: 80%;
   }
@@ -152,8 +147,7 @@
     justify-content: space-evenly;
   }
   .service-box {
-    min-width: 0;
-    width: 30%;
+    min-width: 28%;
   }
   .service-btn {
     padding: var(--ctaPad);
@@ -175,6 +169,6 @@
     width: 28%;
   }
   .icon {
-    scale: .7;
+    scale: 0.7;
   }
 }
