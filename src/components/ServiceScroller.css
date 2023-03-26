@@ -41,37 +41,6 @@
 .snaps-inline > * {
   scroll-snap-align: start;
 }
-.service-box {
-  position: relative;
-  overflow-y: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-width: 77%;
-  height: 100%;
-  color: var(--darkWhite);
-  padding-block: 2rem;
-  padding-inline: 1rem;
-  margin-inline: 1rem;
-  border-radius: var(--borderRadius);
-  background: var(--boxGradient);
-  box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.2);
-}
-.service-name {
-  font-family: var(--serifFont);
-  font-weight: 300;
-  font-size: 1.5rem;
-}
-.icon {
-  scale: 0.4;
-}
-.service-description {
-  font-family: var(--serifFont);
-  text-align: center;
-  font-size: 0.75rem;
-  font-weight: 200;
-}
 .service-link-container {
   margin-block-start: -3vh;
   display: flex;
@@ -113,21 +82,6 @@
     height: 80%;
     margin-block-start: 3vh;
   }
-  .service-box {
-    min-width: 60%;
-  }
-  .service-name {
-    font-size: 1.75rem;
-  }
-  .icon {
-    scale: .6;
-  }
-  .service-description {
-    letter-spacing: 0.25px;
-    font-size: 1rem;
-    width: 80%;
-    margin-block-start: -3vh;
-  }
   .service-btn {
     padding: var(--ctaTabletPad);
   }
@@ -139,16 +93,10 @@
   .service-title {
     font-size: 7rem;
     font-weight: 200;
-    margin-inline-start: 3.5vw;
-  }
-  .service-description {
-    width: 80%;
+    margin-inline-start: 2vw;
   }
   .service-box-container {
     justify-content: space-evenly;
-  }
-  .service-box {
-    min-width: 28%;
   }
   .service-btn {
     padding: var(--ctaPad);
@@ -162,14 +110,4 @@
     margin-inline-start: 15px;
   }
 }
-/*//*\\\\\\\\////////////////////////////////////*/
-/* //!            1920px MEDIA QUERY            */
-/* //&\\\\\\\\//\\\\\\\\\\\\\\\\\\//////////////*/
-@media screen and (min-width: 1920px) {
-  .service-box {
-    width: 28%;
-  }
-  .icon {
-    scale: 0.7;
-  }
-}
+
