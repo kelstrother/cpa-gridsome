@@ -16,6 +16,8 @@
       <g-image
         class="hero-img"
         alt="The Capitol Building in Denver."
+        width="1920"
+        height="1079"
         src="~/assets/images/capitol-1920.jpg"
         :immediate="true"
       />
@@ -50,49 +52,10 @@
     <!-- //!   SERVICES SECTION -->
     <section id="main-content">
       <ServiceScroller class="service-scroller-component" />
-      <!-- <ServiceCarousel class="carousel-component " /> -->
       <!-- //!   APPROACH SECTION -->
       <ApproachSection />
-      <!-- <section class="approach-container">
-        <h1
-          data-aos="fade-up"
-          data-aos-duration="900"
-          data-aos-easing="ease-in-cubic"
-          class="approach-title"
-        >
-          Who We Are
-        </h1>
-        <p
-          class="summary"
-          data-aos="fade-up"
-          data-aos-duration="900"
-          data-aos-delay="100"
-          data-aos-easing="ease-in-cubic"
-        >
-          With over 40 years of experience in accounting, we provide expert
-          financial guidance to businesses and individuals throughout the
-          country. Our experience and knowledge in the industry allows us to
-          provide a wide range of accounting and financial services for both
-          individuals and businesses, tailored to meet their unique needs and
-          goals. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        </p>
-        <p
-          class="summary"
-          data-aos="fade-up"
-          data-aos-duration="900"
-          data-aos-delay="100"
-          data-aos-easing="ease-in-cubic"
-        >
-          Aut incidunt magni suscipit repellendus dolore harum voluptatem quo
-          expedita repellat sed, laboriosam nesciunt natus veniam consequatur!
-          Perferendis excepturi odit inventore quae velit perspiciatis vitae
-          possimus quas delectus accusamus ratione consequuntur minima et
-          distinctio, totam ducimus amet officiis tempora porro voluptas enim?
-        </p>
-      </section> -->
       <!-- //!   TESTIMONIAL SECTION -->
       <TestimonialScroller />
-      <!-- <a class="back-to-top" href="#top">^</a> -->
     </section>
   </div>
 </template>
@@ -123,6 +86,7 @@ export default {
   },
   metaInfo: {
     title: "Home",
+    description: "Main page for Denver based Certified Public Accountant firm, Strother CPA",
   },
 };
 </script>

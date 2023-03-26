@@ -30,13 +30,13 @@
 .service-box-container {
   display: flex;
   height: 85%;
-  padding-inline: 1rem;
+  /* padding-inline: 1rem; */
   overflow-x: auto;
   overscroll-behavior: contain;
 }
 .snaps-inline {
   scroll-snap-type: inline mandatory;
-  scroll-padding-inline: 1rem 2rem;
+  scroll-padding-inline: 1rem;
 }
 .snaps-inline > * {
   scroll-snap-align: start;

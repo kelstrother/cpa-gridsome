@@ -18,6 +18,7 @@ export default {
   },
   metaInfo: {
     title: "Services",
+    description: "An in depth guide to services that Strother CPA offers.",
   },
 };
 </script>

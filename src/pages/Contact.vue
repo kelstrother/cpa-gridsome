@@ -199,8 +199,9 @@ export default {
       this.$router.push({ path: "/" });
     },
   },
+  metaInfo: {
+    title: "Contact",
+    description: "Contact information for Strother CPA",
+  },
 };
-metaInfo: {
-  title: "Contact";
-}
 </script>

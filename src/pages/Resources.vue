@@ -23,6 +23,7 @@ export default {
   name: "Resources",
   metaInfo: {
     title: "Resources",
+    description: "Resources for anyone seeking more information and helpful tips about taxes.",
   },
 };
 </script>

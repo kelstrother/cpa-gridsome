@@ -29,6 +29,7 @@ import "/src/pages/About.css";
 export default {
   metaInfo: {
     title: "About us",
+    description: "Details about Strother CPA",
   },
 };
 </script>
