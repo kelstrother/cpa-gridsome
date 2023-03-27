@@ -1,7 +1,5 @@
 .service-component {
-  width: 100vw;
-  margin-block-start: 10vh;
-  margin-block-end: 10%;
+  margin-block-start: 5vw;
 }
 .service-title {
   color: var(--lightGrey);
@@ -16,8 +14,6 @@
 .service-scroller {
   overflow-y: hidden;
   position: relative;
-  height: 50vh;
-  width: 100%;
 }
 .service-scroller::after {
   content: "";
@@ -28,9 +24,8 @@
   z-index: -1;
 }
 .service-box-container {
+  padding-block: 3rem;
   display: flex;
-  height: 85%;
-  /* padding-inline: 1rem; */
   overflow-x: auto;
   overscroll-behavior: contain;
 }
@@ -47,6 +42,7 @@
   justify-content: center;
 }
 .service-link {
+  z-index: 5;
   text-decoration: none;
 }
 .service-btn {
@@ -63,6 +59,7 @@
   border-radius: var(--borderRadius);
   color: var(--textLight);
   box-shadow: var(--btnShadow);
+  z-index: 5;
 }
 .arrow {
   margin-inline-start: 5px;
@@ -72,15 +69,8 @@
 /* //!            768px MEDIA QUERY            */
 /* //&\\\\\\\\//\\\\\\\\\\\\\\\\\\//////////////*/
 @media screen and (min-width: 768px) {
-  .component-container {
-    margin-block-end: 20%;
-  }
   .service-title {
     font-size: 5rem;
-  }
-  .service-box-container {
-    height: 80%;
-    margin-block-start: 3vh;
   }
   .service-btn {
     padding: var(--ctaTabletPad);
@@ -97,6 +87,7 @@
   }
   .service-box-container {
     justify-content: space-evenly;
+    padding-block: 5rem;
   }
   .service-btn {
     padding: var(--ctaPad);

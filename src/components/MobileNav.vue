@@ -109,7 +109,7 @@ export default {
 }
 .mobile-nav {
   position: absolute;
-  top: 11vh;
+  top: 100%;
   right: 0;
   background-color: hsl(38, 58%, 0%, 0.4);
   backdrop-filter: blur(8px);
@@ -117,18 +117,34 @@ export default {
   z-index: 100;
   display: flex;
   flex-direction: column;
-  height: 90vh;
   align-items: center;
   justify-content: space-evenly;
-  width: 55%;
+  padding-block-end: 10vh;
+  padding-inline: 20vw;
+  height: 92vh;
   opacity: 1;
 }
 .nav__link {
+  --linkColor: hsl(38, 58%, 90%, 0.85);
   text-decoration: none;
-  color: hsl(38, 58%, 90%, 0.85);
+  color: var(--linkColor);
   font-size: 0.8rem;
-  letter-spacing: 1px;
-  margin-block-end: 2rem;
+  letter-spacing: .75px;
+  font-weight: 300;
+}
+.nav__active {
+  position: relative;
+  font-weight: 400;
+}
+.nav__active::after {
+  content: "";
+    display: block;
+    position: absolute;
+    bottom: -4px;
+    width: 75%;
+    height: 1px;
+    background: var(--linkColor);
+    opacity: .6;
 }
 .slide-fade-enter-active {
   transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);

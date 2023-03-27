@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
@@ -27,7 +24,6 @@
   --svgLight: #e5fffd;
   --mozGradient: -moz-linear-gradient(top left, #f0f5f5, #a3c1c8);
   --webkitGradient: -webkit-linear-gradient(top left, #f0f5f5, #9ebbc2);
-  --bgGradient: linear-gradient(145deg, #f0f5f5, #b5e2ed);
   --rdGradient: radial-gradient(circle at center, hsla(198, 33%, 20%, 0.85), hsla(198, 35%, 21%, 1));
   --boxGradient: linear-gradient(
     135deg,
@@ -69,11 +65,6 @@
     hsl(38, 58%, 55%) 0%,
     hsl(38, 33%, 63%) 100%
   );
-  --greenBoxGradient: linear-gradient(
-    135deg,
-    hsl(129, 28%, 7%) 0%,
-    hsl(130, 29%, 17%) 100%
-  );
   --grayGradient: linear-gradient(
     135deg,
     hsla(0, 0%, 25%, 1) 0%,
@@ -89,7 +80,7 @@
 
   /* !  SIZES */
   --ctaMobilePad: 1rem 1.25rem;
-  --ctaTabletPad: 1.5rem 1.5rem;
+  --ctaTabletPad: 1.5rem 1.75rem;
   --ctaPad: 1.5rem 2.25rem;
   --borderRadius: 6px;
 
@@ -110,7 +101,7 @@
       17.1px 20.3px 25px -5px rgba(0, 0, 0, 0.029),
       37px 44px 54px -5px rgba(0, 0, 0, 0.04);
     --smTextShadow: 1px 0.5px 2px rgba(0, 0, 0, 0.1);
-    --lgTextShadow: 0.5px 1px 3px rgba(0, 0, 0, 0.15);
+    --lgTextShadow: 0.5px 1px 2px rgba(0, 0, 0, 0.15);
 }
 
 * {
@@ -124,8 +115,7 @@ html {
 }
 body {
   background: var(--darkWhite);
-  height: 100%;
-  width: 100%;
+  /* height: 100%; */
 }
 button {
   cursor: pointer;

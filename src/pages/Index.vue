@@ -16,8 +16,6 @@
       <g-image
         class="hero-img"
         alt="The Capitol Building in Denver."
-        width="1920"
-        height="1079"
         src="~/assets/images/capitol-1920.jpg"
         :immediate="true"
       />

@@ -1,12 +1,10 @@
 .testimonial-component {
   position: relative;
-  height: 60vh;
-  margin-block-end: 15vh;
+  margin-block-end: 5vw;
 }
 .testimonial-header {
-  height: 25vh;
+  height: 30vw;
   display: flex;
-  
 }
 .testimonial-header::after {
   content: "";
@@ -32,7 +30,7 @@
   font-family: var(--serifFont);
   font-weight: 200;
   color: var(--lightGrey);
-  min-width: 100%;
+  min-width: max-content;
   text-shadow: var(--textShadow);
 }
 .testimonial-scroll-container {
@@ -42,8 +40,7 @@
   grid-auto-flow: column;
   grid-auto-columns: 73%;
   place-items: center;
-  padding: 1rem 1rem 0 1rem;
-  max-height: 40vh;
+  padding: 10vw 10vw 0 10vw;
   background: transparent;
   overflow-x: scroll;
   overscroll-behavior-inline: contain;
@@ -62,7 +59,7 @@
   font-size: 0.9rem;
 }
 .testimonial-box {
-  padding: 0.5rem;
+  padding:  2vh;
   border-radius: var(--borderRadius);
   background: var(--rdGradient);
   box-shadow: var(--hoverShadow);
@@ -72,8 +69,9 @@
   color: var(--xLightGrey);
   font-family: var(--serifFont);
   font-weight: 200;
-  text-align: left;
-  text-indent: .5rem;
+  font-size: .9rem;
+  text-align: center;
+  padding: 1vw;
 }
 .testimonial-author {
   color: var(--mainGrey);
@@ -84,13 +82,6 @@
   text-align: right;
 }
 @media screen and (min-width: 768px) {
-  .testimonial-header{
-    margin-block-end: 5vh;
-  }
-  .testimonial-header::after {
-    height: 45%;
-    top: -2vh;
-  }
   .desktop-quote {
     left: 8vw;
     top: 2vh;
@@ -99,50 +90,39 @@
     font-size: 5rem;
   }
   .testimonial-scroll-container {
-    grid-auto-columns: 56%;
-    height: 60vh;
-    gap: 2rem;
-  }
-  .testimonial-box {
-    display: flex;
-    align-items: center;
-    padding: 2rem 1rem;
+    grid-auto-columns: 53%;
+    gap: 3vw;
   }
   .testimonial-text {
-    font-size: 1.1rem;
-    padding: .75rem;
+    font-size: 1rem;
   }
     .testimonial-author {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
 @media screen and (min-width: 1440px) {
   .desktop-quote {
     left: 4vw;
   }
+  .testimonial-header {
+    height: 20vh;
+  }
   .testimonial-scroll-container {
-    grid-auto-columns: 25%;
-    gap: 7vw;
+    overflow-x: hidden;
+    grid-auto-columns: 30%;
+    gap: 5vw;
     place-content: center;
-    overscroll-behavior-inline: contain;
-  }
-  .snaps-inline {
-    scroll-snap-type: none;
-    scroll-padding-inline: 0;
-  }
-  .snaps-inline > * {
-    scroll-snap-align: 0;
   }
   .testimonial-box {
     place-content: center;
-    padding: 2rem 0;
+    padding: 2vw;
     transition: all .25s linear;
   }
   .testimonial-box:hover {
     scale: 1.02;
   }
   .testimonial-text {
-    width: 90%;
+
   }
 }
 /*//*\\\\\\\\////////////////////////////////////*/

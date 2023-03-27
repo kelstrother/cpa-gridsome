@@ -51,16 +51,18 @@ export default {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 8fr 1fr;
-  padding-inline: 1rem;
+  padding-inline: 3vw;
+  padding-block: 5vw 0vw;
+  gap: 2vw;
   place-items: center;
-  width: 100vw;
-  height: 35%;
   background: var(--footerGradient);
 }
 .footer-logo {
   grid-column: 1;
   grid-row: 2;
   width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
 }
 .footer-about {
   display: none;
@@ -106,7 +108,7 @@ export default {
 .back-to-top {
   position: absolute;
   top: 70%;
-  left: 3vw;
+  left: 2vw;
   display: grid;
   place-items: center;
 }
@@ -121,33 +123,24 @@ export default {
   font-family: var(--serifFont);
   font-size: 0.6rem;
   color: var(--xLightGrey);
-  margin-block-end: 0.5rem;
+  margin-block-end: 1.5vw;
 }
 /*//*\\\\\\\\////////////////////////////////////*/
 /* //           ! TABLET MEDIA QUERY            */
 /* //&\\\\\\\\//\\\\\\\\\\\\\\\\\\//////////////*/
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .footer {
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 1fr 8fr 1fr;
-    gap: 0.5rem;
-    padding-inline: 1rem;
-    height: 30vh;
-  }
-  .footer-logo {
-    width: 100%;
   }
   .footer-about {
     grid-row: 1 / span 2;
     grid-column: 2;
     display: flex;
     flex-direction: column;
-    height: 100%;
-    max-width: 85%;
-    gap: 2vh;
+    max-width: 35vw;
+    gap: 2.5vw;
     align-items: flex-start;
-    justify-content: center;
-    margin-block-start: 3vh;
   }
   .f-about-content {
     text-indent: 10px;
@@ -180,10 +173,13 @@ export default {
   }
   .copyright {
     font-size: 0.7rem;
+    grid-column: 2 / span 3;
+    place-self: end;
+    /* width: max-content; */
   }
   .back-to-top {
-    top: 75%;
-    left: 4vw;
+    top: 80%;
+    left: 2vw;
   }
   .top-arrow {
     width: 55px;
@@ -192,39 +188,33 @@ export default {
 /*//*\\\\\\\\////////////////////////////////////*/
 /* //           ! 1440px MEDIA QUERY            */
 /* //&\\\\\\\\//\\\\\\\\\\\\\\\\\\//////////////*/
-@media screen and (min-width: 1440px) {
+@media (min-width: 1440px) {
   .footer {
-    height: 40vh;
     gap: 0;
-    padding-inline: 2rem;
-    padding-block-start: 1rem;
   }
   .footer-logo {
-    width: 50%;
+    max-width: 250px;
   }
   .footer-about {
-    max-width: 45%;
-    height: 90%;
+    max-width: 30vw;
   }
   .f-about-content {
-    font-size: .97rem;
-  }
-  .footer-contact {
-    gap: 2rem;
+    font-size: 0.97rem;
   }
   .f-title {
-  font-size: 1rem;
-}
-.f-phone,
-.f-email,
-.f-address {
-  font-size: 0.9rem;
-}
+    font-size: 1rem;
+  }
+  .f-phone,
+  .f-email,
+  .f-address {
+    font-size: 0.9rem;
+  }
   .copyright {
-    grid-column: 1;
+    margin-block-end: 1vw;
   }
   .back-to-top {
-    left: 1vw;
+    left: 4vw;
+    top: 5%;
   }
   .top-arrow {
     width: 55px;
@@ -233,4 +223,17 @@ export default {
 /*//*\\\\\\\\////////////////////////////////////*/
 /* //           ! 1920px MEDIA QUERY            */
 /* //&\\\\\\\\//\\\\\\\\\\\\\\\\\\//////////////*/
+@media (min-width: 1920px) {
+  .footer {
+    padding-inline: 1rem;
+    padding-block: 2vw 0vw;
+  }
+  .f-about-content {
+    font-size: 1rem;
+  }
+  .back-to-top {
+    left: 1vw;
+    top: 80%;
+  }
+}
 </style>

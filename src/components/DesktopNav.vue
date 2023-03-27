@@ -29,15 +29,13 @@ export default {
 @media screen and (min-width: 768px) {
   .desktop-nav {
     display: flex;
-    flex-direction: row;
+    gap: 8.5vw;
     background-color: transparent;
-    width: 70%;
-    height: auto;
-    justify-content: space-around;
+    
   }
   .nav__link {
     color: var(--mainGrey);
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 300;
     cursor: pointer;
     text-decoration: none;
@@ -71,9 +69,14 @@ export default {
     background: var(--lightGrey);
   }
 }
-@media screen and (min-width: 1920px) {
-  .desktop-nav {
-    width: 60%;
+@media (min-width: 1440px) {
+  .nav__link {
+    font-size: .9rem;
+  }
+}
+@media (min-width: 1920px) {
+  .nav__link {
+    font-size: 1rem;
   }
 }
 </style>
