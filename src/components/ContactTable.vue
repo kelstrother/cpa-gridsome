@@ -105,9 +105,16 @@ export default {
 </script>
 <style scoped>
 .contact-table-container {
-  font-family: var(--serifFont);
-  font-weight: 200;
-  letter-spacing: 0.25px;
+  display: none;
+}
+/*//*\\\\\\\\////////////////////////////////////*/
+/* //!            780px MEDIA QUERY            */
+/* //&\\\\\\\\//\\\\\\\\\\\\\\\\\\//////////////*/
+@media screen and (min-width: 768px) {
+  .contact-table-container {
+    font-family: var(--serifFont);
+    font-weight: 200;
+    letter-spacing: 0.25px;
   display: flex;
   /* flex-direction: column; */
   justify-content: space-evenly;
@@ -191,4 +198,5 @@ address {
 .fax-container {
   grid-column: 4;
 } */
+}
 </style>
