@@ -19,6 +19,12 @@
         src="~/assets/images/capitol-1920.jpg"
         :immediate="true"
       />
+      <!-- <g-image
+        class="hero-img"
+        alt="The Capitol Building in Denver."
+        src="~/assets/images/transparent-capitol-1920.png"
+        :immediate="true"
+      /> -->
       <div class="hero-text-container">
         <div class="inside-hero-container">
           <div class="mobile-slogan">
@@ -69,7 +75,7 @@ import ServiceScroller from "../components/ServiceScroller.vue";
 import ApproachSection from "../components/ApproachSection.vue";
 // import ServiceCarousel from "~/components/ServiceCarousel.vue";
 export default {
-  props: {
+props: {
     immediate: Boolean,
   },
   name: "Home",
@@ -84,7 +90,8 @@ export default {
   },
   metaInfo: {
     title: "Home",
-    description: "Main page for Denver based Certified Public Accountant firm, Strother CPA",
+    description:
+    "Main page for Denver based Certified Public Accountant firm, Strother CPA",
   },
 };
 </script>

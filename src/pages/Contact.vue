@@ -1,6 +1,7 @@
 <template>
   <div class="contact-component-container">
-    <div class="contact-container">
+    <ContactTable class="contact-table" />
+    <!-- <div class="contact-container">
       <div class="contact-info">
         <div class="contact address-container">
           <div
@@ -79,41 +80,46 @@
           </p>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="form-container">
-      <p class="invitation">We'd love to hear from you!</p>
+      <div class="heading-container">
+        <p class="invitation">We'd love to hear from you!</p>
+        <p class="required">
+          <span class="red-required">*</span> fields are required
+        </p>
+      </div>
       <form class="form" ref="form" @submit.prevent="sendMail">
-        <div class="form-group">
-          <label>Name <span class="red">*</span></label>
-          <input type="text" name="senders_name" v-model="name" required />
-        </div>
-        <div class="form-group">
-          <label>Email <span class="red">*</span></label>
-          <input name="senders_email" type="email" v-model="email" required />
-        </div>
-        <div class="form-group">
-          <label>Phone <span class="tel">(123-456-7890)</span></label>
-          <input id="telNo" name="phone" type="tel" v-model="phone" />
-        </div>
-        <div class="form-group">
-          <label>Subject <span class="red">*</span></label>
-          <input name="subject" type="text" v-model="subject" required />
-        </div>
-        <div class="form-group message-container">
-          <label>Message <span class="red">*</span></label>
-          <textarea
-            class="text-area"
-            name="message"
-            type="text"
-            v-model="message"
-            required
-          >
-          </textarea>
-        </div>
-        <div class="form-group contact-btn-container">
-          <button class="submit" type="submit" name="send">Submit</button>
-          <p class="required"><span class="red">*</span> fields are required</p>
-        </div>
+        <!-- <div class="form-group"> -->
+        <label>Name <span class="red">*</span></label>
+        <input type="text" name="senders_name" v-model="name" required />
+        <!-- </div> -->
+        <!-- <div class="form-group"> -->
+        <label>Email <span class="red">*</span></label>
+        <input name="senders_email" type="email" v-model="email" required />
+        <!-- </div> -->
+        <!-- <div class="form-group"> -->
+        <label>Phone <span class="tel">(123-456-7890)</span></label>
+        <input id="telNo" name="phone" type="tel" v-model="phone" />
+        <!-- </div> -->
+        <!-- <div class="form-group"> -->
+        <label>Subject <span class="red">*</span></label>
+        <input name="subject" type="text" v-model="subject" required />
+        <!-- </div> -->
+        <!-- <div class="form-group message-container"> -->
+        <label>Message <span class="red">*</span></label>
+        <textarea
+          class="text-area"
+          name="message"
+          type="text"
+          v-model="message"
+          required
+        >
+        </textarea>
+        <!-- </div> -->
+        <!-- <div class="form-group contact-btn-container"> -->
+        <button class="submit" type="submit" name="send">Submit</button>
+        <!-- <p class="required"><span class="red">*</span> fields are required</p> -->
+        <!-- </div> -->
       </form>
     </div>
     <!-- </div> -->
@@ -137,28 +143,14 @@
 
 <script>
 import emailjs from "@emailjs/browser";
-import MobileHome from "~/assets/icons/mobile-home-contact.svg";
-import MobilePhone from "~/assets/icons/mobile-phone-icon.svg";
-import MobileFax from "~/assets/icons/mobile-fax-icon.svg";
-import MobileMail from "~/assets/icons/mobile-mail-icon.svg";
-import HomeIcon from "../assets/icons/home.svg";
-import PhoneIcon from "../assets/icons/call.svg";
-import FaxIcon from "../assets/icons/fax.svg";
-import MailIcon from "../assets/icons/mail.svg";
+import ContactTable from '~/components/ContactTable.vue'
 import router from "vue-router";
 import "@/pages/Contact.css";
 
 export default {
   name: "Contact",
   components: {
-    MobileFax,
-    MobileMail,
-    MobilePhone,
-    MobileHome,
-    HomeIcon,
-    PhoneIcon,
-    FaxIcon,
-    MailIcon,
+    ContactTable,
   },
   data() {
     return {

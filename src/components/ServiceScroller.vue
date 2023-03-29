@@ -45,9 +45,10 @@
       <g-link class="service-link" to="/services">
         <button class="service-btn">
           Explore Services
-          <span class="material-symbols-outlined arrow">
+          <!-- <span class="material-symbols-outlined arrow">
             double_arrow
-          </span>
+          </span> -->
+      <img class="arrow" src="https://s2.svgbox.net/hero-outline.svg?ic=arrow-right&color=ffffff" width="32" height="32">
         </button>
       </g-link>
     </div>

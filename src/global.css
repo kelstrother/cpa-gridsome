@@ -10,6 +10,7 @@
   --lightGrey: #777777;
   --xLightGrey: #b7b7b7;
   --darkWhite: hsl(0, 0%, 84%);
+  --xDarkWhite: hsl(0, 0%, 80%);
   --darkGrey: #333333;
   --lightBlue: rgb(209, 224, 224, 0.5);
   --bodyBG: hsl(38, 58%, 90%, 1);
@@ -108,14 +109,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 html {
   scroll-behavior: smooth;
 }
 body {
   background: var(--darkWhite);
-  /* height: 100%; */
+}
+p {
+  line-height: 1.25;
 }
 button {
   cursor: pointer;

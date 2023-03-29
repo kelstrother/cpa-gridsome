@@ -121,9 +121,6 @@
   .testimonial-box:hover {
     scale: 1.02;
   }
-  .testimonial-text {
-
-  }
 }
 /*//*\\\\\\\\////////////////////////////////////*/
 /* //!            1920px MEDIA QUERY            */
@@ -131,5 +128,8 @@
 @media screen and (min-width: 1920px) {
   .testimonial-title {
     font-size: 7rem;
+  }
+  .testimonial-text {
+    line-height: 1.25;
   }
 }

@@ -29,7 +29,10 @@
         </address>
       </div>
     </div>
-    <a class="back-to-top" href="#top"><Arrow class="top-arrow"/></a>
+    <div class="to-top-container">
+      <a class="back-to-top" href="#top"><Arrow class="top-arrow"/></a>
+      <p class="to-top-text">Back to top</p>
+    </div>
     <small class="copyright"
       >&copy; Copyright {{ new Date().getFullYear() }}, David Strother CPA. All
       Rights Reserved</small
@@ -105,12 +108,17 @@ export default {
   font-size: 0.7rem;
   font-weight: 200;
 }
-.back-to-top {
+.to-top-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: absolute;
-  top: 70%;
+  top: 1vw;
   left: 2vw;
-  display: grid;
-  place-items: center;
+}
+.to-top-text {
+  color: rgba(183, 183, 183, 0.3);
+  font-size: .6rem;
 }
 .top-arrow {
   fill: rgba(183, 183, 183, 0.3);
@@ -177,10 +185,6 @@ export default {
     place-self: end;
     /* width: max-content; */
   }
-  .back-to-top {
-    top: 80%;
-    left: 2vw;
-  }
   .top-arrow {
     width: 55px;
   }
@@ -212,9 +216,9 @@ export default {
   .copyright {
     margin-block-end: 1vw;
   }
-  .back-to-top {
-    left: 4vw;
-    top: 5%;
+  .to-top-container {
+    left: 1vw;
+    top: 1vw;
   }
   .top-arrow {
     width: 55px;
@@ -231,9 +235,9 @@ export default {
   .f-about-content {
     font-size: 1rem;
   }
-  .back-to-top {
-    left: 1vw;
-    top: 80%;
+  .copyright {
+    margin-block-end: 1vw;
+    margin-inline-end: 1vw;
   }
 }
 </style>
